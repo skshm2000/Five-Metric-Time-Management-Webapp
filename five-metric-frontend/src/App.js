@@ -6,9 +6,9 @@ import { Work } from "./JPpages/Work";
 
 function App() {
   return <div className="App">
-    {/* <Time/> */}
+    {/* <Time/>   */}
      <Task/>
-    {/* <Work/> */}
+     {/* <Work/>  */}
   </div>;
 }
 

@@ -31,7 +31,7 @@ export const Work = () => {
               boxShadow={"rgba(149, 157, 165, 0.2) 0px 8px 24px;"}
               border={"1px solid lightgrey"}
               borderRadius={7}
-              p={2}
+              p={5}
               w={["100%", "100%", "100%", "100%", "100%"]}
             >
               <Flex w="100%" gap="520px">
@@ -66,10 +66,10 @@ export const Work = () => {
               boxShadow={"rgba(149, 157, 165, 0.2) 0px 8px 24px;"}
               border={"1px solid lightgrey"}
               borderRadius={7}
-              p={2}
+              p={5}
               w={"100%"}
             >
-              <Flex gap={"560px"}>
+              <Flex gap={"540px"}>
                 <Text fontSize={"17px"} fontWeight={500}>
                   Overview
                 </Text>
@@ -85,7 +85,7 @@ export const Work = () => {
               <Text color={"grey"} mt={3} fontSize={"14px"}>
                 We analyze your data based on your tracked time
               </Text>
-              <Flex mb={"7px"} mt={"30px"} gap={4}>
+              <Flex mb={"7px"} mt={"39px"} gap={4}>
                 <Box
                   border={"1px solid lightgrey"}
                   borderRadius={5}
@@ -133,12 +133,13 @@ export const Work = () => {
           </GridItem>
           <GridItem>
             <Box
+               
               boxShadow={"rgba(149, 157, 165, 0.2) 0px 8px 24px;"}
               border={"1px solid lightgrey"}
               borderRadius={7}
               width={"100%"}
             >
-              <Flex width={"100px"} padding={"10px"} gap={"560px"}>
+              <Flex width={"100px"} padding={"10px"} gap={"545px"}>
                 <Text fontSize={"17px"} fontWeight={500}>
                   Calendar
                 </Text>
@@ -164,14 +165,15 @@ export const Work = () => {
           </GridItem>
           <GridItem>
             <Box
+            
               boxShadow={"rgba(149, 157, 165, 0.2) 0px 8px 24px;"}
               border={"1px solid lightgrey"}
               borderRadius={7}
               width={"100%"}
             >
-              <Flex padding={"10px"} gap={"560px"}>
+              <Flex width={"100px"} padding={"10px"} gap={"530px"}>
                 <Box>
-                  <Text fontSize={"17px"} fontWeight={500}>
+                  <Text w={"90px"} fontSize={"17px"} fontWeight={500}>
                     Due tasks
                   </Text>
                 </Box>
