@@ -1,6 +1,6 @@
 import { Box, Button, Flex, Menu, MenuButton, MenuItem, MenuList, Text } from "@chakra-ui/react"
 import { BsChevronDown } from "react-icons/bs";
-import { GrFormAdd } from "react-icons/gr";
+import { MdOutlineAdd } from "react-icons/md";
 
 export const Task=()=>{
     return (
@@ -30,11 +30,16 @@ export const Task=()=>{
             </Box>
           </Flex>
           <Box>
-            <Button color={"white"} leftIcon={<GrFormAdd color="white" />}>
+            <Button
+            p={3}
+              bg={"#3070f0"}
+              color={"white"}
+              leftIcon={<MdOutlineAdd color="white" />}
+            >
               New Task
             </Button>
           </Box>
-        </Box>
+        </Box>y
       </>
     );
 
