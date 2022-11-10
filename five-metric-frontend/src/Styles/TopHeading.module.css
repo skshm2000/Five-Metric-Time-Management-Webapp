@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@600;700&family=Open+Sans:wght@500&family=Orelega+One&family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@300&family=Secular+One&family=Source+Sans+Pro:ital,wght@1,600&display=swap');
+
+
+
+.priceHeadingBox{
+
+    background-color:#d7f3fc;
+    padding: 100px;
+    font-family: 'roboto',sans-serif serif;
+    height: 350px;
+}
+.priceHeading{
+    letter-spacing: 1px;
+    font-weight: bold;
+    font-size:  70px;
+    text-align: center;
+}
+.priceHeadingText{
+    font-size: 20px;
+    margin-top: 30px;
+    font-weight: 600;
+    text-align: center;
+}
+
+@media screen and (max-width:450px) {
+    .priceHeadingBox {   
+    background-color: #d7f3fc;
+    padding: 100px;
+    font-family: 'roboto', sans-serif serif;
+    height: auto;
+    }
+    .priceHeadingText{
+        font-size: 20px;
+        width: 100%;
+    }
+    .priceHeading{
+        font-size: 50px;
+    }
+}

@@ -1,0 +1,91 @@
+.sliderComponentMain{
+    border: 1px solid rgb(197, 197, 197);
+    width: 90%;
+    border-radius: 10px;
+    margin: auto;
+    padding: 20px;
+    display: grid;
+    margin-top: 30px;
+    grid-template-columns: repeat(2,1fr);
+}
+
+.countShowInput{
+    border: 1px solid rgb(172, 172, 172);
+    width: 100px;
+    border-radius: 5px;
+    padding: 10px;
+    margin-left: 20px;
+    margin-right: 40px;
+    font-size: 20px;
+    color: black;
+    font-weight: 600;
+}
+.verticalDivider{
+    font-size: large;
+    opacity: 2px;
+    color: black;
+}
+.inputRange{
+    width: 50%;
+}
+.switcherFlex{
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.monthlyText{
+    margin-right: 10px;
+    font-size: 20px;
+}
+.Switcher{
+    align-items: center;
+}
+.annuallyText{
+    margin-left: 10px;
+    font-size: 20px;
+    margin-right: 40px;
+}
+.countSliderFlex{
+    margin-left: -100px;
+    align-items: center;
+}
+@media screen and (max-width:1050px) {
+    .sliderComponentMain {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: 90%;
+        margin: auto;
+    }
+}
+@media screen and (max-width:750px) {
+    .sliderComponentMain {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        width: auto;
+        margin: auto;
+        
+    }
+    .countSliderFlex{
+        width: 90%;
+        padding: 0px;
+        margin-left: 50px;
+        margin-top: 30px;
+    }
+}
+@media screen and (max-width:450px) {
+    .sliderComponentMain {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        width: 90%;
+        margin: auto;
+        margin-top: 50px;
+        
+    }
+    .countSliderFlex{
+        margin: auto;
+        width: 100%;
+        margin-top: 30px;
+        padding: 0px;
+     
+    }
+}
