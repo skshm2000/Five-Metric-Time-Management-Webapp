@@ -64,10 +64,10 @@ export const Time = () => {
       <Box margin={"auto"} width={"90%"}>
         <Flex w={{ md: "50%", lg: "100%" }} gap={"42%"}>
           <Flex w={{ lg: "40%" }} gap={6}>
-            <Button borderRadius={"50%"} bg={"#17c22e"}>
+            <Button borderRadius={"47%"} bg={"#17c22e"}>
               <VscDebugStart color="white" />
             </Button>
-            <Button borderRadius={"50%"}>
+            <Button borderRadius={"47%"}>
               <BsFillStopFill color="grey" />
             </Button>
             <Text fontSize={"21px"}>My Time </Text>
