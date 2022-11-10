@@ -64,13 +64,68 @@ app.post("/data", (req, res)=>{
 app.post("/addEntry", (req, res)=>{
     let input = req.body
     let [pass, uname] = input.token.split("@")
-    console.log(uname)
+    const {id, title, tags, startTime, endTime, projectName, duration} = input
     let data = db.people.find(ele=>ele.username==uname)
-    data.entries.push({id, title})
-    res.send()
-    
+    data.entries.push({id, title, tasks:[], isActive:false, tags, startTime, endTime, projectName, duration})
+    fs.writeFile("./src/db.json", JSON.stringify(db), ()=>{})
+    res.send(data)
 })
 
+app.post("/addTask", (req, res)=>{
+    let input = req.body
+    let [pass, uname] = input.token.split("@")
+    const {id, taskId, title, tags, projectName, desc, dueDate} = input
+    let data = db.people.find(ele=>ele.username==uname)
+    let entry = data.entries.find(ele=>ele.id==id)
+    entry.tasks.push({id:taskId, title, isCompleted:false, tags, projectName, desc, dueDate})
+    fs.writeFile("./src/db.json", JSON.stringify(db), ()=>{})
+    res.send(entry)
+})
+
+app.patch("/entry", (req, res)=>{
+    let input = req.body
+    let [pass, uname] = input.token.split("@")
+    const {id} = input
+    let data = db.people.find(ele=>ele.username==uname)
+    let entry = data.entries.find(ele=>ele.id==id)
+    entry.isActive = !entry.isActive
+    fs.writeFile("./src/db.json", JSON.stringify(db), ()=>{})
+    res.send(data)
+})
+
+app.patch("/task", (req, res)=>{
+    let input = req.body
+    let [pass, uname] = input.token.split("@")
+    const {taskId, entryId} = input
+    let data = db.people.find(ele=>ele.username==uname)
+    let entry = data.entries.find(ele=>ele.id==entryId)
+    let task = entry.tasks.find(ele=>ele.id==taskId)
+    task.isCompleted = !task.isCompleted
+    fs.writeFile("./src/db.json", JSON.stringify(db), ()=>{})
+    res.send(data)
+})
+
+app.delete("/deleteEntry", (req, res)=>{
+    let input = req.body
+    let [pass, uname] = input.token.split("@")
+    const {id} = input
+    let data = db.people.find(ele=>ele.username==uname)
+    data.entries = data.entries.filter(ele=>ele.id!=id)
+    fs.writeFile("./src/db.json", JSON.stringify(db), ()=>{})
+    res.status(200).send(data)
+})
+
+app.delete("/deleteTask", (req, res)=>{
+
+    let input = req.body
+    let [pass, uname] = input.token.split("@")
+    const {taskId, entryId} = input
+    let data = db.people.find(ele=>ele.username==uname)
+    let entry = data.entries.find(ele=>ele.id==entryId)
+    entry.tasks = entry.tasks.filter(ele=>ele.id!=taskId)
+    fs.writeFile("./src/db.json", JSON.stringify(db), ()=>{})
+    res.status(200).send(data)
+})
 
 app.listen(PORT, ()=>{
     console.log(`Server Started @ http://localhost:${PORT}`)
