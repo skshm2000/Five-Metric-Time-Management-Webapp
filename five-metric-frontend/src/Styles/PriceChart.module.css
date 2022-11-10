@@ -1,0 +1,161 @@
+.priceSheetBox{
+    border: 1px solid rgb(202, 199, 199);
+    width: 90%;
+    padding: 50px;
+   border-radius: 10px;
+    margin: auto;
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(3 ,1fr);
+    gap: 30px;
+}
+@media screen and (max-width:1050px) {
+    .priceSheetBox{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media screen and (max-width:750px) {
+    .priceSheetBox {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+@media screen and (max-width:450px) {
+    .priceSheetBox {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+.iDiv{
+    /* border: 1px solid; */
+   width: 20px;
+   height: 20px;
+   text-align: center;
+   border-radius: 50%;
+   background-color: rgb(189, 186, 186);
+   margin-left: 5px;
+   font-size: 20px;
+   margin-bottom: 10px;
+   font-family: 'Times New Roman', Times, serif;
+}
+.iDiv div{
+    margin-bottom: 50px;
+    font-size: 15px;
+    font-weight: bold;
+    font-weight: bolder;
+    color: white;
+    text-align: center;
+}
+.priceSavingText{
+    background-color: #c8f1df;
+    color: #006237;
+    height: 40px;
+    margin-top: 50px;
+    width: 90%;
+    position: relative;
+    z-index: 10px;
+    margin: auto;
+    border-radius: 10px;
+    
+}
+.priceSavingText h1{
+    margin-top: 20px;
+
+}
+.designationText {
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+@media screen and (max-width:750px) {
+    .designationText{
+        font-size: 20px;
+    }
+}
+@media screen and (max-width:450px) {
+    .designationText {
+        font-size: 20px;
+    }
+}
+.priceTag{
+    border: 0px solid;
+    width: 80%;
+    margin: auto;
+    height: 90px;
+    align-items: center;
+    background-color: rgb(240, 240, 240);
+    border-radius: 10px;
+    position: relative;
+}
+@media screen and (max-width:450px) {
+    .priceTag {
+        width: 90%;
+        margin: auto;
+    }
+}
+@media screen and (max-width:750px) {
+    .priceTag{
+        width: 90%;
+        margin: auto;
+    }
+}
+.priceTags div{
+    text-align: center;
+    margin: auto;
+    margin-left: 10%;
+}
+.serviceTagsMainFlex{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+    margin: auto;
+    margin-top: 30px;
+    width: 90%;
+    gap: 30px;
+    
+}
+@media screen and (max-width:450px) {
+    .serviceTagsMainFlex{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media screen and (max-width:750px) {
+    .serviceTagsMainFlex {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+.firstPriceBox{
+    border: 1px solid rgb(212, 210, 210);
+    /* margin-left: 50px; */
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 10px;
+}
+.correctIcon{
+    font-size: 20px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+.crossIcon{
+    font-size: 12px;
+    color: rgb(177, 176, 176);
+    margin-right: 20px;
+    align-items: center;
+    margin-top: 5px;
+}
+.divider{
+    padding: 5px;
+    font-size: 5px;
+}
+.crossText{
+    color: rgb(177, 176, 176);
+    text-align: justify;
+}
+.correctTickText{
+    text-align: justify;
+}
+.individualPriceButtonDiv{
+    
+}
