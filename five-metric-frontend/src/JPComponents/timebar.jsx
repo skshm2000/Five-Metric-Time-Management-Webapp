@@ -1,7 +1,8 @@
-import { Box,  Flex,  Text } from "@chakra-ui/react"
+import { Box,  Flex,  Input,  Text } from "@chakra-ui/react"
 import {MdOutlineGraphicEq} from "react-icons/md"
 
 export const TimeBar=()=>{
+  
     return (
       <>
         <Box p={"20px"} borderRadius={5} mt={10} border={"1px solid grey"}>
@@ -18,7 +19,7 @@ export const TimeBar=()=>{
                 <Box>
                   <Box
                     bg={"white"}
-                    mt={3}
+                     mt={3}
                     title="12:00am"
                     fontSize={"4px"}
                     h={"10px"}
