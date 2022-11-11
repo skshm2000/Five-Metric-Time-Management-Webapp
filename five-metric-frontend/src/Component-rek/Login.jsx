@@ -14,10 +14,14 @@ import {
 import {FaMicrosoft }from "react-icons/fa"
 import {FaApple }from "react-icons/fa"
 import { useState } from 'react';
+import axios from"axios"
+import { useNavigate } from 'react-router-dom';
+import logo from "../GsAssets/logo.png";
   
   const Login=()=> {
+    const navigate = useNavigate()
     const [user,setUser]=useState({
-        email:"",
+        username:"",
         password:""
     })
     const handleChange=(e)=>{
@@ -25,7 +29,26 @@ import { useState } from 'react';
     setUser({...user,[name]:value})
     }
 
-    console.log(user)
+    //console.log(user)
+    const handleSubmit=(e)=>{
+      e.preventDefault()
+      axios.post("https://tender-hen-suspenders.cyclic.app/login",{
+        username:user.username,
+        password:user.password
+      })
+      .then((response)=>{
+     console.log(response.data)
+     localStorage.setItem("token",JSON.stringify(response.data))
+      if(response.data.token){
+       navigate("/time")
+      }
+     
+      })
+      .catch((err)=>{
+        console.log(err)
+      })
+    }
+   
     return (
       <Flex
         minH={'100vh'}
@@ -43,39 +66,42 @@ import { useState } from 'react';
           my={12}>
             
             <Box backgroundColor={"#F2F5FC"} borderRadius="10px" >
-            <Image src="https://id.tmetric.com/images/tmetric_logo_and_text.svg" height={"49px"} width={"162px"} marginLeft={"100px"} marginTop={"40px"} backgroundColor={"#F2F5FC"}/>
+            <Image src={logo} height={"50px"} width={"162px"} marginLeft={"140px"} marginTop={"40px"} backgroundColor={"#F2F5FC"}/>
           <Heading lineHeight={1.1} fontSize={{ base: '2xl', md: '3xl',lg:"1.625rem" }}  fontWeight={"12px"} color={"black"} backgroundColor={"#F2F5FC"} pb="17px" mt="12px">
           Log into TMetric
           </Heading>
             </Box>
-            <Stack p={6}>
-          <FormControl  >
+         <Stack p={6}>
+          <form onSubmit={handleSubmit}>
+             <FormControl  >
             <FormLabel fontSize={"14px"} color={"#777e85"}>Email </FormLabel>
             <Input
               placeholder="johnsmith@gmail.com"
               height={"34px"}
               _placeholder={{ color: 'gray.500' }}
-              type="email"
-              value={user.email} name="email" onChange={handleChange}
-              
-            />
+              type="text"
+              value={user.username} name="username" onChange={handleChange} />
           </FormControl>
           <FormControl  >
             <FormLabel fontSize={"14px"} color={"#777e85"}>Password</FormLabel>
             <Input type="password"   placeholder="Enter your password" height={"34px"} value={user.password} name="password" onChange={handleChange}/>
           </FormControl>
-          <Stack spacing={6}>
+         
             <Button
+            type="submit"
               bg={'#3070f0'}
               height={"34px"} 
               fontSize={"14px"}
               color={'white'}
-              marginTop={"10px"}
+              marginTop={"12px"}
+              w={"100%"}
               _hover={{
                 bg: 'blue.500',
               }}>
               Log In
             </Button>
+            </form>
+            <Stack spacing={6}>
             <Divider orientation={'horizontal'}/>
             <Stack>
               <Button colorScheme={"none"} border={"1px solid lightgrey"} _hover={{bg: '#e2e6eb',}}  leftIcon={<FcGoogle fontSize={"20px"} /> } textColor={"#777E85"} variant={'solid'} height={"34px"} fontSize={"14px"}>
