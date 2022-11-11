@@ -1,7 +1,70 @@
 import { Box,  Flex,  Text } from "@chakra-ui/react"
 import {MdOutlineGraphicEq} from "react-icons/md"
+import { useSelector, useDispatch } from "react-redux"
+import { useEffect } from "react"
+import { dataGetter, entryAdder, taskAdder, entryDeleter, taskDeleter, entryChanger, taskChanger } from "../redux/User Data/userDataActions"
 
 export const TimeBar=()=>{
+  let state = useSelector(state=>state)
+  let dispatch = useDispatch()
+  console.log(state)
+
+  useEffect(()=>{
+    // let entryAdderType = {
+    //   token:"1234@rekha",
+    //   id:Date.now(),
+    //   title:"Test1",
+    //   tags:"Design", 
+    //   startTime:"1pm",
+    //   endTime:"2pm",
+    //   projectName:"5Metric",
+    //   duration:"1hr"
+    // }
+
+    // let taskAdderType = {
+    //   token:"1234@rekha",
+    //   id:"1668162698616", 
+    //   taskId:Date.now(), 
+    //   title:"Test Task 1", 
+    //   tags:"Design", 
+    //   projectName:"Design", 
+    //   desc:"This is a test task", 
+    //   dueDate:"today"
+    // } 
+
+    // let entryDeleterType = {
+    //   token:"1234@rekha",
+    //   id:"1668165530283"
+    // }
+
+    // let taskDeleterType = {
+    //   token:"1234@rekha",
+    //   entryId:"1668161408069",
+    //   "taskId":"1668161449485"
+    // }
+
+    // let taskChangerType = {
+    //   token:"1234@rekha",
+    //   taskId:"1668162775900",
+    //   entryId:"1668162698616"
+
+    // }
+
+    // let entryChangerType = {
+    //   token:"1234@rekha",
+    //   id:"1668162698616"
+    // }
+
+
+    // dispatch(dataGetter({token:"234@rekha"}))
+    // dispatch(taskAdder(taskAdderType))
+    // dispatch(entryAdder(entryAdderType))
+    // dispatch(entryDeleter(entryDeleterType))
+    // dispatch(taskDeleter(taskDeleterType))
+    // dispatch(entryChanger(entryChangerType))
+    // dispatch(taskChanger(taskChangerType))
+  }, [])
+
     return (
       <>
         <Box p={"20px"} borderRadius={5} mt={10} border={"1px solid grey"}>
