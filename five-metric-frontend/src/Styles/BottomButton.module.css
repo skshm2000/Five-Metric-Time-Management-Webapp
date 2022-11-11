@@ -1,0 +1,56 @@
+.priceButtonFlex{
+   align-items: center;
+   justify-content: center;
+   
+    display: grid;
+    grid-template-columns: repeat(2,0.2fr);
+    margin-top: 20px;
+}
+.buttonText{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+}
+@media screen and (max-width:1050px) {
+    .priceButtonFlex{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        gap: 20px;
+    }
+}
+@media screen and (max-width:750px) {
+    .priceButtonFlex {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+    }
+}
+@media screen and (max-width :450px) {
+    .buttonText {
+            margin-top: 20px;
+            display: grid;
+            grid-template-columns: repeat(1,1fr);
+    }
+}
+.priceButton{
+    width: 200px;
+   
+}
+.priceButtonText{
+    font-size: 15px;
+}
+.checkoutText{
+   margin-top: 20px;
+   
+}
+.checkoutLink{
+    color: blue;
+}
+.checkoutLink:hover{
+    text-decoration: underline;
+    color: blue;
+}
+.divider{
+    color: black;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
