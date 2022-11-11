@@ -8,6 +8,7 @@ import {
   MenuButton,
   MenuItem,
   MenuList,
+  Stack,
   Text,
   VisuallyHidden,
   VisuallyHiddenInput,
@@ -32,6 +33,9 @@ import { BsFillStopFill } from "react-icons/bs";
 import { BiCalendar } from "react-icons/bi";
 
 import { TimeBar } from "../JPComponents/timebar";
+
+import SideBarTrackingComponent from "../JPComponents/SideBarTrackingComponent";
+// import styles from "../Styles/SideBarTrackingComponent.module.css";
 
 export const Time = () => {
   const [Stime, setStartTime] = useState();
@@ -70,205 +74,213 @@ export const Time = () => {
   };
   return (
     <>
-      <Box h={5}></Box>
-      <Box margin={"auto"} width={"90%"}>
-        <Flex w={{ md: "50%", lg: "100%" }} gap={"42%"}>
-          <Flex w={{ lg: "40%" }} gap={6}>
-            <Button borderRadius={"48%"} bg={"#17c22e"}>
-              <VscDebugStart color="white" />
-            </Button>
-            <Button borderRadius={"47%"}>
-              <BsFillStopFill color="grey" />
-            </Button>
-            <Text fontSize={"21px"}>My Time </Text>
-            <Text>|</Text>
-            <Box>
-              <Menu>
-                <MenuButton
-                  color={"grey"}
-                  as={Button}
-                  rightIcon={<BsChevronDown />}
-                >
-                  Select User or Team
-                </MenuButton>
-                <MenuList>
-                  <MenuItem></MenuItem>
-                  <MenuItem></MenuItem>
-                  <MenuItem></MenuItem>
-                  <MenuItem></MenuItem>
-                </MenuList>
-              </Menu>
-            </Box>
-          </Flex>
-          <Box>
-            {/* <Calendar view="month" defaultValue={new Date()} /> */}
-            <Flex>
-              <VisuallyHidden>
-                {" "}
-                <input type="date" />
-              </VisuallyHidden>
-              <Text mt={2} fontSize={"20px"}>
-                <BiCalendar />
-              </Text>
-              <Text fontSize={"22px"}>Today</Text>
-              <Button borderRadius={"50%"} bg={"white"} title="Previoues day">
-                &lt;
+      <Flex w="100%" >
+        <Box>
+          {" "}
+          <SideBarTrackingComponent />
+        </Box>
+        
+        <Box mt={10} ml="100px"  width={"90%"}>
+          <Flex w={{ md: "50%", lg: "100%" }} gap={"42%"}>
+            <Flex w={{ lg: "40%" }} gap={6}>
+              <Button borderRadius={"48%"} bg={"#17c22e"}>
+                <VscDebugStart color="white" />
               </Button>
-              <Button
-                title="Today"
-                bg={"white"}
-                borderRadius={"50%"}
-                fontSize={20}
-              >
-                {" "}
-                &sdot;
+              <Button borderRadius={"47%"}>
+                <BsFillStopFill color="grey" />
               </Button>
-              <Button
-                title="Next Day"
-                borderRadius={"50%"}
-                bg={"white"}
-                isDisabled
-              >
-                &gt;
-              </Button>
-            </Flex>
-          </Box>
-        </Flex>
-        {/*  */}
-        <TimeBar />
-        <Box borderRadius={5} mt={10} border={"1px solid grey"}>
-          <Flex p={"20px"} gap={10}>
-            <Checkbox size="lg"></Checkbox>
-            <Button onClick={handleAddTimeEntry}>Add time Entry</Button>
-            <Button>Add break</Button>
-          </Flex>
-          <Divider />
-          <Flex gap={"50%"}>
-            {/* adding task div */}
-            <Flex p={"20px"} gap={5}>
-              <Checkbox size="lg"></Checkbox>
-              <Text>{task}</Text>
+              <Text fontSize={"21px"}>My Time </Text>
+              <Text>|</Text>
+              <Box>
+                <Menu>
+                  <MenuButton
+                    color={"grey"}
+                    as={Button}
+                    rightIcon={<BsChevronDown />}
+                  >
+                    Select User or Team
+                  </MenuButton>
+                  <MenuList>
+                    <MenuItem></MenuItem>
+                    <MenuItem></MenuItem>
+                    <MenuItem></MenuItem>
+                    <MenuItem></MenuItem>
+                  </MenuList>
+                </Menu>
+              </Box>
             </Flex>
             <Box>
-              <Flex p={"20px"} gap={10}>
-                <Text>{project}</Text>
-                <Text>{tag}</Text>
-                <Text>
-                  {Stime}-{etime}
+              {/* <Calendar view="month" defaultValue={new Date()} /> */}
+              <Flex>
+                <VisuallyHidden>
+                  {" "}
+                  <input type="date" />
+                </VisuallyHidden>
+                <Text mt={2} fontSize={"20px"}>
+                  <BiCalendar />
                 </Text>
-                <Text>{tTime}</Text>
-                <Button>Start</Button>
+                <Text fontSize={"22px"}>Today</Text>
+                <Button borderRadius={"50%"} bg={"white"} title="Previoues day">
+                  &lt;
+                </Button>
+                <Button
+                  title="Today"
+                  bg={"white"}
+                  borderRadius={"50%"}
+                  fontSize={20}
+                >
+                  {" "}
+                  &sdot;
+                </Button>
+                <Button
+                  title="Next Day"
+                  borderRadius={"50%"}
+                  bg={"white"}
+                  isDisabled
+                >
+                  &gt;
+                </Button>
               </Flex>
             </Box>
           </Flex>
-        </Box>
-        {/* Add entry form  */}
-        <Box>
-          {add ? (
-            <Box border={"1px solid grey"}>
-              <FormControl onSubmit={handleSubmit}>
-                <FormLabel ml={5}>Description</FormLabel>
-                <Flex>
-                  <Select
-                    onChange={handleSelectTask}
-                    ml={5}
-                    mt={"16px"}
-                    w={"800px"}
-                    placeholder="Describe your task"
-                  >
-                    <option value={"Your work"}>Your work</option>
-                    <option value={"New work"}>New work</option>
-                  </Select>
+          {/*  */}
+          <TimeBar />
+          <Box borderRadius={5} mt={10} border={"1px solid grey"}>
+            <Flex p={"20px"} gap={10}>
+              <Checkbox size="lg"></Checkbox>
+              <Button onClick={handleAddTimeEntry}>Add time Entry</Button>
+              <Button>Add break</Button>
+            </Flex>
+            <Divider />
+            <Flex gap={"50%"}>
+              {/* adding task div */}
+              <Flex p={"20px"} gap={5}>
+                <Checkbox size="lg"></Checkbox>
+                <Text>{task}</Text>
+              </Flex>
+              <Box>
+                <Flex p={"20px"} gap={10}>
+                  <Text>{project}</Text>
+                  <Text>{tag}</Text>
+                  <Text>
+                    {Stime}-{etime}
+                  </Text>
+                  <Text>{tTime}</Text>
+                  <Button>Start</Button>
+                </Flex>
+              </Box>
+            </Flex>
+          </Box>
+          {/* Add entry form  */}
+          <Box>
+            {add ? (
+              <Box border={"1px solid grey"}>
+                <FormControl onSubmit={handleSubmit}>
+                  <FormLabel ml={5}>Description</FormLabel>
+                  <Flex>
+                    <Select
+                      onChange={handleSelectTask}
+                      ml={5}
+                      mt={"16px"}
+                      w={"800px"}
+                      placeholder="Describe your task"
+                    >
+                      <option value={"Your work"}>Your work</option>
+                      <option value={"New work"}>New work</option>
+                    </Select>
 
-                  <TableContainer mt={"-40px"}>
+                    <TableContainer mt={"-40px"}>
+                      <Table variant="unstyled">
+                        <Thead>
+                          <Tr>
+                            <Th>Start time</Th>
+                            <Th>EndTime</Th>
+                            <Th>Duration</Th>
+                          </Tr>
+                        </Thead>
+                        <Tbody>
+                          <Tr>
+                            <Td>
+                              <Input
+                                value={Stime}
+                                onChange={(e) => setStartTime(e.target.value)}
+                                type={"time"}
+                              ></Input>
+                            </Td>
+                            <Td>
+                              <Input
+                                value={etime}
+                                onChange={(e) => setEndTime(e.target.value)}
+                                type={"time"}
+                              ></Input>
+                            </Td>
+                            <Td>
+                              <Input
+                                value={tTime}
+                                onChange={(e) => setTotalTime(e.target.value)}
+                                type={"time"}
+                              ></Input>
+                            </Td>
+                          </Tr>
+                        </Tbody>
+                      </Table>
+                    </TableContainer>
+                  </Flex>
+                  <TableContainer width={"850px"}>
                     <Table variant="unstyled">
                       <Thead>
                         <Tr>
-                          <Th>Start time</Th>
-                          <Th>EndTime</Th>
-                          <Th>Duration</Th>
+                          <Th>Projects</Th>
+                          <Th>Tags</Th>
                         </Tr>
                       </Thead>
                       <Tbody>
                         <Tr>
                           <Td>
-                            <Input
-                              value={Stime}
-                              onChange={(e) => setStartTime(e.target.value)}
-                              type={"time"}
-                            ></Input>
+                            <Select
+                              onChange={(e) => setProject(e.target.value)}
+                              w={"350px"}
+                              placeholder="Select project"
+                            >
+                              <option value={"Sample Project"}>
+                                Your work
+                              </option>
+                              <option value={"Demo"}>New work</option>
+                            </Select>
                           </Td>
                           <Td>
                             <Input
-                              value={etime}
-                              onChange={(e) => setEndTime(e.target.value)}
-                              type={"time"}
+                              value={tag}
+                              onChange={(e) => setTag(e.target.value)}
+                              placeholder="Select tags"
+                              width={"350px"}
+                              type={"text"}
                             ></Input>
                           </Td>
+                        </Tr>
+                        <Tr>
                           <Td>
-                            <Input
-                              value={tTime}
-                              onChange={(e) => setTotalTime(e.target.value)}
-                              type={"time"}
-                            ></Input>
+                            <Button
+                              onClick={handleTimeClose}
+                              bg={"blue"}
+                              color="white"
+                            >
+                              Save
+                            </Button>
+                            <Button onClick={handleTimeClose} ml={5}>
+                              Cancel
+                            </Button>
                           </Td>
                         </Tr>
                       </Tbody>
                     </Table>
                   </TableContainer>
-                </Flex>
-                <TableContainer width={"850px"}>
-                  <Table variant="unstyled">
-                    <Thead>
-                      <Tr>
-                        <Th>Projects</Th>
-                        <Th>Tags</Th>
-                      </Tr>
-                    </Thead>
-                    <Tbody>
-                      <Tr>
-                        <Td>
-                          <Select
-                            onChange={(e) => setProject(e.target.value)}
-                            w={"350px"}
-                            placeholder="Select project"
-                          >
-                            <option value={"Sample Project"}>Your work</option>
-                            <option value={"Demo"}>New work</option>
-                          </Select>
-                        </Td>
-                        <Td>
-                          <Input
-                            value={tag}
-                            onChange={(e) => setTag(e.target.value)}
-                            placeholder="Select tags"
-                            width={"350px"}
-                            type={"text"}
-                          ></Input>
-                        </Td>
-                      </Tr>
-                      <Tr>
-                        <Td>
-                          <Button
-                            onClick={handleTimeClose}
-                            bg={"blue"}
-                            color="white"
-                          >
-                            Save
-                          </Button>
-                          <Button onClick={handleTimeClose} ml={5}>
-                            Cancel
-                          </Button>
-                        </Td>
-                      </Tr>
-                    </Tbody>
-                  </Table>
-                </TableContainer>
-              </FormControl>
-            </Box>
-          ) : null}
+                </FormControl>
+              </Box>
+            ) : null}
+          </Box>
         </Box>
-      </Box>
+      </Flex>
     </>
   );
 };

@@ -130,16 +130,10 @@ export const TimeBar=()=>{
                 </Box>
                 <Box>
                   <Box
-                    bg={"white"}
-                    mt={3}
-                    title="8:00am"
-                    fontSize={"5px"}
-                    h={"10px"}
-                    width="5px"
-                    border="1px solid black"
+                    
                   ></Box>
                   <Text ml="-20px" fontSize={"9px"} w={12}>
-                    8:00 am
+                  
                   </Text>
                 </Box>
               </Flex>
