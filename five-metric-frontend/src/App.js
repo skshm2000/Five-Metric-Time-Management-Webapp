@@ -5,7 +5,6 @@ import Login from './Component-rek/Login';
 import Pricing from './Routes/Pricing';
 import { TimeBar } from './JPComponents/timebar';
 
-
 function App() {
   return (
     <div className="App">

@@ -1,10 +1,11 @@
-import { Box,  Flex,  Text } from "@chakra-ui/react"
+import { Box,  Flex,  Input,  Text } from "@chakra-ui/react"
 import {MdOutlineGraphicEq} from "react-icons/md"
 import { useSelector, useDispatch } from "react-redux"
 import { useEffect } from "react"
 import { dataGetter, entryAdder, taskAdder, entryDeleter, taskDeleter, entryChanger, taskChanger } from "../redux/User Data/userDataActions"
 
 export const TimeBar=()=>{
+  
   let state = useSelector(state=>state)
   let dispatch = useDispatch()
   console.log(state)
@@ -75,139 +76,137 @@ export const TimeBar=()=>{
             <Text>0 min</Text>
           </Box>
           {/* time bar */}
-          <Box margin={"auto"} height={"15px"} width="90%" bg={"lightgrey"}>
-            <Flex gap={"125px"}>
-              <Box
-                bg={"white"}
-                mt={3}
-                title="12:00am"
-                fontSize={"4px"}
-                h={"10px"}
-                width="5px"
-                border="1px solid black"
-              >
-                <Text fontSize={"9px"} w={12}>
-                  12:00 am
-                </Text>
-              </Box>
-
-              <Box
-                bg={"white"}
-                mt={3}
-                title="1:00am"
-                fontSize={"5px"}
-                h={"10px"}
-                width="5px"
-                border="1px solid black"
-              >
-                <Text fontSize={"9px"} w={12}>
-                  1:00 am
-                </Text>
-              </Box>
-              <Box
-                bg={"white"}
-                mt={3}
-                title="2:00am"
-                fontSize={"5px"}
-                h={"10px"}
-                width="5px"
-                border="1px solid black"
-              >
-                <Text fontSize={"9px"} w={12}>
-                  2:00 am
-                </Text>
-              </Box>
-              <Box
-                bg={"white"}
-                mt={3}
-                title="3:00am"
-                fontSize={"5px"}
-                h={"10px"}
-                width="5px"
-                border="1px solid black"
-              >
-                <Text fontSize={"9px"} w={12}>
-                  3:00 am
-                </Text>
-              </Box>
-              <Box
-                bg={"white"}
-                mt={3}
-                title="4:00am"
-                fontSize={"5px"}
-                h={"10px"}
-                width="5px"
-                border="1px solid black"
-              >
-                <Text fontSize={"9px"} w={12}>
-                  4:00 am
-                </Text>
-              </Box>
-              <Box
-                bg={"white"}
-                mt={3}
-                title="5:00am"
-                fontSize={"5px"}
-                h={"10px"}
-                width="5px"
-                border="1px solid black"
-              >
-                <Text fontSize={"9px"} w={12}>
-                  5:00 am
-                </Text>
-              </Box>
-              <Box
-                bg={"white"}
-                mt={3}
-                title="6:00am"
-                fontSize={"5px"}
-                h={"10px"}
-                width="5px"
-                border="1px solid black"
-              >
-                <Text fontSize={"9px"} w={12}>
-                  6:00 am
-                </Text>
-              </Box>
-              <Box
-                bg={"white"}
-                mt={3}
-                title="7:00am"
-                fontSize={"5px"}
-                h={"10px"}
-                width="5px"
-                border="1px solid black"
-              >
-                <Text fontSize={"9px"} w={12}>
-                  7:00 am
-                </Text>
-              </Box>
-              <Box
-                bg={"white"}
-                mt={3}
-                title="8:00am"
-                fontSize={"5px"}
-                h={"10px"}
-                width="5px"
-                border="1px solid black"
-              >
-                <Text fontSize={"9px"} w={12}>
-                  8:00 am
-                </Text>
-              </Box>
-              <Box
-                bg={"white"}
-                mt={3}
-                title="9:00am"
-                h={"10px"}
-                width="5px"
-                border="1px solid black"
-              >
-                <Text fontSize={"10px"} w={12}>
-                  9:00 am
-                </Text>
-              </Box>
-            </Flex>
+          <Box mt={2} pb={9}>
+            <Box margin={"auto"} height={"15px"} width="90%" bg={"lightgrey"}>
+              <Flex gap={"115px"}>
+                <Box>
+                  <Box
+                    bg={"white"}
+                     mt={3}
+                    title="12:00am"
+                    fontSize={"4px"}
+                    h={"10px"}
+                    width="5px"
+                    border="1px solid black"
+                  ></Box>
+                  <Text ml={"-20px"} fontSize={"9px"} w={12}>
+                    12:00 am
+                  </Text>{" "}
+                </Box>
+                <Box>
+                  <Box
+                    bg={"white"}
+                    mt={3}
+                    title="1:00am"
+                    fontSize={"5px"}
+                    h={"10px"}
+                    width="5px"
+                    border="1px solid black"
+                  ></Box>
+                  <Text ml={"-20px"} fontSize={"9px"} w={12}>
+                    1:00 am
+                  </Text>
+                </Box>
+                <Box>
+                  <Box
+                    bg={"white"}
+                    mt={3}
+                    title="2:00am"
+                    fontSize={"5px"}
+                    h={"10px"}
+                    width="5px"
+                    border="1px solid black"
+                  ></Box>
+                  <Text ml="-20px" fontSize={"9px"} w={12}>
+                    2:00 am
+                  </Text>
+                </Box>
+                <Box>
+                  <Box
+                    bg={"white"}
+                    mt={3}
+                    title="2:00am"
+                    fontSize={"5px"}
+                    h={"10px"}
+                    width="5px"
+                    border="1px solid black"
+                  ></Box>
+                  <Text ml="-20px" fontSize={"9px"} w={12}>
+                    3:00 am
+                  </Text>
+                </Box>
+                <Box>
+                  <Box
+                    bg={"white"}
+                    mt={3}
+                    title="4:00am"
+                    fontSize={"5px"}
+                    h={"10px"}
+                    width="5px"
+                    border="1px solid black"
+                  ></Box>
+                  <Text ml="-20px" fontSize={"9px"} w={12}>
+                    4:00 am
+                  </Text>
+                </Box>
+                <Box>
+                  <Box
+                    bg={"white"}
+                    mt={3}
+                    title="5:00am"
+                    fontSize={"5px"}
+                    h={"10px"}
+                    width="5px"
+                    border="1px solid black"
+                  ></Box>
+                  <Text ml="-20px" fontSize={"9px"} w={12}>
+                    5:00 am
+                  </Text>
+                </Box>
+                <Box>
+                  <Box
+                    bg={"white"}
+                    mt={3}
+                    title="6:00am"
+                    fontSize={"5px"}
+                    h={"10px"}
+                    width="5px"
+                    border="1px solid black"
+                  ></Box>
+                  <Text ml="-20px" fontSize={"9px"} w={12}>
+                    6:00 am
+                  </Text>
+                </Box>
+                <Box>
+                  <Box
+                    bg={"white"}
+                    mt={3}
+                    title="7:00am"
+                    fontSize={"5px"}
+                    h={"10px"}
+                    width="5px"
+                    border="1px solid black"
+                  ></Box>
+                  <Text ml="-20px" fontSize={"9px"} w={12}>
+                    7:00 am
+                  </Text>
+                </Box>
+                <Box>
+                  <Box
+                    bg={"white"}
+                    mt={3}
+                    title="8:00am"
+                    fontSize={"5px"}
+                    h={"10px"}
+                    width="5px"
+                    border="1px solid black"
+                  ></Box>
+                  <Text ml="-20px" fontSize={"9px"} w={12}>
+                    8:00 am
+                  </Text>
+                </Box>
+              </Flex>
+            </Box>
           </Box>
         </Box>
       </>
