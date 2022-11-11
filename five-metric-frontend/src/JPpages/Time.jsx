@@ -18,20 +18,18 @@ import {
   Input,
   Select,
   Table,
- 
   TableContainer,
   Tbody,
   Td,
-
   Th,
   Thead,
   Tr,
 } from "@chakra-ui/react";
 import { useState } from "react";
 import { BsChevronDown } from "react-icons/bs";
-import {VscDebugStart} from "react-icons/vsc"
-import {BsFillStopFill} from "react-icons/bs"
-import {BiCalendar} from "react-icons/bi"
+import { VscDebugStart } from "react-icons/vsc";
+import { BsFillStopFill } from "react-icons/bs";
+import { BiCalendar } from "react-icons/bi";
 
 import { TimeBar } from "../JPComponents/timebar";
 
@@ -42,8 +40,21 @@ export const Time = () => {
   const [add, setAdd] = useState(false);
   const [task, setTask] = useState("");
   const [project, setProject] = useState("");
-  const [tag,setTag]=useState("")
-  const [addTask,setAddTask]=useState([])
+  const [tag, setTag] = useState("");
+  const [addTask, setAddTask] = useState([]);
+  const [progress, setProgress] = useState(0);
+
+  // const start=(() => {
+  //   const progressInterval = setInterval(() => {
+  //     setProgress((prev) => prev + 1);
+  //   }, 10000);
+  // });
+
+  // const stop=(()=> {
+  //   if (progress >= 100) {
+  //     clearInterval(start);
+  //   }
+  // });
 
   const handleAddTimeEntry = () => {
     setAdd(true);
@@ -51,23 +62,22 @@ export const Time = () => {
   const handleTimeClose = () => {
     setAdd(false);
   };
-  const handleSubmit=(e)=>{
-    e.preventDefault()
-  }
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  };
   const handleSelectTask = (e) => {
     setTask(e.target.value);
-    
   };
   return (
     <>
-    <Box h={5}></Box>
+      <Box h={5}></Box>
       <Box margin={"auto"} width={"90%"}>
         <Flex w={{ md: "50%", lg: "100%" }} gap={"42%"}>
           <Flex w={{ lg: "40%" }} gap={6}>
-            <Button borderRadius={"50%"} bg={"#17c22e"}>
+            <Button borderRadius={"48%"} bg={"#17c22e"}>
               <VscDebugStart color="white" />
             </Button>
-            <Button borderRadius={"50%"}>
+            <Button borderRadius={"47%"}>
               <BsFillStopFill color="grey" />
             </Button>
             <Text fontSize={"21px"}>My Time </Text>
@@ -82,10 +92,10 @@ export const Time = () => {
                   Select User or Team
                 </MenuButton>
                 <MenuList>
-                  <MenuItem>Download</MenuItem>
-                  <MenuItem>Create a Copy</MenuItem>
-                  <MenuItem>Mark as Draft</MenuItem>
-                  <MenuItem>Delete</MenuItem>
+                  <MenuItem></MenuItem>
+                  <MenuItem></MenuItem>
+                  <MenuItem></MenuItem>
+                  <MenuItem></MenuItem>
                 </MenuList>
               </Menu>
             </Box>
@@ -124,6 +134,7 @@ export const Time = () => {
             </Flex>
           </Box>
         </Flex>
+        {/*  */}
         <TimeBar />
         <Box borderRadius={5} mt={10} border={"1px solid grey"}>
           <Flex p={"20px"} gap={10}>
