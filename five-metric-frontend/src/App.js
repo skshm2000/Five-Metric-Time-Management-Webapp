@@ -17,7 +17,7 @@ function App() {
       {/* <Pricing/>
       <Signup/>
       <Login/> */}
-      <Work/>
+      {/* <Work/> */}
     </div>
   );
 }
