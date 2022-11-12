@@ -5,7 +5,7 @@
 } */
 
  .sidebarMainBox{
-    border: 1px solid red;
+   
 
     width: 100%;
     height: 100vh;
@@ -134,4 +134,27 @@ background: transparent;
   margin-left: 30px;
   margin-top: 180px;
   position: fixed;
+}
+
+/* responsive odf sidebar */
+
+@media screen and (max-width:1050px) {
+    .sidebarMainBoxOpen{
+      display: none;
+    }
+    .openIcon{
+      position: static;
+        right: 0;
+    
+     
+    }
+         .sidebarMainBox {
+          display: initial;
+            width: 50%;
+            margin-top: 0px;
+              margin-left: -30px;
+              background-color: rgb(229, 232, 238);
+              position: absolute
+             }
+
 }

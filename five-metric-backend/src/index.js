@@ -6,6 +6,11 @@ const PORT = 8080
 const app = express()
 app.use(express.json())
 
+app.get("/", (req, res )=>{
+    res.status(200).send("Hello")
+})
+
+
 app.post("/login", (req, res)=>{
     let input = (req.body)
     let data = db.people.find((ele)=>ele.username==input.username)

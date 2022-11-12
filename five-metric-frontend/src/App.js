@@ -3,6 +3,7 @@ import './App.css';
 import Signup from './Component-rek/Signup';
 import Login from './Component-rek/Login';
 import Pricing from './Routes/Pricing';
+import { TimeBar } from './JPComponents/timebar';
 
 import { Time } from './JPpages/Time';
 import SideBarTrackingComponent from './JPComponents/SideBarTrackingComponent';
@@ -13,11 +14,7 @@ import { Work } from './JPpages/Work';
 function App() {
   return (
     <div className="App">
-      {/* <Task/> */}
-      {/* <Pricing/>
-      <Signup/>
-      <Login/> */}
-      {/* <Work/> */}
+<Time/>
     </div>
   );
 }

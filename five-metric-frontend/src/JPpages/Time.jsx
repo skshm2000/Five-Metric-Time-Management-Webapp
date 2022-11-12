@@ -33,32 +33,51 @@ import { BsFillStopFill } from "react-icons/bs";
 import { BiCalendar } from "react-icons/bi";
 
 import { TimeBar } from "../JPComponents/timebar";
-
+import { useSelector } from "react-redux";
 import SideBarTrackingComponent from "../JPComponents/SideBarTrackingComponent";
+import { useDispatch } from "react-redux";
+import { dataGetter, entryAdder } from "../redux/User Data/userDataActions";
 // import styles from "../Styles/SideBarTrackingComponent.module.css";
 
+let EntryInitState = {
+  token: "",
+  id: Date.now(),
+  title: "",
+  tags: "",
+  startTime: "",
+  endTime: "",
+  projectName: "",
+  duration: "",
+};
 export const Time = () => {
-  const [Stime, setStartTime] = useState();
-  const [etime, setEndTime] = useState();
-  const [tTime, setTotalTime] = useState();
+  
   const [add, setAdd] = useState(false);
-  const [task, setTask] = useState("");
-  const [project, setProject] = useState("");
-  const [tag, setTag] = useState("");
-  const [addTask, setAddTask] = useState([]);
-  const [progress, setProgress] = useState(0);
+  const [task, setTask] = useState([]);
+ 
+  const [addTask, setAddTask] = useState(EntryInitState);
+  const state = useSelector((state) => state);
+  const Dispatch = useDispatch();
 
-  // const start=(() => {
-  //   const progressInterval = setInterval(() => {
-  //     setProgress((prev) => prev + 1);
-  //   }, 10000);
-  // });
+  // const handleEntryAdder = () => {
+  //   setAddTask(addTask);
+  //   console.log(addTask);
 
-  // const stop=(()=> {
-  //   if (progress >= 100) {
-  //     clearInterval(start);
-  //   }
-  // });
+
+  // };
+
+const handleChange=(e)=>{
+  const {name,value}=e.target
+ 
+  setAddTask({...addTask,[name]:value})
+  
+
+}
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setTask([...task, addTask]);
+      console.log(addTask);
+     
+  };
 
   const handleAddTimeEntry = () => {
     setAdd(true);
@@ -66,21 +85,17 @@ export const Time = () => {
   const handleTimeClose = () => {
     setAdd(false);
   };
-  const handleSubmit = (e) => {
-    e.preventDefault();
-  };
-  const handleSelectTask = (e) => {
-    setTask(e.target.value);
-  };
+
+
   return (
     <>
-      <Flex w="100%" >
+      <Flex w="100%">
         <Box>
           {" "}
           <SideBarTrackingComponent />
         </Box>
-        
-        <Box mt={10} ml="100px"  width={"90%"}>
+
+        <Box mt={10} ml="100px" width={"90%"}>
           <Flex w={{ md: "50%", lg: "100%" }} gap={"42%"}>
             <Flex w={{ lg: "40%" }} gap={6}>
               <Button borderRadius={"48%"} bg={"#17c22e"}>
@@ -160,12 +175,10 @@ export const Time = () => {
               </Flex>
               <Box>
                 <Flex p={"20px"} gap={10}>
-                  <Text>{project}</Text>
-                  <Text>{tag}</Text>
-                  <Text>
-                    {Stime}-{etime}
-                  </Text>
-                  <Text>{tTime}</Text>
+                  <Text></Text>
+                  <Text></Text>
+                  <Text>-</Text>
+                  <Text></Text>
                   <Button>Start</Button>
                 </Flex>
               </Box>
@@ -174,20 +187,20 @@ export const Time = () => {
           {/* Add entry form  */}
           <Box>
             {add ? (
-              <Box border={"1px solid grey"}>
+              <Box p={5} border={"1px solid grey"}>
                 <FormControl onSubmit={handleSubmit}>
                   <FormLabel ml={5}>Description</FormLabel>
                   <Flex>
-                    <Select
-                      onChange={handleSelectTask}
+                    <Input
+                      name="title"
+                      onChange={handleChange}
                       ml={5}
                       mt={"16px"}
-                      w={"800px"}
+                      w={"400px"}
                       placeholder="Describe your task"
                     >
-                      <option value={"Your work"}>Your work</option>
-                      <option value={"New work"}>New work</option>
-                    </Select>
+                      
+                    </Input>
 
                     <TableContainer mt={"-40px"}>
                       <Table variant="unstyled">
@@ -202,22 +215,22 @@ export const Time = () => {
                           <Tr>
                             <Td>
                               <Input
-                                value={Stime}
-                                onChange={(e) => setStartTime(e.target.value)}
+                                name="startTime"
+                                onChange={handleChange}
                                 type={"time"}
                               ></Input>
                             </Td>
                             <Td>
                               <Input
-                                value={etime}
-                                onChange={(e) => setEndTime(e.target.value)}
+                                name="endTime"
+                                onChange={handleChange}
                                 type={"time"}
                               ></Input>
                             </Td>
                             <Td>
                               <Input
-                                value={tTime}
-                                onChange={(e) => setTotalTime(e.target.value)}
+                                name="duration"
+                                onChange={handleChange}
                                 type={"time"}
                               ></Input>
                             </Td>
@@ -238,7 +251,8 @@ export const Time = () => {
                         <Tr>
                           <Td>
                             <Select
-                              onChange={(e) => setProject(e.target.value)}
+                              name="projectName"
+                              onChange={handleChange}
                               w={"350px"}
                               placeholder="Select project"
                             >
@@ -250,8 +264,8 @@ export const Time = () => {
                           </Td>
                           <Td>
                             <Input
-                              value={tag}
-                              onChange={(e) => setTag(e.target.value)}
+                              name="tags"
+                              onChange={handleChange}
                               placeholder="Select tags"
                               width={"350px"}
                               type={"text"}
@@ -261,7 +275,7 @@ export const Time = () => {
                         <Tr>
                           <Td>
                             <Button
-                              onClick={handleTimeClose}
+                              onClick={handleSubmit}
                               bg={"blue"}
                               color="white"
                             >

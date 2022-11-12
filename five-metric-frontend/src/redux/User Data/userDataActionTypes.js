@@ -1,0 +1,7 @@
+export const getUserData = "userData/get"
+export const addEntry = "userData/addEntry"
+export const addTask = "userData/addTask"
+export const changeEntryStat = "userData/changeEntryStat"
+export const changeTaskStat = "userData/changeTaskStat"
+export const delEntry = "userData/delEntry"
+export const delTask = "userData/delTask"
