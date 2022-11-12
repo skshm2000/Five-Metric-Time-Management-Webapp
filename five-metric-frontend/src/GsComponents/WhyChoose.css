@@ -1,0 +1,57 @@
+.why_choose{
+text-align: center;
+font-weight: bold;
+font-size: 4rem;
+margin-top: 3rem;
+padding: 1rem;
+}
+.choose{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 3rem 0;
+}
+.metric_details{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    width: 15%;
+    height: 15rem;
+    border-radius: 5px;
+    padding: 1rem;
+    margin-bottom: 6rem;
+
+}
+.metric_details h1{
+    padding: 1rem;
+    font-weight: 1rem;
+    font-size: 1.5rem;
+    font-weight:450;
+}
+.make_time{
+    
+    width: 100%;
+    text-align: center;
+    background-color: #41338f;
+    color: whitesmoke;
+    padding: 2rem;
+    line-height: 1rem;
+}
+.make_time h1{
+    font-size: 4rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 2.5rem ;
+    padding: 2rem;
+}
+.make_time button{
+    width: 15%;
+    margin-bottom:2.5rem;
+    height: 3.5rem;
+    background-color: whitesmoke;
+    color: black;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+}
+.make_time h3{
+    margin: 2rem 0 3rem 0;
+    font-size: 1.3rem;
+}

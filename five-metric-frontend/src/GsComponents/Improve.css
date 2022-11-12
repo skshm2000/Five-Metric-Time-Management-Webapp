@@ -1,0 +1,48 @@
+.control{
+    
+    width: 100%;
+    display: flex;
+    padding: 1rem;
+    background-color: #f6f7f8;
+
+}
+.working_time{
+    
+    width: 45%;
+    margin: 1rem;
+    padding: 1rem;
+}
+.working_time h1{
+   
+    width: 100%;
+    margin: 1rem;
+    padding: 1rem;
+    font-size: 4rem;
+    font-weight: bold;
+}
+.working_time li{
+    margin-left: 2rem;
+    padding:0.2rem;
+    font-size:1.5rem;
+    
+}
+.blue{
+    color: blue;
+}
+.trial{
+font-size:1.1rem;
+font-weight: bold;
+background-color: blue;
+color: beige;
+width:20%;
+padding: 1rem;
+border-radius: 5px;
+margin: 2rem 2rem;
+}
+.activity_img img{
+    
+width: 100%;
+margin: 5rem 0rem 2rem 1rem;
+}
+
+
