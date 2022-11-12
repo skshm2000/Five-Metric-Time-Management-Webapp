@@ -38,12 +38,11 @@
         font-weight:normal;
     }
     .sites{
-        display: grid;
-        grid-template-columns: repeat(8,2fr);
-        justify-content: space-evenly;
+        display: flex;
+        justify-content:center;
         grid-gap: 1rem;
         padding: 1rem;
-        margin: 1rem;
+        margin: 0.5rem;
     }
     .sites img:hover{
         border-radius:1.8rem;
