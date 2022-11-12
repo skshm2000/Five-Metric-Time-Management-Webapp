@@ -2,16 +2,16 @@ import React from 'react'
 import { FaAndroid, FaApple, FaChrome, FaDesktop, FaEdge, FaFirefox, FaOpera, FaSafari } from 'react-icons/fa';
 import "./Footer.css"
 import { Link } from "react-router-dom";
-import footer_logo from "../GsAssets/footer_logo.png"
+
 const Footer = () => {
   return (
     <div className='footer'>
-      <div className='logo'>
+      {/* <div className='logo'>
       <Link to="/">
         <img src={footer_logo} alt="logo"  />
         
       </Link>
-      </div>
+      </div> */}
       <div className='application'>
       <h1>Application</h1>
         <Link to="#">

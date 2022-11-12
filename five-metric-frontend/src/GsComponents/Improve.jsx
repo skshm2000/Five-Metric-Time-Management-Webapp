@@ -7,12 +7,8 @@ const Improve = () => {
     <div>
       <div className='control'>
       <div className='working_time'>
-        <h1>Improve attendance with time off tracking software</h1>
-        
-
-
-
-
+        <p>Improve attendance with time off tracking software</p>
+       
         <ul>
             <li>
             flexible time off policy
@@ -31,9 +27,8 @@ const Improve = () => {
         </ul>
         <button className='trial'>Start Free Trial</button>
       </div>
-      <div className='activity_img'>
-        <img src="https://tmetric.com/media/mlzbtxv5/time-off-calendar-case.svg" alt="myactivity" />
-      </div>
+        <img src="https://tmetric.com/media/mlzbtxv5/time-off-calendar-case.svg" alt="myactivity" className='activity_img'/>
+
     </div>
     </div>
   )

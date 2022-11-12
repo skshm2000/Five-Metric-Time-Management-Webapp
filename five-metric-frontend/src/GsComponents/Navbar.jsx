@@ -81,7 +81,7 @@ const Navbar = () => {
               </div>
               <div className="feature">
                 <h1>Features</h1>
-                <div className="features">
+                <div className="featuress">
                 <div>
                   <h1>
                     <FaClock size={35} color="gray" />
@@ -151,9 +151,9 @@ const Navbar = () => {
                   </p>
                 </div>
               </div>
-              <div className="">
+              <div className="featur">
                 <h1>Integrations</h1>
-                <div className="features">
+                <div className="featuress">
                 <div>
                   <h1>
                     <FaJira size={35} color="gray" />
@@ -221,14 +221,15 @@ const Navbar = () => {
             <button className="signup">Sign In</button>
           </Link>
         </div>
-        <div className="menu-icon" onClick={handleClick}>
+
+      </div>
+      <div className="menu-icon" onClick={handleClick}>
           {click ? (
-            <FaTimes size={25} style={{ color: "white" }} />
+            <FaTimes size={25} style={{ color: "black" }} />
           ) : (
-            <FaBars size={25} style={{ color: "white" }} />
+            <FaBars size={25} style={{ color: "black" }} />
           )}
         </div>
-      </div>
     </>
   );
 };

@@ -98,16 +98,13 @@ height:50vh;
 }
 @media screen and (max-width:1040px){
     .footer{
-        display: flex;
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
         background-color: none;
-        
-        
+        margin-bottom: 20px;
         }
-        .logo{
-            width:5rem;
-            height:2vh;
-            
-            
+        .footer h1{
+            text-align: justify;
         }
+
 }
