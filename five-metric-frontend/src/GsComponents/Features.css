@@ -22,7 +22,8 @@
 }
 .features button{
     background: none;
-    width:15rem;
+    width:17rem;
+    padding: 2rem;
     height: 3rem;
 }
 .features h1{
