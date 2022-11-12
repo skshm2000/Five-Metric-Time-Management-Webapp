@@ -2,12 +2,11 @@ import React from 'react'
 import "./Achive.css"
 const Achieve = () => {
   return (
-    <div className='achieve'>
-     <div className='project_summary'>
-        <img src="https://tmetric.com/media/lltfuaaz/img-report-cases-svg.svg" alt="myactivity" />
-      </div>
-      <div className='achieve_time'>
-        <h1>Achieve high profitability by using time tracker</h1>
+    <div className='control-p'>
+        <img src="https://tmetric.com/media/lltfuaaz/img-report-cases-svg.svg" alt="myactivity" className='activity_img'/>
+     
+      <div className='working_time'>
+        <p>Achieve high profitability by using time tracker</p>
 
         <ul>
             <li>
