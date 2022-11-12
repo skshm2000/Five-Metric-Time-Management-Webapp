@@ -1,0 +1,38 @@
+.service{
+    text-align: center;
+    width: 100%;
+    margin: 0.5rem 0 ;
+}
+.service h1{
+    line-height: normal;
+    font-size:4rem;
+    font-weight: bold;
+   margin: 2rem;
+}
+.service p{
+    font-size:1.36rem;
+    font-weight: bold;
+    color: cadetblue;
+    
+}
+
+.trial{
+    font-size:1.1rem;
+    font-weight: bold;
+    background-color: blue;
+    color: beige;
+    width:10%;
+    padding: 1rem;
+    border-radius: 5px;
+    margin: 2rem 2rem;
+    }
+    .explore{
+
+        display: flex;
+        justify-content: center;
+    }
+    .explore p{
+        margin:3rem 0 0 0;
+        color: blue;
+        font-weight:normal;
+    }
