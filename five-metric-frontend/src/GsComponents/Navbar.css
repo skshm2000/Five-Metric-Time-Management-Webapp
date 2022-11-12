@@ -204,9 +204,9 @@
         justify-content: center;
         align-items: center;
     }
-    /* .menu-icon{
+    .menu-icon{
         display:block;
-    } */
+    }
     .header_content{
         margin-bottom: 25px
     }
@@ -214,6 +214,7 @@
         font-size: 24px;
         cursor: pointer;
     }
+    
     .navbr{
         width:60%;
         border: 1px solid red;
