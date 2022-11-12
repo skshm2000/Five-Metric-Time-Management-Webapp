@@ -8,11 +8,11 @@ const Review = () => {
       <div className="review">
         <h1>Read Hundreds of Reviews</h1>
         <div className="stars">
-        <FaStar color='orange' size={80} />
-        <FaStar color='orange' size={80} />
-        <FaStar color='orange' size={80} />
-        <FaStar color='orange' size={80} />
-        <FaStarHalf color='orange' size={80} />
+        <FaStar color='orange' size={60} />
+        <FaStar color='orange' size={60} />
+        <FaStar color='orange' size={60} />
+        <FaStar color='orange' size={60} />
+        <FaStarHalf color='orange' size={60} />
         </div>
         <h1>4.5 Customer Rating</h1>
         <Link to="/"><h2>242 Reviews</h2></Link>
