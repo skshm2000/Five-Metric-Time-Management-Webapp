@@ -46,3 +46,13 @@ line-height: 5rem;
     display: flex;
     justify-content: space-evenly;
 }
+@media screen and  (max-width:1040px) {
+    .business_image{
+        margin: auto;
+        width: 90%;
+        gap: 20px;
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+    }
+    
+}

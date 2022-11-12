@@ -221,14 +221,15 @@ const Navbar = () => {
             <button className="signup">Sign In</button>
           </Link>
         </div>
-        <div className="menu-icon" onClick={handleClick}>
+
+      </div>
+      <div className="menu-icon" onClick={handleClick}>
           {click ? (
-            <FaTimes size={25} style={{ color: "white" }} />
+            <FaTimes size={25} style={{ color: "black" }} />
           ) : (
-            <FaBars size={25} style={{ color: "white" }} />
+            <FaBars size={25} style={{ color: "black" }} />
           )}
         </div>
-      </div>
     </>
   );
 };

@@ -23,3 +23,15 @@
     margin: 0 0 2rem 0;
 
 }
+@media screen and (max-width: 1040px){
+    .bottom{
+       
+        display:grid;
+        grid-template-columns: repeat(2,1fr);
+        width: 100%;
+        grid-gap: 1rem;
+        position: sticky;
+gap: 50px;
+        top: 0;
+    }
+}
