@@ -36,7 +36,8 @@ import { useEffect, useState } from "react";
 import { AiOutlineCheck } from "react-icons/ai";
 import SideBarTrackingComponent from "../JPComponents/SideBarTrackingComponent";
 import { useDispatch, useSelector } from "react-redux";
-import { dataGetter, taskAdder } from "../redux/User Data/userDataActions";
+import { dataGetter, taskAdder, taskDeleter } from "../redux/User Data/userDataActions";
+import { NavLink, useNavigate } from "react-router-dom";
 const initTaskData = {
   token: "",
   id: Date.now(),
@@ -49,29 +50,54 @@ const initTaskData = {
 };
 
 export const Task = () => {
+  const token = localStorage.getItem("token") || "1234@rekha";
   const [openbox, setOpenbox] = useState(false);
   const [isComplete, setComplete] = useState(false);
-
+  const nav=useNavigate()
   const [taskData, setTaskData] = useState(initTaskData);
   const state=useSelector((state)=>state)
   const dispatcher=useDispatch()
 
   const handleChange=((e)=>{
     const  {name,value}=e.target
-    setTaskData({...taskData,[name]:value})
+  
+    setTaskData({...taskData,[name]:value,token})
   })
   const handleSubmit=(e)=>{
+    
     e.preventDefault()
-    dispatcher(taskAdder(taskData))
+    if(!state.entries[0]){
+      alert("You need to add entry first")
+      nav("/")
+      return
+    }
+    dispatcher(taskAdder({...taskData,id:state.entries[0].id}))
   }
   console.log(state)
 
-  // useEffect(()=>{
-  //   dispatcher(dataGetter({token:"testing"}))
-  // })
+  useEffect(()=>{
+
+    dispatcher(dataGetter({token:token}))
+  },[])
+
+  const handleDelete=(x)=>{
+    let taskDeleterType = {
+      token: token,
+      entryId: state.entries[0].id,
+      taskId: x
+    };
+    dispatcher(taskDeleter(taskDeleterType)).then((res)=>{
+      console.log(res)
+    })
+  }
 
   const handleOpenBox2 = () => {
-    setOpenbox(true);
+     if(!state.entries[0]){
+      alert("You need to add entry first")
+     setOpenbox(false);
+     }else{
+      setOpenbox(true)
+     }
   };
   const handleCloseBox2 = () => {
     setOpenbox(false);
@@ -312,63 +338,75 @@ export const Task = () => {
             </Flex>
             <Divider></Divider>
             {/* adding task form AND TASKS DIV */}
-            <Flex>
+            <Flex >
               {/* box 1 */}
 
-              <Box p="25px" height={"400px"} width={"100%"}>
-                <Accordion allowToggle>
-                  <AccordionItem>
-                    <h2>
-                      <AccordionButton>
-                        <Box flex="1" textAlign="left">
-                          {/* {project} */}
-                        </Box>
-                        <AccordionIcon />
-                      </AccordionButton>
-                    </h2>
-                    <AccordionPanel pb={4}>
-                      <Flex width={"100%"} gap={"160px"}>
-                        <Box></Box>
-                        <Box>
-                          <Flex gap={"30px"}>
+              <Box p="25px" height={"400px"} margin="auto" width={"100%"}>
+                {state.entries[0]?.tasks.map((ele) => {
+                  return (
+                    <Accordion allowToggle>
+                      <AccordionItem>
+                        <h2>
+                          <AccordionButton>
+                            <Box flex="1" textAlign="left">
+                              {ele.title}
+                            </Box>
+                            <AccordionIcon />
+                          </AccordionButton>
+                        </h2>
+                        <AccordionPanel pb={4}>
+                          <Flex width={"50%"} margin="auto" gap={"100px"}>
+                            <Box>{ele.desc}</Box>
                             <Box>
-                              <Flex
-                                borderRadius={"15px"}
-                                p={1}
-                                bg={"lightgrey"}
-                                gap={2}
-                              >
-                                <Text mt={1}>
-                                  <MdWork />
-                                </Text>
-                                {/* {tag} */}
+                              <Flex  w="100%" gap={"60px"}>
+                                <Button onClick={() => handleDelete(ele.id)}>
+                                  Delete
+                                </Button>
+                                <Box>
+                                  <Flex
+                                    borderRadius={"15px"}
+                                    p={1}
+                                    bg={"lightgrey"}
+                                    gap={2}
+                                  >
+                                    <Text mt={1}>
+                                      <MdWork />
+                                    </Text>
+                                    {ele.tags}
+                                  </Flex>
+                                </Box>
+                                <Box>{ele.projectName}</Box>
+                                <Box>
+                                  <Button variant={"unstyled"}>
+                                    <VscDebugStart />
+                                  </Button>
+                                </Box>
+                                <Box>{ele.dueDate}</Box>
                               </Flex>
                             </Box>
-                            <Box></Box>
-                            <Box>
-                              <Button variant={"unstyled"}>
-                                <VscDebugStart />
-                              </Button>
-                            </Box>
-                            <Box></Box>
                           </Flex>
-                        </Box>
-                      </Flex>
-                    </AccordionPanel>
-                  </AccordionItem>
-                </Accordion>
+                        </AccordionPanel>
+                      </AccordionItem>
+                    </Accordion>
+                  );
+                })}
+                
               </Box>
               {/* box 2 */}
               {openbox ? (
                 <Box borderLeft={"1px solid lightgrey"} p="25px" width={"100%"}>
-                  <FormControl >
-                    <Flex gap={"300px"}>
+                  <FormControl>
+                    <Flex  gap={"200px"}>
                       <Flex gap={3}>
                         <Button border={"1px soild grey"} borderRadius="47%">
                           <VscDebugStart color="green" />
                         </Button>
-                        <Button style={isComplete===true?green:gray} onClick={handleComplete} leftIcon={<AiOutlineCheck />}>
-                         {isComplete?"Completed":"Mark as complete"}
+                        <Button
+                          style={isComplete === true ? green : gray}
+                          onClick={handleComplete}
+                          leftIcon={<AiOutlineCheck />}
+                        >
+                          {isComplete ? "Completed" : "Mark as complete"}
                         </Button>
                       </Flex>
                       <Flex gap={3}>
@@ -403,7 +441,7 @@ export const Task = () => {
                         onChange={handleChange}
                         variant={"flushed"}
                         type="text"
-                        placeHolder="Enter project"
+                        placeHolder="Enter Asignee name here"
                       />
                     </Box>
                     <Box mt={4} w={"300px"} display={"flex"} gap="22px">
@@ -432,6 +470,8 @@ export const Task = () => {
                     <Box>
                       <InputGroup>
                         <InputLeftElement
+                        name="desc"
+                        onChange={handleChange}
                           variant="flushed"
                           _hover={{ color: "black" }}
                           pointerEvents="none"
@@ -445,7 +485,13 @@ export const Task = () => {
                           placeHolder="Add tag"
                         />
                       </InputGroup>
-                      <Button bg={"blue"} color="white" onClick={handleSubmit}>
+                      <Button
+                        mt={5}
+                        _hover={{ bg: "#578fff" }}
+                        bg={"#3070f0"}
+                        color={"white"}
+                        onClick={handleSubmit}
+                      >
                         Save
                       </Button>
                     </Box>

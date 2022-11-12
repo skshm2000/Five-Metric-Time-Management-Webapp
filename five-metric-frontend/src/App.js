@@ -15,7 +15,8 @@ function App() {
   return (
     <div className="App">
 <Time/>
-{/* <Task/> */}
+<Task/>
+<Work/>
     </div>
   );
 }

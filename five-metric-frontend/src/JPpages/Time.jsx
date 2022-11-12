@@ -26,7 +26,7 @@ import {
   Thead,
   Tr,
 } from "@chakra-ui/react";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { BsChevronDown } from "react-icons/bs";
 import { VscDebugStart } from "react-icons/vsc";
 import { BsFillStopFill } from "react-icons/bs";
@@ -36,7 +36,11 @@ import { TimeBar } from "../JPComponents/timebar";
 import { useSelector } from "react-redux";
 import SideBarTrackingComponent from "../JPComponents/SideBarTrackingComponent";
 import { useDispatch } from "react-redux";
-import { dataGetter, entryAdder, entryDeleter } from "../redux/User Data/userDataActions";
+import {
+  dataGetter,
+  entryAdder,
+  entryDeleter,
+} from "../redux/User Data/userDataActions";
 // import styles from "../Styles/SideBarTrackingComponent.module.css";
 
 let EntryInitState = {
@@ -49,30 +53,27 @@ let EntryInitState = {
   projectName: "",
   duration: "",
 };
+
 //need   asignee and Date..
 export const Time = () => {
-  
+  const token = localStorage.getItem("token") || "1234@rekha";
   const [add, setAdd] = useState(false);
-  // const [task, setTask] = useState([]);
   const [addTask, setAddTask] = useState(EntryInitState);
   const state = useSelector((state) => state);
   const Dispatch = useDispatch();
 
-const handleChange=(e)=>{
-  const {name,value}=e.target
-  const token = localStorage.getItem("token") || "1234@rekha"
-  setAddTask({...addTask,[name]:value, token})
-  
+  const handleChange = (e) => {
+    const { name, value } = e.target;
 
-}
+    setAddTask({ ...addTask, [name]: value, token });
+  };
   const handleSubmit = (e) => {
     e.preventDefault();
     // setTask([...task, addTask]);
-      // console.log(addTask);
-      Dispatch(entryAdder(addTask))
-
+    // console.log(addTask);
+    Dispatch(entryAdder(addTask));
   };
-console.log(state)
+  console.log(state);
   const handleAddTimeEntry = () => {
     setAdd(true);
   };
@@ -80,91 +81,35 @@ console.log(state)
     setAdd(false);
   };
 
-  useEffect(()=>{
-    Dispatch(dataGetter({ token: "234@rekha" }));
-  }, [])
-  
-  const handleDelete=(addTask)=>{
-    Dispatch(entryDeleter(addTask)).then((res)=>{
-      console.log(res)
-      
-    })
-    alert("You sure you want to Delete this entry")
+  useEffect(() => {
+    Dispatch(dataGetter({ token: token }));
+  }, []);
 
-
-  }
+  const handleDelete = (Delid) => {
+    let entryDeleterType = {
+      token: token,
+      id: Delid,
+    };
+    Dispatch(entryDeleter(entryDeleterType)).then((res) => {
+      console.log(res);
+    });
+    alert("You sure you want to Delete this entry");
+  };
 
   return (
     <>
       <Flex w="100%">
-        <Box> <SideBarTrackingComponent /></Box>
+        <Box>
+          {" "}
+          <SideBarTrackingComponent />
+        </Box>
 
         <Box mt={10} ml="80px" width={"80%"}>
-          <Flex w={{ md: "50%", lg: "100%" }} gap={"42%"}>
-            <Flex w={{ lg: "40%" }} gap={6}>
-              <Button borderRadius={"48%"} bg={"#17c22e"}>
-                <VscDebugStart color="white" />
-              </Button>
-              <Button borderRadius={"47%"}>
-                <BsFillStopFill color="grey" />
-              </Button>
-              <Text fontSize={"21px"}>My Time </Text>
-              <Text>|</Text>
-              <Box>
-                <Menu>
-                  <MenuButton
-                    color={"grey"}
-                    as={Button}
-                    rightIcon={<BsChevronDown />}
-                  >
-                    Select User or Team
-                  </MenuButton>
-                  <MenuList>
-                    <MenuItem>{state.team}</MenuItem>
-                    
-                  </MenuList>
-                </Menu>
-              </Box>
-            </Flex>
-            <Box>
-              {/* <Calendar view="month" defaultValue={new Date()} /> */}
-              <Flex>
-                <VisuallyHidden>
-                  {" "}
-                  <input type="date" />
-                </VisuallyHidden>
-                <Text mt={2} fontSize={"20px"}>
-                  <BiCalendar />
-                </Text>
-                <Text fontSize={"22px"}>Today</Text>
-                <Button borderRadius={"50%"} bg={"white"} title="Previoues day">
-                  &lt;
-                </Button>
-                <Button
-                  title="Today"
-                  bg={"white"}
-                  borderRadius={"50%"}
-                  fontSize={20}
-                >
-                  {" "}
-                  &sdot;
-                </Button>
-                <Button
-                  title="Next Day"
-                  borderRadius={"50%"}
-                  bg={"white"}
-                  isDisabled
-                >
-                  &gt;
-                </Button>
-              </Flex>
-            </Box>
-          </Flex>
           {/*  */}
           <TimeBar />
           <Box borderRadius={5} mt={10} border={"1px solid grey"}>
             <Flex p={"20px"} gap={10}>
-              <Checkbox size="lg"></Checkbox>
+              
               <Button onClick={handleAddTimeEntry}>Add time Entry</Button>
               <Button>Add break</Button>
             </Flex>
@@ -180,7 +125,9 @@ console.log(state)
                   </Flex>
                   <Box>
                     <Flex p={"20px"} gap={10}>
-                      <Button onClick={handleDelete}>Delete</Button>
+                      <Button onClick={() => handleDelete(ele.id)}>
+                        Delete
+                      </Button>
                       <Text>{ele.tags}</Text>
                       <Text>{ele.startTime}</Text>
                       <Text>-</Text>
