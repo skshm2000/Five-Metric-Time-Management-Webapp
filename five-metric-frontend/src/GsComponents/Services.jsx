@@ -31,13 +31,17 @@ const Services = () => {
       <img src={asana} alt="" />
       <img src={jira} alt="" />
       <img src={gitlab} alt="" />
-      <img src={docs}alt="" />
-      <img src={trello}alt="" />
+      </div>
+      <div className='sites'>
+      <img src={docs} alt="" />
+      <img src={trello} alt="" />
       <img src={redmine} alt="" />
       <img src={zendesk} alt="" />
       <img src={wrike} alt="" />
-
       </div>
+      
+
+      
     </div>
   )
 }

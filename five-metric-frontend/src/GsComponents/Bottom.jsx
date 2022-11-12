@@ -3,7 +3,8 @@ import React from 'react'
 
 const Bottom = () => {
   return (
-    <div>
+    <div className='bottom'>
+    <h1></h1>
      
     </div>
     

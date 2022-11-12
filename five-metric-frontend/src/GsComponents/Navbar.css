@@ -20,9 +20,9 @@
 }
 
 .logo img{
-    width:20rem;
-    height:7rem;
-    padding: 1rem 1.5rem;
+    width:18rem;
+    height:5rem;
+    
 }
 .header_content{
     width: 50rem;
@@ -45,7 +45,8 @@
    margin: 0;
     width:13rem;
     padding: 0.5rem;
-    margin: 0.5rem;
+    margin: 1rem 1rem;
+    padding: 1rem 0;
 }
 .entry .login{
     font-size:1.5rem;
