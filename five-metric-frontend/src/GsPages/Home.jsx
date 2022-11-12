@@ -8,6 +8,9 @@ import Control from '../GsComponents/Control';
 import Achieve from '../GsComponents/Achieve';
 import Improve from '../GsComponents/Improve';
 import Services from '../GsComponents/Services';
+import Why5Metric from '../GsComponents/Why5Metric';
+import Review from '../GsComponents/Review';
+import WhyChoose from '../GsComponents/WhyChoose';
 const Home = () => {
   return (
     <>
@@ -18,6 +21,9 @@ const Home = () => {
       <Achieve />
       <Improve />
       <Services />
+      {/* <Why5Metric /> */}
+      <Review />
+      <WhyChoose />
       <Footer />
       <Bottom />
     </>
