@@ -17,7 +17,8 @@ function App() {
       {/* <Pricing/>
       <Signup/>
       <Login/> */}
-      <TimeBar />
+      {/* <TimeBar /> */}
+      <AllRoutes/>
     </div>
   );
 }
