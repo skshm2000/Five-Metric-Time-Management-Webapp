@@ -1,22 +1,19 @@
-/* *{
+*{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-} */
+}
 
  .sidebarMainBox{
-    border: 1px solid red;
+   
 
     width: 100%;
     height: 100vh;
     background-color: rgb(229, 232, 238);
-    overflow-y: scroll;
       scroll-padding: 0px;
-     scroll-behavior: auto;
-     scroll-margin-right: 0px;
-     scroll-padding-right: 1px;
+     height: 1200px;
      transform: translate(-100%);
-     transition: none  0.8s;
+     transition: none  0.2s;
     overflow-y: hidden;
      z-index: 100px;
       /* position: fixed; */
@@ -37,11 +34,11 @@
 } */
 .sidebarMainBoxOpen{
   transform: translate(0%);
-  
+  height: 120vh;
   width: 130%;
-    height: 100vh;
+  
     background-color: rgb(229, 232, 238);
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
     scroll-padding: 0px;
     scroll-behavior: auto;
     scroll-margin-right: 0px;
@@ -131,7 +128,30 @@ background: transparent;
   font-size: 14px;
 }
 .userProfileSection{
-  margin-left: 30px;
+  margin-left: 10px;
   margin-top: 180px;
   position: fixed;
+}
+
+/* responsive odf sidebar */
+
+@media screen and (max-width:1050px) {
+    .sidebarMainBoxOpen{
+      display: none;
+    }
+    .openIcon{
+      position: static;
+        right: 0;
+    
+     
+    }
+         .sidebarMainBox {
+          display: initial;
+            width: 50%;
+            margin-top: 0px;
+              margin-left: -30px;
+              background-color: rgb(229, 232, 238);
+              position: absolute
+             }
+
 }

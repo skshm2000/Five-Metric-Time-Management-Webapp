@@ -19,17 +19,21 @@ import {
     Divider,
     Box,
     InputGroup,
-    InputRightElement
+    InputRightElement,
+    Alert,
+    AlertIcon,
+    Text
   } from '@chakra-ui/react'
 import { useState } from "react"
 
-import logo from "../GsAssets/logo.png";
+import logo from "../assets/logo.png";
+import { Navigate, useNavigate } from "react-router-dom"
 
   // 
 
 const Signup=()=>{
  const[open,setOpen]=useState(false)
-
+  const navigate = useNavigate()
  const toggle=()=>{
   setOpen(!open)
  }
@@ -53,21 +57,20 @@ const handleSubmit=(e)=>{
   })
   .then((response)=>{
  console.log(response.data)
-
+    navigate("/login")
   })
   .catch((err)=>{
-    console.log(err)
+     console.log(err)
+   
   })
 }
-
-
 
     return(
       <Stack bg={"#f6f7f8"}>
         <Stack minH={'100vh'} direction={{ base: 'column', md: 'row' }} border={"1px solid lightgrey"} w={"85%"} margin="auto" borderRadius={"5px"} marginTop={"5px"} >
         <Flex  flex={1} align={'center'} justify={'center'}  bg={"white"} borderRadius={"5px"}>
           <Stack spacing={4} w={'65%'} maxW={'md'}>
-            <Image src={logo} height={"50px"} width={"162px"} marginLeft={{base: '2xl', md: '3xl',lg:"100px"}} marginTop={"40px"}/>
+            <Image src={logo} margin='auto' width={"162px"} marginLeft={{base: '2xl', md: '3xl',lg:"100px"}} marginTop={"0px"}/>
             <Heading fontSize={'1.625rem'} fontWeight={"16px"} color={"black"}>Create Your Account</Heading>
           <form onSubmit={handleSubmit}>
             <FormControl >
@@ -111,7 +114,7 @@ const handleSubmit=(e)=>{
               </Button>
               </Stack>
               <Divider orientation={'horizontal'}  color={"blue"}/>
-              <Heading fontSize={'14px'} fontWeight={"10px"} paddingBottom="20px">Already have an account?<Link to="/login"color="blue"> Login</Link></Heading>
+           <Heading fontSize={'14px'} fontWeight={"10px"} paddingBottom="20px">Already have an account?<Link onClick={()=>navigate("/login")} color="blue"> Login</Link></Heading>
              
             
           </Stack>

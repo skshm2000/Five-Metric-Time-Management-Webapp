@@ -41,7 +41,7 @@ const Navbar = () => {
   const [color, setColor] = useState(false);
 
   const changeColor = () => {
-    if (window.scrollY >= 100) {
+    if (window.scrollY >= 50) {
       setColor(true);
     } else {
       setColor(false);
@@ -205,7 +205,7 @@ const Navbar = () => {
             
           </Menu>
            
-          <Link to="#" className="psb">
+          <Link to="/pricing" className="psb">
             <h1>Pricing</h1>
           </Link>
           <Link to="#" className="psb">
@@ -214,10 +214,10 @@ const Navbar = () => {
           
         </div>
         <div className="entry">
-          <Link>
+          <Link to='/login'>
             <button className="login">Log In</button>
           </Link>
-          <Link>
+          <Link to='/signup'>
             <button className="signup">Sign In</button>
           </Link>
         </div>
