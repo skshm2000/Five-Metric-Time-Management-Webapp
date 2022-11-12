@@ -16,7 +16,8 @@
     
 }
 
-.trial{
+.trials{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     font-size:1.1rem;
     font-weight: bold;
     background-color: blue;
@@ -35,4 +36,16 @@
         margin:3rem 0 0 0;
         color: blue;
         font-weight:normal;
+    }
+    .sites{
+        display: grid;
+        grid-template-columns: repeat(8,2fr);
+        justify-content: space-evenly;
+        grid-gap: 1rem;
+        padding: 1rem;
+        margin: 1rem;
+    }
+    .sites img:hover{
+        border-radius:1.8rem;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
     }
