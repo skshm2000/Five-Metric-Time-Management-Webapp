@@ -14,10 +14,9 @@ import { Work } from './JPpages/Work';
 function App() {
   return (
     <div className="App">
-      {/* <Pricing/>
-      <Signup/>
-      <Login/> */}
-      <TimeBar />
+<Time/>
+<Task/>
+<Work/>
     </div>
   );
 }
