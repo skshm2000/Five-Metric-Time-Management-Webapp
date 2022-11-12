@@ -1,0 +1,32 @@
+{
+  "people": [
+    {
+      "password": "secret",
+      "username": "masai-school",
+      "teamName": "Masai Team",
+      "email": "masaischool@gmail.com",
+      "entries": []
+    },
+    {
+      "username": "sakshamSelwal",
+      "email": "sakshamselwal2000@gmail.com",
+      "password": "12345678",
+      "teamName": "",
+      "entries": [
+        {
+          "id": "456",
+          "title": "Entry Add Check",
+          "tasks": [],
+          "isActive": false
+        }
+      ]
+    },
+    {
+      "email": "rekha@gmail.com",
+      "password": "123456789",
+      "username": "rekha",
+      "teamName": "",
+      "entries": [{ "id": "456", "title": "Entry Add Check", "tasks": [] }]
+    }
+  ]
+}
