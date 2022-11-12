@@ -1,0 +1,51 @@
+.service{
+    text-align: center;
+    width: 100%;
+    margin: 0.5rem 0 ;
+}
+.service h1{
+    line-height: normal;
+    font-size:4rem;
+    font-weight: bold;
+   margin: 2rem;
+}
+.service p{
+    font-size:1.36rem;
+    font-weight: bold;
+    color: cadetblue;
+    
+}
+
+.trials{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    font-size:1.1rem;
+    font-weight: bold;
+    background-color: blue;
+    color: beige;
+    width:10%;
+    padding: 1rem;
+    border-radius: 5px;
+    margin: 2rem 2rem;
+    }
+    .explore{
+
+        display: flex;
+        justify-content: center;
+    }
+    .explore p{
+        margin:3rem 0 0 0;
+        color: blue;
+        font-weight:normal;
+    }
+    .sites{
+        display: grid;
+        grid-template-columns: repeat(8,2fr);
+        justify-content: space-evenly;
+        grid-gap: 1rem;
+        padding: 1rem;
+        margin: 1rem;
+    }
+    .sites img:hover{
+        border-radius:1.8rem;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    }

@@ -79,7 +79,7 @@ const Navbar = () => {
                   </p>
                 </div>
               </div>
-              <div className="">
+              <div className="feature">
                 <h1>Features</h1>
                 <div className="features">
                 <div>
@@ -211,9 +211,7 @@ const Navbar = () => {
           <Link to="#" className="psb">
             <h1>Support</h1>
           </Link>
-          <Link to="#" className="psb">
-            <h1>Blog</h1>
-          </Link>
+          
         </div>
         <div className="entry">
           <Link>
