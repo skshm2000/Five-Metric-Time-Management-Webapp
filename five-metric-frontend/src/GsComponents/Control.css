@@ -13,11 +13,10 @@
     padding: 1rem;
 }
 .working_time h1{
-   
     width: 100%;
     margin: 1rem;
     padding: 1rem;
-    font-size: 4rem;
+    font-size:3rem;
     font-weight: bold;
 }
 .working_time li{
@@ -30,9 +29,9 @@
     color: blue;
 }
 .trial{
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-font-size:1.1rem;
-font-weight: bold;
+box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+font-size:1rem;
+
 background-color: blue;
 color: beige;
 width:30%;

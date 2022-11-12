@@ -1,4 +1,5 @@
 .gssecond{
+   
     width: 100%;
     display: flex;
     justify-content:space-evenly;
@@ -13,16 +14,15 @@
 }
 .mytime_right h1{
     font-weight:bolder;
-    font-size:4.5rem;
+    font-size:4rem;
     width: 100%;
     color: blueviolet;
 
 }
 .mytime_right p{
     
-    font-size:1.3rem;
+    font-size:1rem;
     font-weight: bold;
-    width:45rem;
    margin: 0.5rem 0;
     text-align: start;
     letter-spacing: 1px;
@@ -47,7 +47,7 @@
 
 }
 .getstarted h2 {
-    font-size:1.5rem;
+    font-size:1rem;
     padding:0.5rem;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 
@@ -58,8 +58,8 @@
 
 }
 .apps{
+    width: 100%;
     height:10rem;
-    
     display: flex;
     justify-content: space-evenly;
     padding:2rem 0;

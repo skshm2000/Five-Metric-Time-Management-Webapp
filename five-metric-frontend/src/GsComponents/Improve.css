@@ -30,15 +30,16 @@
     color: blue;
 }
 .trial{
-font-size:1.1rem;
-font-weight: bold;
-background-color: blue;
-color: beige;
-width:20%;
-padding: 1rem;
-border-radius: 5px;
-margin: 2rem 2rem;
-}
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    font-size:1rem;
+    
+    background-color: blue;
+    color: beige;
+    width:30%;
+    padding: 1rem;
+    border-radius: 5px;
+    margin: 2rem 2rem;
+    }
 .activity_img img{
     
 width: 100%;

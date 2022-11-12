@@ -81,7 +81,7 @@ const Navbar = () => {
               </div>
               <div className="feature">
                 <h1>Features</h1>
-                <div className="features">
+                <div className="featuress">
                 <div>
                   <h1>
                     <FaClock size={35} color="gray" />
@@ -151,9 +151,9 @@ const Navbar = () => {
                   </p>
                 </div>
               </div>
-              <div className="">
+              <div className="featur">
                 <h1>Integrations</h1>
-                <div className="features">
+                <div className="featuress">
                 <div>
                   <h1>
                     <FaJira size={35} color="gray" />
