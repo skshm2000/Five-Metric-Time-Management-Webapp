@@ -56,8 +56,10 @@ const handleSubmit=(e)=>{
     password:user.password
   })
   .then((response)=>{
- console.log(response.data)
-    navigate("/login")
+  console.log(response.data)
+    if(response.data.error==false){
+      navigate("/login")
+    }
   })
   .catch((err)=>{
      console.log(err)

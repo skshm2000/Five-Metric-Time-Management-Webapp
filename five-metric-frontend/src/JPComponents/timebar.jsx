@@ -96,8 +96,8 @@ export const TimeBar=()=>{
 
     return (
       <>
-        <Flex w={{ md: "50%", lg: "100%" }} gap={"42%"}>
-          <Flex w={{ lg: "40%" }} gap={6}>
+        <Flex w={{ md: "50%", lg: "100%" }} gap={"30%"}>
+          <Flex w={{ lg: "50%" }} gap={6}>
             <Button  p={3} onClick={handleStart} borderRadius={"50%"} bg={"#17c22e"}>
               <Text fontSize={"18px"}>
                 <VscDebugStart color="white" />
@@ -108,7 +108,7 @@ export const TimeBar=()=>{
                 <BsFillStopFill color="#ed1212ad" />
               </Text>
             </Button>
-            <Text fontSize={"21px"}>My Time </Text>
+            <Text fontSize={"19px"}> My Time </Text>
             <Text>|</Text>
             <Box>
               <Menu>
@@ -171,7 +171,7 @@ export const TimeBar=()=>{
           {/* time bar */}
           <Box mt={2} pb={9}>
             <Box margin={"auto"} height={"15px"} width="90%" bg={"lightgrey"}>
-              <Flex gap={"115px"}>
+              <Flex gap={"10.5%"}>
                 <Box>
                   <Box
                     bg={"white"}

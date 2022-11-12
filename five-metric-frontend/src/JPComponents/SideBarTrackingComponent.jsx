@@ -47,8 +47,8 @@ const SideBarTrackingComponent = () => {
 
   const handleLogout = () =>{
    
-   localStorage.removeItem("token")
-    navigate("/login")
+    localStorage.removeItem("token")
+    navigate("/")
    
   }
     return (
@@ -83,12 +83,10 @@ const SideBarTrackingComponent = () => {
                       <Text className={styles.timeWorkIndividualText}>Tasks</Text>
                     </Flex>
                 </Link>
-                <Link to='/#' className={styles.timeWorkIndividualLink}>
                   <Flex className={styles.timeWorkIndividualFlex} align={'center'} >
                       <AiOutlineTeam className={styles.timeWorkIndividualIcon}/>
                       <Text className={styles.timeWorkIndividualText}>Team</Text>
                 </Flex>
-                </Link>
             </Box>
         <Divider />
         <Box className={styles.accordionBox}>
@@ -172,7 +170,7 @@ const SideBarTrackingComponent = () => {
         <Box className={styles.userProfileSection}>
             <Flex align={'center'} gap='20px' >
                 <CgProfile fontSize={'25px'}/>
-                <Text fontSize={'12px'} wordBreak='break-word' ><Heading size='md'>Token:</Heading>{userId}</Text>
+                <Text fontSize={'12px'} wordBreak='break-word' >Username:<Heading size='md'>{userId.split("@")[1]}</Heading></Text>
               </Flex>
               <Button _hover={'black'} onClick={handleLogout} marginTop={'15px'} width='150px' bgColor={'blue.400'} color='white'>Logout</Button>
         </Box>

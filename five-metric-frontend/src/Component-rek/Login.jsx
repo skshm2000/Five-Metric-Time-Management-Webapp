@@ -41,9 +41,9 @@ import logo from "../assets/logo.png";
       })
       .then((response)=>{
      console.log(response.data)
-     localStorage.setItem("token",JSON.stringify(response.data))
-      if(response.data.token){
-       navigate("/time")
+     if(response.data.token){
+      localStorage.setItem("token", (response.data.token))
+      navigate("/time")
       }
      
       })
@@ -77,9 +77,9 @@ import logo from "../assets/logo.png";
          <Stack p={6}>
           <form onSubmit={handleSubmit}>
              <FormControl  >
-            <FormLabel fontSize={"14px"} color={"#777e85"}>Email </FormLabel>
+            <FormLabel fontSize={"14px"} color={"#777e85"}>Username </FormLabel>
             <Input
-              placeholder="johnsmith@gmail.com"
+              placeholder="Enter Username"
               height={"34px"}
               _placeholder={{ color: 'gray.500' }}
               type="text"

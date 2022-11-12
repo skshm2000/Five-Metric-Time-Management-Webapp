@@ -19,11 +19,12 @@ export const Work = () => {
         <Box>
           <SideBarTrackingComponent />
         </Box>
+        {/* ml={{ base: "40px", sm: "55px", md: "100px", lg: "70px" }} */}
         <Box
-          ml={{ base: "40px", sm: "55px", md: "100px", lg: "30px" }}
-          width="100%"
+          ml="180px"
+          width="85%"
         >
-          <Text ml={"70px"} w={"120px"} fontSize="26px">
+          <Text ml={"70px"} w={"120px"} mt="20px" fontSize="26px">
             My Work
           </Text>
           <SimpleGrid
@@ -43,25 +44,25 @@ export const Work = () => {
               >
                 <Flex
                   w="100%"
-                  gap={{ base: "40px", sm: "275px", md: "360px", lg: "450px" }}
+                  gap={{ base: "40px", sm: "275px", md: "360px", lg: "50%" }}
                 >
-                  <Text fontSize={"17px"} fontWeight={500}>
+                  <Text fontSize={"17px"} w="35%" fontWeight={500}>
                     Current task
                   </Text>
-                  <Button mr={20} borderRadius={"55%"} bg={"#17c22e"}>
+                  <Button  w="10%" borderRadius={"55%"} bg={"#17c22e"}>
                     <VscDebugStart color="white" />
                   </Button>
                 </Flex>
                 <Text fontSize="14px" color={"grey"} margin="auto">
                   You can start tracking your time by click on green button
                 </Text>
-                <Flex mt={9} w="100%" gap="340px">
+                <Flex mt={9} w="100%" gap="65%">
                   <Text fontSize={"14px"}>Description</Text>
                   <Text fontSize={"12px"}>
                     <b>(Total time)</b>
                   </Text>
                 </Flex>
-                <Flex mt={2} w="100%" gap="340px">
+                <Flex mt={2} w="100%" gap="65%">
                   <Text fontSize={"12px"}>Project Name</Text>
                   <Text fontSize={"12px"}>
                     <b>
@@ -79,7 +80,7 @@ export const Work = () => {
                 p={5}
                 w={"100%"}
               >
-                <Flex gap={"450px"}>
+                <Flex gap={"75%"}>
                   <Text fontSize={"17px"} fontWeight={500}>
                     Overview
                   </Text>
@@ -88,7 +89,6 @@ export const Work = () => {
                     borderRadius={"70%"}
                     border={"1px solid lightgrey"}
                   >
-                    {" "}
                     <MdOutlineTimer />
                   </Text>
                 </Flex>{" "}
@@ -148,7 +148,7 @@ export const Work = () => {
                 borderRadius={7}
                 width={"100%"}
               >
-                <Flex width={"100px"} padding={"10px"} gap={"457px"}>
+                <Flex width={"100%"} padding={"10px"} gap={"79%"}>
                   <Text fontSize={"17px"} fontWeight={500}>
                     Calendar
                   </Text>
@@ -179,7 +179,7 @@ export const Work = () => {
                 borderRadius={7}
                 width={"100%"}
               >
-                <Flex width={"100px"} padding={"10px"} gap={"445px"}>
+                <Flex width={"100%"} padding={"10px"} gap={"75%"}>
                   <Box>
                     <Text w={"90px"} fontSize={"17px"} fontWeight={500}>
                       Due tasks

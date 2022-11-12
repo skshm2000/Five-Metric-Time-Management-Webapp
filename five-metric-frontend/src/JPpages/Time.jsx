@@ -73,7 +73,6 @@ export const Time = () => {
     // console.log(addTask);
     Dispatch(entryAdder(addTask));
   };
-  console.log(state);
   const handleAddTimeEntry = () => {
     setAdd(true);
   };
@@ -98,76 +97,12 @@ export const Time = () => {
 
   return (
     <>
-      <Flex w="100%">
-        <Box>
-          {" "}
+      <Flex w="100%" >
+        <Box w="12%">
           <SideBarTrackingComponent />
         </Box>
         
-        <Box mt={10} ml="100px"  width={"90%"} >
-          <Flex w={{ md: "50%", lg: "100%" }} gap={"42%"}>
-            <Flex alignItems={'center'} w={{ lg: "40%" }} gap={6}>
-              <Button width={'50px'}height='50px' borderRadius={"50%"} bg={"#17c22e"}>
-                <VscDebugStart color="white" />
-              </Button>
-              <Button bgColor={'white'} border='1px solid' borderRadius={"50%"} width='50px' height={'50px'}>
-                <BsFillStopFill fontSize={'20px'} color="grey" />
-              </Button>
-              <Text fontSize={"21px"}>My Time </Text>
-              <Text>|</Text>
-              <Box>
-                <Menu>
-                  <MenuButton
-                    color={"grey"}
-                    as={Button}
-                    rightIcon={<BsChevronDown />}
-                  >
-                    Select User or Team
-                  </MenuButton>
-                  <MenuList>
-                    <MenuItem></MenuItem>
-                    <MenuItem></MenuItem>
-                    <MenuItem></MenuItem>
-                    <MenuItem></MenuItem>
-                  </MenuList>
-                </Menu>
-              </Box>
-            </Flex>
-            <Box>
-              {/* <Calendar view="month" defaultValue={new Date()} /> */}
-              <Flex>
-                <VisuallyHidden>
-                  {" "}
-                  <input type="date" />
-                </VisuallyHidden>
-                <Text mt={2} fontSize={"20px"}>
-                  <BiCalendar />
-                </Text>
-                <Text fontSize={"22px"}>Today</Text>
-                <Button borderRadius={"50%"} bg={"white"} title="Previoues day">
-                  &lt;
-                </Button>
-                <Button
-                  title="Today"
-                  bg={"white"}
-                  borderRadius={"50%"}
-                  fontSize={20}
-                >
-                  {" "}
-                  &sdot;
-                </Button>
-                <Button
-                  title="Next Day"
-                  borderRadius={"50%"}
-                  bg={"white"}
-                  isDisabled
-                >
-                  &gt;
-                </Button>
-              </Flex>
-            </Box>
-          </Flex>
-          {/*  */}
+        <Box mt={10} ml="100px"  width={"75%"} >
           <TimeBar />
           <Box borderRadius={5} mt={10} border={"1px solid grey"}>
             <Flex p={"20px"} gap={10}>
@@ -178,7 +113,7 @@ export const Time = () => {
             <Divider />
             {state.entries.map((ele) => (
               <>
-                <Flex key={ele.id} gap={"50%"}>
+                <Flex key={ele.id} gap={"40%"}>
                   {/* adding task div */}
 
                   <Flex p={"20px"} gap={5}>

@@ -7,7 +7,7 @@
  .sidebarMainBox{
    
 
-    width: 100%;
+    width: 1%;
     height: 100vh;
     background-color: rgb(229, 232, 238);
       scroll-padding: 0px;
@@ -33,10 +33,10 @@
   display: none;
 } */
 .sidebarMainBoxOpen{
+  position: fixed;
   transform: translate(0%);
-  height: 120vh;
-  width: 130%;
-  
+  height: 127%;
+  width: 18%;
     background-color: rgb(229, 232, 238);
     /* overflow-y: scroll; */
     scroll-padding: 0px;
@@ -112,7 +112,7 @@ background: transparent;
 }
 .accordionBox{
     margin-top: 0px;
-    height: 200px;
+    height: 230px;
     overflow-y: scroll;
     border-top: 1px solid rgb(194, 194, 194);
     border-bottom: 1px solid rgb(194, 194, 194);
@@ -129,7 +129,7 @@ background: transparent;
 }
 .userProfileSection{
   margin-left: 10px;
-  margin-top: 180px;
+  margin-top: 20px;
   position: fixed;
 }
 

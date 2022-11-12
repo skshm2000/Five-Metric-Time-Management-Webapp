@@ -123,7 +123,7 @@ export const Task = () => {
         <Box>
           <SideBarTrackingComponent />
         </Box>
-        <Box mt={"50px"} ml={"90"} width={"79%"}>
+        <Box mt={"50px"} ml={"250px"} width={"75%"} >
           <Flex gap={5}>
             <Text fontSize={"26px"}>My Task</Text>
             <Text p={1} color={"lightgrey"} fontSize={"20px"}>
@@ -295,7 +295,7 @@ export const Task = () => {
           </Flex>
           {/* new task big Box */}
           <Box borderRadius={5} mt={5} border={"1px solid lightgrey"}>
-            <Flex p={4} gap={"690px"}>
+            <Flex p={4} gap={"45%"}>
               <Flex p={2} gap={3}>
                 <Box>
                   <Button
