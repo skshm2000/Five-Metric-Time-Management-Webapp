@@ -106,7 +106,7 @@ const Features = () => {
             ontoggle1()
         }} >
         <h1>
-                    <FaClock size={50} color="gray" />
+                    <FaClock size={30} color="gray" />
                     Time Tracking
                   </h1>
         </Button>
@@ -117,7 +117,7 @@ const Features = () => {
             ontoggle2()
         }} >
         <h1>
-                    <FaFolder size={50} color="gray" />
+                    <FaFolder size={30} color="gray" />
                     Project Management
                   </h1>
         </Button>
@@ -128,7 +128,7 @@ const Features = () => {
             ontoggle3()
         }} >
         <h1>
-                    <FaTshirt size={50} color="gray" />
+                    <FaTshirt size={30} color="gray" />
                     Team Management
                   </h1>
         </Button>
@@ -140,7 +140,7 @@ const Features = () => {
             ontoggle4()
         }} >
         <h1>
-                    <FaFileInvoice size={50} color="gray" />
+                    <FaFileInvoice size={30} color="gray" />
                     Billing & Invoicing
                   </h1>
         </Button>
@@ -152,7 +152,7 @@ const Features = () => {
             ontoggle5()
         }} >
         <h1>
-                    <FaChartBar size={50} color="gray" />
+                    <FaChartBar size={30} color="gray" />
                     Reporting
                   </h1>
         </Button>
@@ -164,7 +164,7 @@ const Features = () => {
             ontoggle6()
         }} >
         <h1>
-                    <FaPowerOff size={50} color="gray" />
+                    <FaPowerOff size={30} color="gray" />
                     Time Off
                   </h1>
         </Button>

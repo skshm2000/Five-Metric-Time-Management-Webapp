@@ -11,9 +11,9 @@
 
 }
 .review h1{
-    font-size:3rem;
+    font-size:2.5rem;
     font-weight:bold;
-    line-height: 8rem;
+line-height: 5rem;
 
     
 }
@@ -26,15 +26,14 @@
     font-size:3rem;
     font-weight:bold;
     color: blue;
-    margin-top: -2rem;
     margin-bottom: 2rem;
     
 }
 .business{
-    
-    width: 100%;
+    width:100%;
     text-align: center;
-    padding: 1.5rem;
+    margin: 1rem 0;
+    padding: 0.5rem;
     background-color: #f6f7f8;
 
 }
@@ -42,9 +41,18 @@
     font-size: 1.5rem;
 }
 .business_image{
-    
+    margin: 1rem 0;
+    width:100%;
     display: flex;
     justify-content: space-evenly;
-    height: 5rem;
-    margin-bottom: 3rem;
+}
+@media screen and  (max-width:1040px) {
+    .business_image{
+        margin: auto;
+        width: 90%;
+        gap: 20px;
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+    }
+    
 }

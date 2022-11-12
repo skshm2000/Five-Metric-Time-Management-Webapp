@@ -12,8 +12,8 @@ padding: 1rem;
 }
 .metric_details{
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-    width: 15%;
-    height: 15rem;
+    width:18%;
+    height: 18rem;
     border-radius: 5px;
     padding: 1rem;
     margin-bottom: 6rem;
@@ -54,4 +54,21 @@ padding: 1rem;
 .make_time h3{
     margin: 2rem 0 3rem 0;
     font-size: 1.3rem;
+}
+
+@media screen and  (max-width:1040px) {
+    .choose{
+        display: grid;
+        grid-template-columns: repeat(2 , 1fr);
+       width: 100%;
+       gap: 20px;
+    }
+    .metric_details{
+        width: 100%;
+        
+    }
+    .make_time h1{
+        width: 100%;
+        font-size: 2rem;
+    }
 }

@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom'
 import "./Control.css"
 const Control = () => {
   return (
-    <div className='control'>
+    <div className='control-p'>
       <div className='working_time'>
-        <h1>Take effective control of working time</h1>
+        <p className='take'>Take effective control of working time</p>
         <ul>
             <li>
                 timekeeping
@@ -37,9 +37,8 @@ const Control = () => {
         </ul>
         <button className='trial'>Start Free Trial</button>
       </div>
-      <div className='activity_img'>
-        <img src="https://tmetric.com/media/kssowlxe/img-activity-cases.svg" alt="myactivity" />
-      </div>
+        <img src="https://tmetric.com/media/kssowlxe/img-activity-cases.svg" alt="myactivity" className='activity_img'/>
+     
     </div>
   )
 }
