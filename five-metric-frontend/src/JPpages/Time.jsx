@@ -80,14 +80,14 @@ export const Time = () => {
           <SideBarTrackingComponent />
         </Box>
         
-        <Box mt={10} ml="100px"  width={"90%"}>
+        <Box mt={10} ml="100px"  width={"90%"} >
           <Flex w={{ md: "50%", lg: "100%" }} gap={"42%"}>
-            <Flex w={{ lg: "40%" }} gap={6}>
-              <Button borderRadius={"48%"} bg={"#17c22e"}>
+            <Flex alignItems={'center'} w={{ lg: "40%" }} gap={6}>
+              <Button width={'50px'}height='50px' borderRadius={"50%"} bg={"#17c22e"}>
                 <VscDebugStart color="white" />
               </Button>
-              <Button borderRadius={"47%"}>
-                <BsFillStopFill color="grey" />
+              <Button bgColor={'white'} border='1px solid' borderRadius={"50%"} width='50px' height={'50px'}>
+                <BsFillStopFill fontSize={'20px'} color="grey" />
               </Button>
               <Text fontSize={"21px"}>My Time </Text>
               <Text>|</Text>

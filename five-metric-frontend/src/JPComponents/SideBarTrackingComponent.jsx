@@ -11,11 +11,13 @@ import {
   Accordion, 
   Container, 
   Stack, 
-  Divider } from '@chakra-ui/react';
+  Divider, 
+  Heading,
+  useDisclosure} from '@chakra-ui/react';
 import React, { useState } from 'react';
 import {IoIosArrowBack} from "react-icons/io"
 import {IoAtCircleOutline,IoShirtOutline} from "react-icons/io5"
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import logo from "../assets/logo.png"
 import {BsClockHistory} from "react-icons/bs"
 import {BiCustomize ,BiNotepad,BiGridAlt} from "react-icons/bi"
@@ -31,10 +33,23 @@ import {CgProfile} from "react-icons/cg"
 
 const SideBarTrackingComponent = () => {
 
+  const state = useDisclosure(state=>state)
+  // console.log(state);
+  let userId  = localStorage.getItem('token');
+  // console.log(userId)
+  const [logout,setLogout] = useState(userId)
   const [sidebar, setSidebar] = useState(false);
-  console.log(sidebar);
+  const navigate = useNavigate()
+  // console.log(sidebar);
   const toggleSideBar = ()=>{
       setSidebar((prev)=>!prev)
+  }
+
+  const handleLogout = () =>{
+   
+   localStorage.removeItem("token")
+    navigate("/login")
+   
   }
     return (
 
@@ -50,19 +65,19 @@ const SideBarTrackingComponent = () => {
             </Flex>
 
             <Box className={styles.timeWorkMainBox}>
-                <Link to='/#' className={styles.timeWorkIndividualLink}>
+                <Link to='/time' className={styles.timeWorkIndividualLink}>
                     <Flex align={'center'} className={styles.timeWorkIndividualFlex}>
                         <BsClockHistory className={styles.timeWorkIndividualIcon}/>
                         <Text className={styles.timeWorkIndividualText}>Time</Text>
                     </Flex>
                 </Link>
-                <Link to='/#' className={styles.timeWorkIndividualLink}>
+                <Link to='/work' className={styles.timeWorkIndividualLink}>
                    <Flex className={styles.timeWorkIndividualFlex} align={'center'}>
                       <BiCustomize className={styles.timeWorkIndividualIcon}/>
                       <Text className={styles.timeWorkIndividualText}>My Work</Text>
                   </Flex>
                 </Link>
-                <Link to='/#' className={styles.timeWorkIndividualLink}>
+                <Link to='/task' className={styles.timeWorkIndividualLink}>
                     <Flex className={styles.timeWorkIndividualFlex} align={'center'}>
                       <BiNotepad className={styles.timeWorkIndividualIcon}/>
                       <Text className={styles.timeWorkIndividualText}>Tasks</Text>
@@ -157,8 +172,9 @@ const SideBarTrackingComponent = () => {
         <Box className={styles.userProfileSection}>
             <Flex align={'center'} gap='20px' >
                 <CgProfile fontSize={'25px'}/>
-                <Text>Name</Text>
+                <Text fontSize={'12px'} wordBreak='break-word' ><Heading size='md'>Token:</Heading>{userId}</Text>
               </Flex>
+              <Button _hover={'black'} onClick={handleLogout} marginTop={'15px'} width='150px' bgColor={'blue.400'} color='white'>Logout</Button>
         </Box>
         </Box>
 

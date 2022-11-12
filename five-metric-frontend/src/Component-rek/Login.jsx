@@ -15,8 +15,8 @@ import {FaMicrosoft }from "react-icons/fa"
 import {FaApple }from "react-icons/fa"
 import { useState } from 'react';
 import axios from"axios"
-import { useNavigate } from 'react-router-dom';
-import logo from "../GsAssets/logo.png";
+import { Link, Navigate, useNavigate } from 'react-router-dom';
+import logo from "../assets/logo.png";
   
   const Login=()=> {
     const navigate = useNavigate()
@@ -29,6 +29,9 @@ import logo from "../GsAssets/logo.png";
     setUser({...user,[name]:value})
     }
 
+    const handleNavigate = () =>{
+        navigate("/signup")
+    } 
     //console.log(user)
     const handleSubmit=(e)=>{
       e.preventDefault()
@@ -66,7 +69,7 @@ import logo from "../GsAssets/logo.png";
           my={12}>
             
             <Box backgroundColor={"#F2F5FC"} borderRadius="10px" >
-            <Image src={logo} height={"50px"} width={"162px"} marginLeft={"140px"} marginTop={"40px"} backgroundColor={"#F2F5FC"}/>
+            <Image src={logo}  width={"162px"} margin='auto' marginTop={"0px"} backgroundColor={"#F2F5FC"}/>
           <Heading lineHeight={1.1} fontSize={{ base: '2xl', md: '3xl',lg:"1.625rem" }}  fontWeight={"12px"} color={"black"} backgroundColor={"#F2F5FC"} pb="17px" mt="12px">
           Log into TMetric
           </Heading>
@@ -117,7 +120,7 @@ import logo from "../GsAssets/logo.png";
               <Divider orientation={'horizontal'}  colorScheme={"black"}/>
               <Flex justifyContent={"space-between"}>
                 <Text color={"#3070F0"} fontSize={"14px"}>Can't Log In?</Text>
-                <Text color={"#3070F0"} fontSize={"14px"}>Sign Up</Text>
+               <Text cursor={'pointer'} onClick={handleNavigate} color={"#3070F0"} fontSize={"14px"}>Sign Up</Text>
               </Flex>
           </Stack>
           </Stack>

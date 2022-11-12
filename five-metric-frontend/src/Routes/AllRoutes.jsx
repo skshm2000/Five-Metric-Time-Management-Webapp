@@ -7,7 +7,7 @@ import { Task } from '../JPpages/Task';
 import { Time } from '../JPpages/Time';
 import { Work } from '../JPpages/Work';
 import Pricing from './Pricing';
-
+import PrivateRoute from "../PrivateRoute/PrivateRoute"
 const AllRoutes = () => {
     return (
         <Routes>

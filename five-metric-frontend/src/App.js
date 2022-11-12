@@ -9,6 +9,7 @@ import SideBarTrackingComponent from './JPComponents/SideBarTrackingComponent';
 import { Box, Flex } from '@chakra-ui/react';
 import { Task } from './JPpages/Task';
 import { Work } from './JPpages/Work';
+import AllRoutes from './Routes/AllRoutes';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <Signup/>
       <Login/>
       <Work/> */}
+      <AllRoutes/>
     </div>
   );
 }
