@@ -1,0 +1,58 @@
+
+.review{
+    width: 100%;
+    
+    text-align: center;
+    padding: 10px;
+    background-color: #feeebc;
+    align-items: center;
+    
+    
+
+}
+.review h1{
+    font-size:2.5rem;
+    font-weight:bold;
+line-height: 5rem;
+
+    
+}
+.stars{
+    display: flex;
+    justify-content: center;
+    
+}
+.review h2{
+    font-size:3rem;
+    font-weight:bold;
+    color: blue;
+    margin-bottom: 2rem;
+    
+}
+.business{
+    width:100%;
+    text-align: center;
+    margin: 1rem 0;
+    padding: 0.5rem;
+    background-color: #f6f7f8;
+
+}
+.business h3{
+    font-size: 1.5rem;
+}
+.business_image{
+    margin: 1rem 0;
+    width:100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+@media screen and  (max-width:1040px) {
+    .business_image{
+        margin: auto;
+        width: 90%;
+        gap: 20px;
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+    }
+    
+}

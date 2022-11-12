@@ -1,79 +1,75 @@
 .navbr{
-    
+
     width: 100%;
-    height:13vh;
+    height:10vh;
     display: flex;
     border-radius: 2px;
     justify-content:space-between;
     background-color: #fff0b8;
     position:fixed;
+    z-index: 1;
     
 }
-.navbr .navbr-bg{
+.navbr-bg{
     background-color: whitesmoke;
     transition: 0.3s;
-    
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 9;
+    z-index: 1;
 }
 
 .logo img{
+    width:5rem;
+    height:3rem;
+    margin-left:3rem;
+    margin-top: -0.5rem;
     
-    width:15rem;
-    height:7rem;
-    padding: 1rem 1.5rem;
-    margin: 0 3rem;
-    color: #fff0b8;
-
 }
 .header_content{
     width: 50rem;
-    
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     margin: 0 auto;
 }
 .header_content button{
+    
     border: none;
     background-color: transparent;
-    font-size:1.5rem;
-    font-weight: bold;
+    font-size:1rem;
+    /* font-weight: bold; */
     color: rebeccapurple;
     padding: 0.5rem;   
     margin: 0;
 }
 .entry{
-   margin: 0;
     width:13rem;
-    padding: 0.5rem;
-    margin: 0.5rem;
+    margin: 1rem 0.5rem;
 }
-.entry .login{
-    font-size:1.5rem;
-    font-weight: bold;
-    padding: 0.5rem;   
-    margin: 0;
-    
-}
+
 .list{
-    margin-top:1.9rem;
-    width:100%;
-    height:35rem;
+    
     display: flex;
-    justify-content: space-evenly;
+    justify-content: flex-end;
+    width:80%;
+    padding:1rem;
+    height:32rem;
+    margin: 0.5rem 0;
     background-color: #d8ebff;
    
     
 }
-.overview > h1{
-    text-decoration: underline;
-    grid-gap: 2px;
-    padding: 20px;
+.overview{
+    width:30%;
+    padding:3rem 0 0 1rem;
+    
+    
+}
+.overview h1{
     color: grey;
-    font-size: 2.5rem;
+    font-size:1rem;
+    margin-bottom: 1rem;
     
 }
 .overview div h1{
@@ -81,53 +77,67 @@
     
 }
 .overview div p{
+    
+    width: 60%;
     color: rgb(155, 79, 79);
-    width: 90%;
-    font-size: 1.2rem;
-    margin: 0 1.5rem;
-    font-style: oblique;
+    font-size: 1rem;
+    margin: 0 1rem;
+    
 }
-.features > h1{
-    text-decoration: underline;
-    grid-gap: 2px;
-    padding: 20px;
+.feature{
+    
+    width: 60%;
+    padding:1rem;
+    
+}
+.feature{
+    
+    width: 50%;
+    margin-right: 5rem;
+    
+}
+.featuress h1{
     color: grey;
-    font-size: 2.5rem;
+    font-size:1rem;
+    display: flex;
+    grid-gap: 0.5rem;
+    justify-content: flex-start;
+    padding:1rem 1rem 0 0;
+    
     
 }
-.features div h1{
-    color: blueviolet;
-    
-}
-.features div p{
+.featuress div p{
     color: rgb(155, 79, 79);
-    width: 80%;
-    font-size: 1.3rem;
-    margin: 0 1.5rem;
-    font-style: oblique;
+    width: 60%;
+    color: rgb(155, 79, 79);
+    font-size: 1rem;
+    
 }
 
 .list h1{
     
-    grid-gap: 2px;
-    padding: 20px;
     font-weight: bold;
     font-size:1.5rem;
 
 }
-.features{
+.featuress{
     display: grid;
     grid-template-columns: repeat(3, 2fr);
-   width: 80%;
-    grid-gap:2px;
-    padding: 20px;
+
     /* color: grey;
     font-size: 2.5rem; */
     
 }
+.entry .login{
+    font-size:1rem;
+    /* font-weight: bold; */
+    padding-right: 1rem;  
+    margin: 0;
+    
+}
 .entry .signup{
     border: 1px solid rebeccapurple;
-    font-size:1.5rem;
+    font-size:1rem;
     font-weight: bold;
     color: rebeccapurple;
     padding: 0.5rem;   
@@ -135,37 +145,81 @@
     margin: 0;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
-.psb{
+.psb h1{
+    /* border: 1px solid red; */
     border: none;
     background-color: transparent;
-    font-size:1.5rem;
-    font-weight: bold;
+    font-size:1rem;
+    
     color: rgb(164, 116, 108);
     padding: 0.5rem;   
     margin: 0;
 }
 
 .view{
-    grid-gap: 2px;
+    
+    font-family: 'Abyssinica SIL', serif;
     padding: 20px;
     color: rgb(5, 34, 249);
-    font-size:1.5rem;
+    font-size:1.2rem;
 
 }
+.menu-icon{
+    display: none;
+}
 @media screen and (max-width: 1040px){
-    .navb{
+    .navbr-bg{
+        /* border: 1px solid red; */
+        display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top:90px;
+    right: 0px;
+    width:300px;
+    height:100;
+        /* background-color: #fff;
+        box-shadow: 0 40px 60px rgb(138, 241, 216); */
+        padding:40px 0 0 10px;
+    /* width: 100%;
+    height: 100vh;
+    transition: 2s;
+    background-image:url("https://www.meshpros.com/images/bg/hmk1.jpg");
+    position: absolute;
+    top: 0;
+    left:-100%;
+    z-index: -3;
+    transition: 0.3s; */
+    }
+    .header_content{
+        display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
-        width: 100%;
-        height: 100vh;
-        transition: 2s;
-        background-image:url("https://www.meshpros.com/images/bg/hmk1.jpg");
-        position: absolute;
-        top: 0;
-        left:-100%;
-        z-index: -3;
-        transition: 0.3s;
+    }
+    .entry{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .menu-icon{
+        display:block;
+    }
+    .header_content{
+        margin-bottom: 25px
+    }
+    .menu-icon i{
+        font-size: 24px;
+        cursor: pointer;
+    }
+    
+    .navbr{
+        width:60%;
+        border: 1px solid red;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
     }
 
 };
