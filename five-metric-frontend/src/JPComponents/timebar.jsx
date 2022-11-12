@@ -1,14 +1,17 @@
-import { Box,  Flex,  Input,  Text } from "@chakra-ui/react"
+import { Box,  Button,  Flex,  Input,  Menu,  MenuButton,  MenuItem,  MenuList,  Text, VisuallyHidden } from "@chakra-ui/react"
 import {MdOutlineGraphicEq} from "react-icons/md"
 import { useSelector, useDispatch } from "react-redux"
-import { useEffect } from "react"
+import { useEffect, useRef, useState } from "react"
 import { dataGetter, entryAdder, taskAdder, entryDeleter, taskDeleter, entryChanger, taskChanger } from "../redux/User Data/userDataActions"
-
+import { BsChevronDown } from "react-icons/bs";
+import { VscDebugStart } from "react-icons/vsc";
+import { BsFillStopFill } from "react-icons/bs";
+import { BiCalendar } from "react-icons/bi";
 export const TimeBar=()=>{
   
   let state = useSelector(state=>state)
   let dispatch = useDispatch()
-  console.log(state)
+  // console.log(state)
 
   useEffect(()=>{
     // let entryAdderType = {
@@ -66,14 +69,104 @@ export const TimeBar=()=>{
     // dispatch(taskChanger(taskChangerType))
   }, [])
 
+  const timeRef = useRef(null);
+  const [hours, setHours] = useState(new Date().getHours());
+  const [minutes, setMins] = useState(new Date().getMinutes());
+  const [seconds, setSecs] = useState(new Date().getSeconds());
+
+   	const startCounting = () => {
+      if (!timeRef.current) {
+        timeRef.current = window.setInterval(() => {
+          setHours(new Date().getHours());
+          setMins(new Date().getMinutes());
+          setSecs(new Date().getSeconds());
+        }, 1000);
+      }
+    };
+    const handleStart=()=>{
+   
+        startCounting();
+      
+    }
+      const handleStop=()=>{
+        clearInterval(timeRef.current)
+        timeRef.current=null
+      }
+
+
     return (
       <>
+        <Flex w={{ md: "50%", lg: "100%" }} gap={"42%"}>
+          <Flex w={{ lg: "40%" }} gap={6}>
+            <Button  p={3} onClick={handleStart} borderRadius={"50%"} bg={"#17c22e"}>
+              <Text fontSize={"18px"}>
+                <VscDebugStart color="white" />
+              </Text>
+            </Button>
+            <Button p={3} onClick={handleStop} fontSize={"18px"} borderRadius={"50%"}>
+              <Text>
+                <BsFillStopFill color="#ed1212ad" />
+              </Text>
+            </Button>
+            <Text fontSize={"21px"}>My Time </Text>
+            <Text>|</Text>
+            <Box>
+              <Menu>
+                <MenuButton
+                  color={"grey"}
+                  as={Button}
+                  rightIcon={<BsChevronDown />}
+                >
+                  Select User or Team
+                </MenuButton>
+                <MenuList>
+                  <MenuItem>{state.team}</MenuItem>
+                </MenuList>
+              </Menu>
+            </Box>
+          </Flex>
+          <Box>
+            {/* <Calendar view="month" defaultValue={new Date()} /> */}
+            <Flex>
+              <VisuallyHidden>
+                {" "}
+                <input type="date" />
+              </VisuallyHidden>
+              <Text mt={2} fontSize={"20px"}>
+                <BiCalendar />
+              </Text>
+              <Text fontSize={"22px"}>Today</Text>
+              <Button borderRadius={"50%"} bg={"white"} title="Previoues day">
+                &lt;
+              </Button>
+              <Button
+                title="Today"
+                bg={"white"}
+                borderRadius={"50%"}
+                fontSize={20}
+              >
+                {" "}
+                &sdot;
+              </Button>
+              <Button
+                title="Next Day"
+                borderRadius={"50%"}
+                bg={"white"}
+                isDisabled
+              >
+                &gt;
+              </Button>
+            </Flex>
+          </Box>
+        </Flex>
         <Box p={"20px"} borderRadius={5} mt={10} border={"1px solid grey"}>
           <Box width={"180px"}>
             {" "}
             {/* // time div */}
             <Text>Time</Text>
-            <Text>0 min</Text>
+            <Text>
+              {hours}:{minutes}:{seconds}
+            </Text>
           </Box>
           {/* time bar */}
           <Box mt={2} pb={9}>
@@ -82,7 +175,7 @@ export const TimeBar=()=>{
                 <Box>
                   <Box
                     bg={"white"}
-                     mt={3}
+                    mt={3}
                     title="12:00am"
                     fontSize={"4px"}
                     h={"10px"}
@@ -192,12 +285,8 @@ export const TimeBar=()=>{
                   </Text>
                 </Box>
                 <Box>
-                  <Box
-                    
-                  ></Box>
-                  <Text ml="-20px" fontSize={"9px"} w={12}>
-                  
-                  </Text>
+                  <Box></Box>
+                  <Text ml="-20px" fontSize={"9px"} w={12}></Text>
                 </Box>
               </Flex>
             </Box>
