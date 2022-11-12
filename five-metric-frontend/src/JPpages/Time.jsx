@@ -26,7 +26,7 @@ import {
   Thead,
   Tr,
 } from "@chakra-ui/react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { BsChevronDown } from "react-icons/bs";
 import { VscDebugStart } from "react-icons/vsc";
 import { BsFillStopFill } from "react-icons/bs";
@@ -36,7 +36,7 @@ import { TimeBar } from "../JPComponents/timebar";
 import { useSelector } from "react-redux";
 import SideBarTrackingComponent from "../JPComponents/SideBarTrackingComponent";
 import { useDispatch } from "react-redux";
-import { dataGetter, entryAdder } from "../redux/User Data/userDataActions";
+import { dataGetter, entryAdder, entryDeleter } from "../redux/User Data/userDataActions";
 // import styles from "../Styles/SideBarTrackingComponent.module.css";
 
 let EntryInitState = {
@@ -49,36 +49,30 @@ let EntryInitState = {
   projectName: "",
   duration: "",
 };
+//need   asignee and Date..
 export const Time = () => {
   
   const [add, setAdd] = useState(false);
-  const [task, setTask] = useState([]);
- 
+  // const [task, setTask] = useState([]);
   const [addTask, setAddTask] = useState(EntryInitState);
   const state = useSelector((state) => state);
   const Dispatch = useDispatch();
 
-  // const handleEntryAdder = () => {
-  //   setAddTask(addTask);
-  //   console.log(addTask);
-
-
-  // };
-
 const handleChange=(e)=>{
   const {name,value}=e.target
- 
-  setAddTask({...addTask,[name]:value})
+  const token = localStorage.getItem("token") || "1234@rekha"
+  setAddTask({...addTask,[name]:value, token})
   
 
 }
   const handleSubmit = (e) => {
     e.preventDefault();
-    setTask([...task, addTask]);
-      console.log(addTask);
-     
-  };
+    // setTask([...task, addTask]);
+      // console.log(addTask);
+      Dispatch(entryAdder(addTask))
 
+  };
+console.log(state)
   const handleAddTimeEntry = () => {
     setAdd(true);
   };
@@ -86,16 +80,26 @@ const handleChange=(e)=>{
     setAdd(false);
   };
 
+  useEffect(()=>{
+    Dispatch(dataGetter({ token: "234@rekha" }));
+  }, [])
+  
+  const handleDelete=(addTask)=>{
+    Dispatch(entryDeleter(addTask)).then((res)=>{
+      console.log(res)
+      
+    })
+    alert("You sure you want to Delete this entry")
+
+
+  }
 
   return (
     <>
       <Flex w="100%">
-        <Box>
-          {" "}
-          <SideBarTrackingComponent />
-        </Box>
+        <Box> <SideBarTrackingComponent /></Box>
 
-        <Box mt={10} ml="100px" width={"90%"}>
+        <Box mt={10} ml="80px" width={"80%"}>
           <Flex w={{ md: "50%", lg: "100%" }} gap={"42%"}>
             <Flex w={{ lg: "40%" }} gap={6}>
               <Button borderRadius={"48%"} bg={"#17c22e"}>
@@ -116,10 +120,8 @@ const handleChange=(e)=>{
                     Select User or Team
                   </MenuButton>
                   <MenuList>
-                    <MenuItem></MenuItem>
-                    <MenuItem></MenuItem>
-                    <MenuItem></MenuItem>
-                    <MenuItem></MenuItem>
+                    <MenuItem>{state.team}</MenuItem>
+                    
                   </MenuList>
                 </Menu>
               </Box>
@@ -167,22 +169,28 @@ const handleChange=(e)=>{
               <Button>Add break</Button>
             </Flex>
             <Divider />
-            <Flex gap={"50%"}>
-              {/* adding task div */}
-              <Flex p={"20px"} gap={5}>
-                <Checkbox size="lg"></Checkbox>
-                <Text>{task}</Text>
-              </Flex>
-              <Box>
-                <Flex p={"20px"} gap={10}>
-                  <Text></Text>
-                  <Text></Text>
-                  <Text>-</Text>
-                  <Text></Text>
-                  <Button>Start</Button>
+            {state.entries.map((ele) => (
+              <>
+                <Flex key={ele.id} gap={"50%"}>
+                  {/* adding task div */}
+
+                  <Flex p={"20px"} gap={5}>
+                    <Checkbox size="lg"></Checkbox>
+                    <Text>{ele.title}</Text>
+                  </Flex>
+                  <Box>
+                    <Flex p={"20px"} gap={10}>
+                      <Button onClick={handleDelete}>Delete</Button>
+                      <Text>{ele.tags}</Text>
+                      <Text>{ele.startTime}</Text>
+                      <Text>-</Text>
+                      <Text>{ele.endTime}</Text>
+                      <Button>Start</Button>
+                    </Flex>
+                  </Box>
                 </Flex>
-              </Box>
-            </Flex>
+              </>
+            ))}
           </Box>
           {/* Add entry form  */}
           <Box>
@@ -198,9 +206,7 @@ const handleChange=(e)=>{
                       mt={"16px"}
                       w={"400px"}
                       placeholder="Describe your task"
-                    >
-                      
-                    </Input>
+                    ></Input>
 
                     <TableContainer mt={"-40px"}>
                       <Table variant="unstyled">

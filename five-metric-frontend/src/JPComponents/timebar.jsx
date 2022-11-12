@@ -8,7 +8,7 @@ export const TimeBar=()=>{
   
   let state = useSelector(state=>state)
   let dispatch = useDispatch()
-  console.log(state)
+  // console.log(state)
 
   useEffect(()=>{
     // let entryAdderType = {
