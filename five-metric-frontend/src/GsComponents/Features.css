@@ -6,8 +6,9 @@
 }
 .tracking .heading{
     width: 60%;
-    margin: 2rem 0 2rem 25rem;
-    font-size: 4rem;
+    margin: auto;
+    margin-top: 25px;
+    font-size: 45px;
     text-align: center;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 

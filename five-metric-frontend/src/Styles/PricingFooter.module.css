@@ -8,10 +8,9 @@
 }
 .footerPriceButton{
     position: absolute;
-    margin-top: -280px;
     width: 200px;
-   margin-left: 0px;
-        
+    margin-left: 42%;
+    margin-top: -280px;
 }
 @media screen and (max-width:750px) {
     .footerPriceImage{

@@ -1,40 +1,47 @@
 .gssecond{
-   
-    width: 100%;
     display: flex;
-    justify-content:space-evenly;
+    width: 100%;
+    margin: auto;
+    justify-content: space-between;
+    padding-left: 130px;
+    padding-top: 100px;
+    padding-bottom: 50px;
+    align-items: center;
     background-color: #ffffff;
-    margin-top: 0.3rem;
-    
 }
+
 .mytime_right{
     width: 34%;
-    margin: 3rem ;
+    /* margin: 3rem ; */
+}
 
+.mytime_left {
+    margin-left: 20px;
+}
+
+.mytime_left img{
+    width:70%;
+    /* margin:2rem 3rem 1rem 0; */
 }
 .mytime_right h1{
     font-weight:bolder;
-    font-size:4rem;
+    font-size:55px;
     width: 100%;
-    color: blueviolet;
-
+    color: black;
 }
 .mytime_right p{
-    
-    font-size:1rem;
+    font-size:16px;
     font-weight: bold;
    margin: 0.5rem 0;
     text-align: start;
     letter-spacing: 1px;
 }
 .emailinput{
-
    border: transparent;
    margin: 0.5rem 0;
    
 }
 .getstarted{
-    
     display : flex;
 }
 .getstarted button {
@@ -44,17 +51,12 @@
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     background-color: blue;
     margin: 0rem 1.5rem 1.5rem 1.5rem;
-
+    color: white;
 }
 .getstarted h2 {
     font-size:1rem;
     padding:0.5rem;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-
-}
-.mytime_left img{
-    width:100%;
-    margin:2rem 3rem 1rem 0;
 
 }
 .apps{

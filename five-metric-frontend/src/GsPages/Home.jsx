@@ -14,7 +14,8 @@ import WhyChoose from '../GsComponents/WhyChoose';
 const Home = () => {
   return (
     <>
-      <Navbar /><br /><br /><br /><br /><br />
+      <Navbar />
+      {/* <br /><br /><br /><br /><br /> */}
       <MyTime />
       <Features />
       <Control />
@@ -25,7 +26,7 @@ const Home = () => {
       <Review />
       <WhyChoose />
       <Footer />
-      <Bottom />
+      {/* <Bottom /> */}
     </>
       
   )

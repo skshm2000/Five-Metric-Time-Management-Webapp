@@ -97,7 +97,7 @@ const Features = () => {
     
 
     return (
-        <div className='tracking'>
+      <div className='tracking'>
         <h1 className='heading'>Best time tracking features for your business</h1>
       <div className='trackingfeatures'>
       

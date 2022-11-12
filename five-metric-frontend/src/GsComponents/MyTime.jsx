@@ -24,7 +24,7 @@ const MyTime = () => {
         </InputGroup>
         <div className="getstarted">
             <Button className="getstarted_btn">Get Started</Button>
-            <h2>Fully Functional 30-Day Trail</h2>
+            <h2>Fully Functional 30-Day Trial</h2>
         </div>
       </div>
       <div className="mytime_left">

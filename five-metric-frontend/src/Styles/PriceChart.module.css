@@ -49,19 +49,23 @@
 }
 .priceSavingText{
     background-color: #c8f1df;
+    margin: auto;
     color: #006237;
     height: 40px;
-    margin-top: 50px;
+    margin-top: 20px;
     width: 90%;
     position: relative;
     z-index: 10px;
-    margin: auto;
     border-radius: 10px;
-    
+    justify-content: center;
+    align-items: center;
 }
-.priceSavingText h1{
-    margin-top: 20px;
 
+
+.priceSavingText>h1{
+    display: block;
+    margin-top: 20px;
+    align-self: center;
 }
 .designationText {
     letter-spacing: 3px;

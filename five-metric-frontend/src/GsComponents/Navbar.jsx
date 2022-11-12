@@ -29,14 +29,16 @@ import {
 
   FaTshirt,
 } from "react-icons/fa";
-import logo from "../GsAssets/logo.png";
+import logo from "../assets/logo.png";
 import {
   Button,
   Menu,
   MenuButton,
   MenuList,
 } from "@chakra-ui/react";
-const Navbar = () => {
+
+
+const Navbar = ({page=false}) => {
   const [click, setClick] = useState(false);
   const [color, setColor] = useState(false);
 
