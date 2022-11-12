@@ -2,8 +2,8 @@ import axios from"axios"
 import {FcGoogle, }from "react-icons/fc"
 import {FaMicrosoft }from "react-icons/fa"
 import {FaApple }from "react-icons/fa"
-
-
+import {AiOutlineEye }from "react-icons/ai"
+import {AiOutlineEyeInvisible }from "react-icons/ai"
 
 import {
     Button,
@@ -17,14 +17,24 @@ import {
     Stack,
     Image,
     Divider,
+    Box,
+    InputGroup,
+    InputRightElement
   } from '@chakra-ui/react'
 import { useState } from "react"
+
+import logo from "../GsAssets/logo.png";
+
   // 
 
 const Signup=()=>{
+ const[open,setOpen]=useState(false)
 
+ const toggle=()=>{
+  setOpen(!open)
+ }
   const [user,setUser]=useState({
-    name:"",
+    username:"",
     email:"",
     password:""
 })
@@ -36,9 +46,14 @@ setUser({...user,[name]:value})
 
 const handleSubmit=(e)=>{
   e.preventDefault()
-  axios.post("",user)
+  axios.post("https://tender-hen-suspenders.cyclic.app/signup",{
+    username:user.username,
+    email:user.email,
+    password:user.password
+  })
   .then((response)=>{
-console.log(response.data)
+ console.log(response.data)
+
   })
   .catch((err)=>{
     console.log(err)
@@ -52,12 +67,12 @@ console.log(response.data)
         <Stack minH={'100vh'} direction={{ base: 'column', md: 'row' }} border={"1px solid lightgrey"} w={"85%"} margin="auto" borderRadius={"5px"} marginTop={"5px"} >
         <Flex  flex={1} align={'center'} justify={'center'}  bg={"white"} borderRadius={"5px"}>
           <Stack spacing={4} w={'65%'} maxW={'md'}>
-            <Image src="https://id.tmetric.com/images/tmetric_logo_and_text.svg" height={"49px"} width={"162px"} marginLeft={{base: '2xl', md: '3xl',lg:"100px"}} marginTop={"40px"}/>
+            <Image src={logo} height={"50px"} width={"162px"} marginLeft={{base: '2xl', md: '3xl',lg:"100px"}} marginTop={"40px"}/>
             <Heading fontSize={'1.625rem'} fontWeight={"16px"} color={"black"}>Create Your Account</Heading>
           <form onSubmit={handleSubmit}>
             <FormControl >
               <FormLabel fontSize={"14px"} color={"#777e85"}> User Name</FormLabel>
-              <Input type="text" height={"34px"} placeholder={"John Smith"} value={user.name} name="name" onChange={handleChange}/>
+              <Input type="text" height={"34px"} placeholder={"John Smith"} value={user.username} name="username" onChange={handleChange}/>
             </FormControl>
             <FormControl >
               <FormLabel fontSize={"14px"} color={"#777e85"}>Email </FormLabel>
@@ -65,17 +80,21 @@ console.log(response.data)
             </FormControl>
             <FormControl >
               <FormLabel fontSize={"14px"} color={"#777e85"}>Password</FormLabel>
-              <Input type="password" height={"34px"}  placeholder="Enter your password" value={user.password} name="password" onChange={handleChange}/>
+              <InputGroup>
+              <Input type={(open===false)?"password":"text"} height={"34px"}  placeholder="Enter your password" value={user.password} name="password" onChange={handleChange}/>
+            <InputRightElement><Box>{(open===false)? <AiOutlineEyeInvisible onClick={toggle} />:<AiOutlineEye onClick={toggle}/>}</Box></InputRightElement>  
+              </InputGroup>
+             
             </FormControl>
 
               <Stack
                 direction={{ base: 'column', sm: 'row' }}
                 align={'start'}
                 justify={'space-between'}>
-                <Checkbox fontSize={"14px"} color={"#777e85"}>I accept <span style={{color:"#3070F0",fontSize:"14px",fontWeight:"600"}}>Terms of Service</span></Checkbox>
+                <Checkbox fontSize={"14px"} color={"#777e85"} marginTop={"5px"}>I accept <span style={{color:"#3070F0",fontSize:"14px",fontWeight:"600"}}>Terms of Service</span></Checkbox>
               
               </Stack>
-              <Button colorScheme={'blue'} variant={'solid'} height={"34px"} fontSize={"14px"} w={"100%"} marginTop="20px" type="submit">
+              <Button colorScheme={'blue'} variant={'solid'} height={"34px"} fontSize={"14px"} w={"100%"} marginTop="20px" type="submit" >
                 Sign Up
               </Button>
         </form>
