@@ -66,7 +66,7 @@ import logo from "../GsAssets/logo.png";
           my={12}>
             
             <Box backgroundColor={"#F2F5FC"} borderRadius="10px" >
-            <Image src={logo} height={"50px"} width={"162px"} marginLeft={"140px"} marginTop={"40px"} backgroundColor={"#F2F5FC"}/>
+            <Image src="Minimalist Boho Tan Professional Logo.png" width={"30%"}height={"90px"} bg={"black"} marginLeft={"150px"} marginTop={"40px"} backgroundColor={"#F2F5FC"}/>
           <Heading lineHeight={1.1} fontSize={{ base: '2xl', md: '3xl',lg:"1.625rem" }}  fontWeight={"12px"} color={"black"} backgroundColor={"#F2F5FC"} pb="17px" mt="12px">
           Log into TMetric
           </Heading>
@@ -74,9 +74,9 @@ import logo from "../GsAssets/logo.png";
          <Stack p={6}>
           <form onSubmit={handleSubmit}>
              <FormControl  >
-            <FormLabel fontSize={"14px"} color={"#777e85"}>Email </FormLabel>
+            <FormLabel fontSize={"14px"} color={"#777e85"}>User Name </FormLabel>
             <Input
-              placeholder="johnsmith@gmail.com"
+              placeholder="Enter your username"
               height={"34px"}
               _placeholder={{ color: 'gray.500' }}
               type="text"

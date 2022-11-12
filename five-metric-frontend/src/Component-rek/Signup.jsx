@@ -19,7 +19,8 @@ import {
     Divider,
     Box,
     InputGroup,
-    InputRightElement
+    InputRightElement,
+    Text
   } from '@chakra-ui/react'
 import { useState } from "react"
 
@@ -29,6 +30,7 @@ import logo from "../GsAssets/logo.png";
 
 const Signup=()=>{
  const[open,setOpen]=useState(false)
+ const [error,setError]=useState(false)
 
  const toggle=()=>{
   setOpen(!open)
@@ -46,6 +48,9 @@ setUser({...user,[name]:value})
 
 const handleSubmit=(e)=>{
   e.preventDefault()
+  if(user.password.length<8){
+    setError(true)
+  }
   axios.post("https://tender-hen-suspenders.cyclic.app/signup",{
     username:user.username,
     email:user.email,
@@ -67,12 +72,13 @@ const handleSubmit=(e)=>{
         <Stack minH={'100vh'} direction={{ base: 'column', md: 'row' }} border={"1px solid lightgrey"} w={"85%"} margin="auto" borderRadius={"5px"} marginTop={"5px"} >
         <Flex  flex={1} align={'center'} justify={'center'}  bg={"white"} borderRadius={"5px"}>
           <Stack spacing={4} w={'65%'} maxW={'md'}>
-            <Image src={logo} height={"50px"} width={"162px"} marginLeft={{base: '2xl', md: '3xl',lg:"100px"}} marginTop={"40px"}/>
-            <Heading fontSize={'1.625rem'} fontWeight={"16px"} color={"black"}>Create Your Account</Heading>
+            <Image src="Minimalist Boho Tan Professional Logo.png"height={"90px"}  marginBottom={"-30px"} width={"30%"} marginLeft={{base: '2xl', md: '3xl',lg:"140px"}} />
+            <Heading fontSize={'1.625rem'} fontWeight={"16px"} color={"black"} >Create Your Account</Heading>
           <form onSubmit={handleSubmit}>
             <FormControl >
               <FormLabel fontSize={"14px"} color={"#777e85"}> User Name</FormLabel>
               <Input type="text" height={"34px"} placeholder={"John Smith"} value={user.username} name="username" onChange={handleChange}/>
+         
             </FormControl>
             <FormControl >
               <FormLabel fontSize={"14px"} color={"#777e85"}>Email </FormLabel>
@@ -84,7 +90,7 @@ const handleSubmit=(e)=>{
               <Input type={(open===false)?"password":"text"} height={"34px"}  placeholder="Enter your password" value={user.password} name="password" onChange={handleChange}/>
             <InputRightElement><Box>{(open===false)? <AiOutlineEyeInvisible onClick={toggle} />:<AiOutlineEye onClick={toggle}/>}</Box></InputRightElement>  
               </InputGroup>
-             
+              {error ? <Text fontSize="xs" color="red" textAlign={"start"}>Password must have 8 characters</Text>:""}
             </FormControl>
 
               <Stack
@@ -100,7 +106,7 @@ const handleSubmit=(e)=>{
         </form>
               <Divider orientation={'horizontal'}/>
               <Stack>
-              <Button colorScheme={"none"} border={"1px solid lightgrey"} _hover={{bg: '#e2e6eb',}} leftIcon={<FcGoogle fontSize={"20px"} /> } textColor={"#777E85"} variant={'solid'} height={"34px"} fontSize={"14px"}>
+              <Button colorScheme={"none"} border={"1px solid lightgrey"} _hover={{bg: '#e2e6eb',}} leftIc4on={<FcGoogle fontSize={"20px"} /> } textColor={"#777E85"} variant={'solid'} height={"34px"} fontSize={"14px"}>
               Sign Up with Google
               </Button>
               <Button colorScheme={"none"} border={"1px solid lightgrey" } _hover={{bg: '#e2e6eb',}} leftIcon={<FaMicrosoft  fontSize={"20px"}/>} textColor={"#777E85"} variant={'solid'} height={"34px"} fontSize={"14px"}>
