@@ -2,8 +2,8 @@ import axios from"axios"
 import {FcGoogle, }from "react-icons/fc"
 import {FaMicrosoft }from "react-icons/fa"
 import {FaApple }from "react-icons/fa"
-
-
+import {AiOutlineEye }from "react-icons/ai"
+import {AiOutlineEyeInvisible }from "react-icons/ai"
 
 import {
     Button,
@@ -17,14 +17,22 @@ import {
     Stack,
     Image,
     Divider,
+    Box,
+    InputGroup,
+    InputRightElement
   } from '@chakra-ui/react'
 import { useState } from "react"
 
 import logo from "../GsAssets/logo.png";
+
   // 
 
 const Signup=()=>{
- 
+ const[open,setOpen]=useState(false)
+
+ const toggle=()=>{
+  setOpen(!open)
+ }
   const [user,setUser]=useState({
     username:"",
     email:"",
@@ -72,7 +80,11 @@ const handleSubmit=(e)=>{
             </FormControl>
             <FormControl >
               <FormLabel fontSize={"14px"} color={"#777e85"}>Password</FormLabel>
-              <Input type="password" height={"34px"}  placeholder="Enter your password" value={user.password} name="password" onChange={handleChange}/>
+              <InputGroup>
+              <Input type={(open===false)?"password":"text"} height={"34px"}  placeholder="Enter your password" value={user.password} name="password" onChange={handleChange}/>
+            <InputRightElement><Box>{(open===false)? <AiOutlineEyeInvisible onClick={toggle} />:<AiOutlineEye onClick={toggle}/>}</Box></InputRightElement>  
+              </InputGroup>
+             
             </FormControl>
 
               <Stack
