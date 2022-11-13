@@ -355,7 +355,7 @@ export const Task = () => {
                           </AccordionButton>
                         </h2>
                         <AccordionPanel pb={4}>
-                          <Flex width={"50%"} margin="auto" gap={"100px"}>
+                          <Flex width={"50%"} margin="auto" gap={"80px"}>
                             <Box>{ele.desc}</Box>
                             <Box>
                               <Flex  w="100%" gap={"60px"}>
@@ -396,7 +396,7 @@ export const Task = () => {
               {openbox ? (
                 <Box borderLeft={"1px solid lightgrey"} p="25px" width={"100%"}>
                   <FormControl>
-                    <Flex  gap={"200px"}>
+                    <Flex  gap={"150px"}>
                       <Flex gap={3}>
                         <Button border={"1px soild grey"} borderRadius="47%">
                           <VscDebugStart color="green" />
