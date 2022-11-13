@@ -68,7 +68,7 @@ Created a functional website which tracks time for your work. Fist users lands t
  - **[Janhavi Prabhu](https://github.com/Janhaviprabhu)**
  - **[Rekha Yadav](https://github.com/Rekha0980)**
  - **[Rushikesh Patil](https://github.com/rushi6457)**
- - **[Gaurav Sudanshi](https://github.com/GauravSudhanshu)**
+ - **[Gaurav Sudhanshu](https://github.com/GauravSudhanshu)**
 
 
 
