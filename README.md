@@ -38,3 +38,33 @@ Created a functional website which tracks time for your work. Fist users lands t
 </ol>
 
 ## Some Snapshots Of project
+
+### Home Page
+![Screenshot (26)](https://user-images.githubusercontent.com/97351159/201516132-0c3a6515-8808-49d3-831c-b43ccf09f2ff.png)
+![Screenshot (27)](https://user-images.githubusercontent.com/97351159/201516189-80f658aa-ed45-4492-93db-87bfec88358b.png)
+
+### SignUp
+![Screenshot (28)](https://user-images.githubusercontent.com/97351159/201516279-a15c9dc7-9fc7-4565-8813-4922ddc83d42.png)
+
+### Login 
+![Screenshot (29)](https://user-images.githubusercontent.com/97351159/201516315-6815bcfc-e553-4e68-b7bf-0567b711cac3.png)
+
+### My Time (Dashbord)
+![Screenshot (30)](https://user-images.githubusercontent.com/97351159/201516533-bed0b362-00d4-4c16-9300-e6bc39edaa3a.png)
+
+### My Tasks
+![Screenshot (32)](https://user-images.githubusercontent.com/97351159/201516750-d28efb25-b676-4b5a-bc45-fa53371d7ff1.png)
+
+### My Work
+![Screenshot (33)](https://user-images.githubusercontent.com/97351159/201516794-14c069c0-0e8d-4cae-9ad2-173afa7e4b8d.png)
+
+
+## Developers
+<a>Saksham Shelwal</a>
+<a>Janhavi Pravhu</a>
+<a>Rekha Yadav</a>
+<a>Rushikesh Patil</a>
+<a>Gaurav Sudanshu</a>
+
+
+
