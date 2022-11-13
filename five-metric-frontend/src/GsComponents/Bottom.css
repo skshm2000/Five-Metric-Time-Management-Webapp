@@ -1,16 +1,17 @@
 .bottom{
     width: 100%;
-    height: 5rem;
+   height: max-content;
     display: flex;
     border-radius: 2px;
     justify-content:space-between;
     /* border: 1px solid red; */
-    padding:2rem 1rem;
+    
     background-color: antiquewhite;
     /* position:fixed; */
     position: -webkit-sticky; /* Safari */
   position: sticky;
   bottom: 0;
+  padding: 10px;
 }
 .bottom a{
     color: blue;
@@ -21,18 +22,25 @@
     width: 5rem;
     height: 2.5rem;
     border-radius: 5px;
-    margin: 0 0 2rem 0;
+    
 
 }
 @media screen and (max-width: 1040px){
     .bottom{
-       
+       border:px solid red;
         display:grid;
         grid-template-columns: repeat(2,1fr);
         width: 100%;
-        grid-gap: 1rem;
         position: sticky;
-gap: 50px;
+        gap: 50px;
+        
         top: 0;
+    }
+    .bottom button{
+        margin-top: auto;
+    
+    }
+    .bottom h1{
+        text-align: justify;
     }
 }

@@ -4,8 +4,8 @@ import { Flex, UnorderedList, ListItem, Box, Button, Text } from '@chakra-ui/rea
 
 const Improve = () => {
   return (
-      <Flex>
-      <Box w="35%" pl="40px" pt="30px"> 
+      <Flex className='improve'>
+      <Box w="35%" pl="40px" pt="30px" className='improve_text'> 
         <Text fontSize="40px" fontWeight="bold">Improve attendance with time off tracking software</Text>
        
         <UnorderedList mt="25px">

@@ -4,13 +4,13 @@ import { Box, Text, Flex, UnorderedList, ListItem, Button, Spacer } from '@chakr
 
 const Achieve = () => {
   return (
-    <Flex>
+    <Flex className='achieve'>
       <Box w="65%">
         <img src="https://tmetric.com/media/lltfuaaz/img-report-cases-svg.svg" alt="myactivity"/>
       </Box>
      <Spacer></Spacer>
-      <Box w="35%">
-        <Text fontSize="40px" fontWeight="bold">Achieve high profitability by using time tracker</Text>
+      <Box w="35%" className='achieve_box'>
+        <Text fontSize="40px" fontWeight="bold" className='achieve_text'>Achieve high profitability by using time tracker</Text>
 
         <UnorderedList mt='25px' fontSize="18px">
             <ListItem>

@@ -5,8 +5,8 @@ import { Flex, Text, Box, Button, UnorderedList, ListItem } from '@chakra-ui/rea
 
 const Control = () => {
   return (
-    <Flex>
-      <Box p="4%" w="50%">
+    <Flex className='control'>
+      <Box p="4%" w="50%" className='control_text'>
         <Text fontSize="45px" fontWeight="bold">Take effective control of working time</Text>
         <UnorderedList>
             <ListItem>

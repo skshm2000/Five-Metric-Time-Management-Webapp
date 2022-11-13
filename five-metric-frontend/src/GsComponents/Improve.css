@@ -45,10 +45,10 @@ width: 100%;
 margin: 5rem 0rem 2rem 1rem;
 }
 @media screen and (max-width: 1040px) {
-    .control-p{
-        display:grid;
-        grid-template-columns: repeat(1 , 1fr);
-        grid-template-rows: repeat(2,1fr);
+    .improve{
+        display: flex;
+        flex-direction:column-reverse;
+        gap:  20px;
         width: 100%;
        
         
@@ -56,24 +56,22 @@ margin: 5rem 0rem 2rem 1rem;
 
     }
  
-    .working_time h1{
+    .improve_text{
         font-size:1px;
         width: 100%;
-       
+       margin-left:3%;
         
         
     }
-    .working_time p{
-        font-size:25px;
+    .improve li{
+        text-align: justify;
+        font-size:13px;
+        /* text-align: center; */
+        width: 200%;
+        margin-left:6%;
     }
-    .trial{
-        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-        font-size:0.5rem;
-        border: 1px solid red;
-        background-color: blue;
-        color: beige;
-        width:100%;
-        border-radius: 5px;
+    .improve button{
+       margin-left: -8px;
         }
     
 }

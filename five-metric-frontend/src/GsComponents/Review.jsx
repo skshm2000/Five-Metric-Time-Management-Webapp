@@ -22,7 +22,7 @@ const Review = () => {
       </div>
       <div className='business'>
         <Text fontSize="20px">Used and trusted by 3000+ businesses in the world</Text>
-        <Flex gap="20px">
+        <Flex gap="20px" className='reviews_image'>
           <img src="https://tmetric.com/media/wlmpffzm/logo_business_endygo.png" alt="" />
           <img src="https://tmetric.com/media/0ddgehbk/logo_business_itsyndicate.png" alt="" />
           <img src="https://tmetric.com/media/rmvok0xh/logo_business_050media.png" alt="" />

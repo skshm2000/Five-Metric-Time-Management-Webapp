@@ -24,7 +24,7 @@ const Services = () => {
         <Button variant="solid" colorScheme="blue">Start Free Trial</Button>
         <Text color="rgb(49, 130, 206)">Explore All Integrations</Text>
       </Flex>
-      <Flex alignSelf='center'>
+      <Flex alignSelf='center' className='services_image'>
       <img src={gsuite} alt="" />
       <img src={msoffice} alt="" />
       <img src={googlekeep} alt="keep" />
@@ -34,7 +34,7 @@ const Services = () => {
       <img src={jira} alt="" />
       <img src={gitlab} alt="" />
       </Flex>
-      <Flex alignSelf='center'>
+      <Flex alignSelf='center' className='services_lowimage'>
       <img src={docs} alt="" />
       <img src={trello} alt="" />
       <img src={redmine} alt="" />

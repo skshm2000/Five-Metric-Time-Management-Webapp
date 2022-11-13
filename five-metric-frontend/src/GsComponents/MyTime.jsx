@@ -14,9 +14,9 @@ import '../GsComponents/Mytime.css';
 const MyTime = () => {
   return (
     <> 
-    <Flex pt="90px" backgroundColor="#fff0b8" pb="50px" justifyContent="space-around">
-      <Stack w="40%" alignContent="center" justifyContent="center">
-        <Heading fontSize="60px">Empower your Team with Time Tracking</Heading>
+    <Flex pt="90px" backgroundColor="#fff0b8" pb="50px" justifyContent="space-around" className="gssecond">
+      <Stack w="40%" alignContent="center" justifyContent="center" classname="gssecond_stack">
+        <Heading classname="gssecond_heading">Empower your Team with Time Tracking</Heading>
         <Text fontSize="22px" fontWeight="bolder">5Metric streamlines your team work so you can focus on what matters</Text>
         <InputGroup>
           <InputLeftAddon children={<FaMailBulk size={35} color="blue" />} />
