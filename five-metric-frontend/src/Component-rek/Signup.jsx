@@ -26,13 +26,14 @@ import {
   } from '@chakra-ui/react'
 import { useState } from "react"
 
-import logo from "../assets/logo.png";
+import logo from "../GsAssets/navbarLogo.jpg";
 import { Navigate, useNavigate } from "react-router-dom"
 
   // 
 
 const Signup=()=>{
- const[open,setOpen]=useState(false)
+ const [open,setOpen]=useState(false)
+ const [error, changeError] = useState("")
   const navigate = useNavigate()
  const toggle=()=>{
   setOpen(!open)
@@ -50,20 +51,22 @@ setUser({...user,[name]:value})
 
 const handleSubmit=(e)=>{
   e.preventDefault()
-  axios.post("https://tender-hen-suspenders.cyclic.app/signup",{
+  axios.post("https://five-metric.onrender.com/signup",{
     username:user.username,
     email:user.email,
     password:user.password
   })
   .then((response)=>{
   console.log(response.data)
-    if(response.data.error==false){
+    if(response.data.message=='Registered Successfully'){
       navigate("/login")
+    }
+    if(response.data.error!=false) {
+      changeError(response.data.error)
     }
   })
   .catch((err)=>{
      console.log(err)
-   
   })
 }
 
@@ -71,7 +74,7 @@ const handleSubmit=(e)=>{
       <Stack bg={"#f6f7f8"}>
         <Stack minH={'100vh'} direction={{ base: 'column', md: 'row' }} border={"1px solid lightgrey"} w={"85%"} margin="auto" borderRadius={"5px"} marginTop={"5px"} >
         <Flex  flex={1} align={'center'} justify={'center'}  bg={"white"} borderRadius={"5px"}>
-          <Stack spacing={4} w={'65%'} maxW={'md'}>
+          <Stack spacing={4} w={'65%'} maxW={'md'} pt="50px"> 
             <Image src={logo} margin='auto' width={"162px"} marginLeft={{base: '2xl', md: '3xl',lg:"100px"}} marginTop={"0px"}/>
             <Heading fontSize={'1.625rem'} fontWeight={"16px"} color={"black"}>Create Your Account</Heading>
           <form onSubmit={handleSubmit}>
@@ -99,6 +102,7 @@ const handleSubmit=(e)=>{
                 <Checkbox fontSize={"14px"} color={"#777e85"} marginTop={"5px"}>I accept <span style={{color:"#3070F0",fontSize:"14px",fontWeight:"600"}}>Terms of Service</span></Checkbox>
               
               </Stack>
+              <Text color="red">{error}</Text>
               <Button colorScheme={'blue'} variant={'solid'} height={"34px"} fontSize={"14px"} w={"100%"} marginTop="20px" type="submit" >
                 Sign Up
               </Button>

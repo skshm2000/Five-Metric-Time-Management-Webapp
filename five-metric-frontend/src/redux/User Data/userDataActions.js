@@ -3,7 +3,7 @@ import axios from 'axios'
 
 const dataGetter = (token) => async (dispatch) => {
     try {
-        let res = await axios.post("https://tender-hen-suspenders.cyclic.app/data", token)
+        let res = await axios.post("https://five-metric.onrender.com/data", token)
         let data = await res.data
         return dispatch({
             type:getUserData,
@@ -16,7 +16,7 @@ const dataGetter = (token) => async (dispatch) => {
 
 const entryAdder = (inData) => async (dispatch) => {
     try {
-        let res = await axios.post("https://tender-hen-suspenders.cyclic.app/addEntry", inData)
+        let res = await axios.post("https://five-metric.onrender.com/addEntry", inData)
         let data = await res.data
         return dispatch({
             type: addEntry,
@@ -29,7 +29,7 @@ const entryAdder = (inData) => async (dispatch) => {
 
 const taskAdder = (inData) => async (dispatch) => {
     try {
-        let res = await axios.post("https://tender-hen-suspenders.cyclic.app/addTask", inData)
+        let res = await axios.post("https://five-metric.onrender.com/addTask", inData)
         console.log(res)
         let data = await res.data
         return dispatch({
@@ -43,7 +43,7 @@ const taskAdder = (inData) => async (dispatch) => {
 
 const entryDeleter = (inData) => async (dispatach) => {
     try {
-        let res = await axios.post("https://tender-hen-suspenders.cyclic.app/deleteEntry", inData)
+        let res = await axios.post("https://five-metric.onrender.com/deleteEntry", inData)
         let data = await res.data
 
         return dispatach({
@@ -57,7 +57,7 @@ const entryDeleter = (inData) => async (dispatach) => {
 
 const taskDeleter = (inData) => async (dispatach) => {
     try {
-        let res = await axios.post("https://tender-hen-suspenders.cyclic.app/deleteTask", inData)
+        let res = await axios.post("https://five-metric.onrender.com/deleteTask", inData)
         let data = await res.data
 
         return dispatach({
@@ -71,7 +71,7 @@ const taskDeleter = (inData) => async (dispatach) => {
 
 const entryChanger = (inData) => async (dispatch) => {
     try {
-        let res = await axios.post("https://tender-hen-suspenders.cyclic.app/entry", inData)
+        let res = await axios.post("https://five-metric.onrender.com/entry", inData)
         let data = await res.data
 
         return dispatch({
@@ -85,7 +85,7 @@ const entryChanger = (inData) => async (dispatch) => {
 
 const taskChanger = (inData) => async (dispatch) => {
     try {
-        let res = await axios.post("https://tender-hen-suspenders.cyclic.app/task", inData)
+        let res = await axios.post("https://five-metric.onrender.com/task", inData)
         let data = await res.data
 
         return dispatch({

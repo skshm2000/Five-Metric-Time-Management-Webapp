@@ -8,7 +8,7 @@
     width: 60%;
     margin: auto;
     margin-top: 25px;
-    font-size: 45px;
+    font-size: 42px;
     text-align: center;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 
@@ -46,27 +46,22 @@
     /* border: 1px solid red; */
     padding:9rem 3rem;
     margin-bottom: 2rem;
-    font-size:2rem;
-    line-height: normal;
-    
-    color:salmon;
+    font-size:30px;
+    color:black;
     align-items: center;
     
 }
-.innertext img{
-
-    padding: 2rem;
-
-    
+.innertext img{ 
+    width: 50%;
 }
 .learn{
-    /* border: 1px solid red; */
+    border: 1px solid black;
     border-radius: 5px;
-   margin-top: 2rem;
+   margin-top: 20px;
     padding: 0.5rem;
     font-size:1.2rem;
     font-weight:normal;
-    color: blue;
+    color: black;
     /* border: 1px solid red; */
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }

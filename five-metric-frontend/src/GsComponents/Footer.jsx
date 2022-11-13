@@ -8,7 +8,7 @@ const Footer = () => {
     <div className='footer'>
       {/* <div className='logo'>
       <Link to="/">
-        <img src={footer_logo} alt="logo"  />
+        <img src="" alt="logo"  />
         
       </Link>
       </div> */}
@@ -70,7 +70,7 @@ const Footer = () => {
         <h4>
             <FaSafari size={30}
               style={{ color: "grey", marginRight: "2rem" }}
-             /> Opera
+             /> Safari
             </h4>
         </Link>
       </div>

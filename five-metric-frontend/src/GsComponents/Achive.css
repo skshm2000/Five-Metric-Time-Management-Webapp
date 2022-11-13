@@ -1,13 +1,10 @@
 .control-p{
-    
     width: 100%;
     display: flex;
     padding: 1rem;
     background-color: #f6f7f8;
-
 }
 .working_time{
-    
     width: 45%;
     margin: 1rem;
     padding: 1rem;
@@ -40,8 +37,7 @@ border-radius: 5px;
 margin: 2rem 2rem;
 }
 .activity_img{
-display: block;
-width: 100%;
+width: 50%;
 margin: 5rem 0rem 2rem 1rem;
 }
 @media screen and (max-width: 1040px) {

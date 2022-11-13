@@ -34,16 +34,18 @@
     }
     .explore p{
         margin:3rem 0 0 0;
-        color: blue;
+        color: rgb(49, 130, 206);
         font-weight:normal;
     }
     .sites{
         display: flex;
+        width: 90%;
+        margin: auto;
         justify-content:center;
-        grid-gap: 1rem;
+        gap: 1rem;
         padding: 1rem;
-        margin: 0.5rem;
     }
+
     .sites img:hover{
         border-radius:1.8rem;
         box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;

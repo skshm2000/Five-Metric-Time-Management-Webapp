@@ -16,10 +16,11 @@ import {FaApple }from "react-icons/fa"
 import { useState } from 'react';
 import axios from"axios"
 import { Link, Navigate, useNavigate } from 'react-router-dom';
-import logo from "../assets/logo.png";
+import logo from "../GsAssets/navbarLogo.jpg";
   
   const Login=()=> {
     const navigate = useNavigate()
+    const [error, changeError] = useState("")
     const [user,setUser]=useState({
         username:"",
         password:""
@@ -35,7 +36,7 @@ import logo from "../assets/logo.png";
     //console.log(user)
     const handleSubmit=(e)=>{
       e.preventDefault()
-      axios.post("https://tender-hen-suspenders.cyclic.app/login",{
+      axios.post("https://five-metric.onrender.com/login",{
         username:user.username,
         password:user.password
       })
@@ -44,8 +45,9 @@ import logo from "../assets/logo.png";
      if(response.data.token){
       localStorage.setItem("token", (response.data.token))
       navigate("/time")
+      } else {
+        changeError(response.data.error)
       }
-     
       })
       .catch((err)=>{
         console.log(err)
@@ -68,9 +70,9 @@ import logo from "../assets/logo.png";
           boxShadow={'lg'}
           my={12}>
             
-            <Box backgroundColor={"#F2F5FC"} borderRadius="10px" >
+            <Box backgroundColor={"#F2F5FC"} borderRadius="10px" pt="50px">
             <Image src={logo}  width={"162px"} margin='auto' marginTop={"0px"} backgroundColor={"#F2F5FC"}/>
-          <Heading lineHeight={1.1} fontSize={{ base: '2xl', md: '3xl',lg:"1.625rem" }}  fontWeight={"12px"} color={"black"} backgroundColor={"#F2F5FC"} pb="17px" mt="12px">
+          <Heading lineHeight={1.1} fontSize={{ base: '2xl', md: '3xl',lg:"1.625rem" }}  fontWeight={"12px"} color={"black"} backgroundColor={"#F2F5FC"} pb="17px" mt="12px" textAlign="center">
           Log into TMetric
           </Heading>
             </Box>
@@ -89,7 +91,7 @@ import logo from "../assets/logo.png";
             <FormLabel fontSize={"14px"} color={"#777e85"}>Password</FormLabel>
             <Input type="password"   placeholder="Enter your password" height={"34px"} value={user.password} name="password" onChange={handleChange}/>
           </FormControl>
-         
+         <Text color='red'>{error}</Text>
             <Button
             type="submit"
               bg={'#3070f0'}

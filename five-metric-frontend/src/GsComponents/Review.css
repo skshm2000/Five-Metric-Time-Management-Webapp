@@ -1,21 +1,14 @@
-
 .review{
     width: 100%;
-    
     text-align: center;
-    padding: 10px;
+    padding: 40px 10px;
     background-color: #feeebc;
     align-items: center;
-    
-    
-
 }
-.review h1{
-    font-size:2.5rem;
-    font-weight:bold;
-line-height: 5rem;
 
-    
+.review h1{
+    font-size:40px;
+    font-weight:bolder;    
 }
 .stars{
     display: flex;
@@ -23,10 +16,9 @@ line-height: 5rem;
     
 }
 .review h2{
-    font-size:3rem;
+    font-size:42px;
     font-weight:bold;
-    color: blue;
-    margin-bottom: 2rem;
+    color: rgb(49, 130, 206);
     
 }
 .business{

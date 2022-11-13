@@ -1,4 +1,4 @@
-import { Button, Input, InputGroup, InputLeftAddon } from "@chakra-ui/react";
+import { Box, Button, Flex, Heading, Input, InputGroup, InputLeftAddon, Stack, Text, Spacer } from "@chakra-ui/react";
 import React from "react";
 import { FaMailBulk } from "react-icons/fa";
 import { Link } from "react-router-dom";
@@ -14,23 +14,23 @@ import '../GsComponents/Mytime.css';
 const MyTime = () => {
   return (
     <> 
-    <div className="gssecond">
-      <div className="mytime_right">
-        <h1>Empower your Team with Time Tracking</h1>
-        <p>5Metric streamlines your team work so you can focus on what matters</p>
-        <InputGroup className="emailinput" >
+    <Flex pt="90px" backgroundColor="#fff0b8" pb="50px" justifyContent="space-around">
+      <Stack w="40%" alignContent="center" justifyContent="center">
+        <Heading fontSize="60px">Empower your Team with Time Tracking</Heading>
+        <Text fontSize="22px" fontWeight="bolder">5Metric streamlines your team work so you can focus on what matters</Text>
+        <InputGroup>
           <InputLeftAddon children={<FaMailBulk size={35} color="blue" />} />
-          <Input type="email" placeholder="Email" className="emailinput" />
+          <Input type="email" placeholder="Email" backgroundColor="white"/>
         </InputGroup>
-        <div className="getstarted">
-            <Button className="getstarted_btn">Get Started</Button>
+        <Flex alignContent="center" gap="20px">
+            <Button variant="solid" colorScheme="blue" className="getstarted_btn">Get Started</Button>
             <h2>Fully Functional 30-Day Trial</h2>
-        </div>
-      </div>
-      <div className="mytime_left">
-        <img src={mytime} alt="" />
-      </div>
-    </div>
+        </Flex>
+      </Stack>
+      <Box w='45%'>
+        <img src="https://tmetric.com/media/nb3imgh0/img-home-heading.svg" alt="" />
+      </Box>
+    </Flex>
     <div className="apps">
       <Link to="#">
         <img src={top20} alt="" />

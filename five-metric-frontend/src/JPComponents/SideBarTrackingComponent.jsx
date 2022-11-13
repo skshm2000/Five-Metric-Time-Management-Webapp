@@ -172,11 +172,9 @@ const SideBarTrackingComponent = () => {
                 <CgProfile fontSize={'25px'}/>
                 <Text fontSize={'12px'} wordBreak='break-word' >Username:<Heading size='md'>{userId.split("@")[1]}</Heading></Text>
               </Flex>
-              <Button _hover={'black'} onClick={handleLogout} marginTop={'15px'} width='150px' bgColor={'blue.400'} color='white'>Logout</Button>
+              <Button _hover={'black'} onClick={handleLogout} marginTop={'15px'} w='200%' bgColor={'blue.400'} color='white'>Logout</Button>
         </Box>
         </Box>
-
-    
   </>
     );
 }

@@ -1,45 +1,48 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import "./Control.css"
+import { Flex, Text, Box, Button, UnorderedList, ListItem } from '@chakra-ui/react'
+
 const Control = () => {
   return (
-    <div className='control-p'>
-      <div className='working_time'>
-        <p className='take'>Take effective control of working time</p>
-        <ul>
-            <li>
+    <Flex>
+      <Box p="4%" w="50%">
+        <Text fontSize="45px" fontWeight="bold">Take effective control of working time</Text>
+        <UnorderedList>
+            <ListItem>
                 timekeeping
-            </li>
-            <li>
+            </ListItem>
+            <ListItem>
             sites and apps monitoring
-            </li>
-            <li>
+            </ListItem>
+            <ListItem>
             activity tracking
-            </li>
+            </ListItem>
             <Link to="#" className='blue'>
-            <li>
+            <ListItem>
             screenshots capturing
-            </li>
+            </ListItem>
             </Link>
-            <li>
+            <ListItem>
             task management
-            </li>
+            </ListItem>
             <Link to="#" className='blue'>
-            <li>
+            <ListItem>
             50+ integrations
-            </li>
+            </ListItem>
             </Link>
             <Link to="#" className='blue'>
-            <li>
+            <ListItem>
             work schedule
-            </li>
+            </ListItem>
             </Link>
-        </ul>
-        <button className='trial'>Start Free Trial</button>
-      </div>
-        <img src="https://tmetric.com/media/kssowlxe/img-activity-cases.svg" alt="myactivity" className='activity_img'/>
-     
-    </div>
+        </UnorderedList>
+        <Button variant="solid" colorScheme="blue" mt="20px">Start Free Trial</Button>
+      </Box>
+      <Box pt="3%" w="50%">
+        <img src="https://tmetric.com/media/kssowlxe/img-activity-cases.svg" alt="myactivity"/>
+      </Box>
+    </Flex>
   )
 }
 
