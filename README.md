@@ -49,6 +49,9 @@ Created a functional website which tracks time for your work. Fist users lands t
 ### Login 
 ![Screenshot (29)](https://user-images.githubusercontent.com/97351159/201516315-6815bcfc-e553-4e68-b7bf-0567b711cac3.png)
 
+### Pricing Page
+![Screenshot (34)](https://user-images.githubusercontent.com/97351159/201516938-300a0ff5-953e-445a-8757-6baba155e173.png)
+
 ### My Time (Dashbord)
 ![Screenshot (30)](https://user-images.githubusercontent.com/97351159/201516533-bed0b362-00d4-4c16-9300-e6bc39edaa3a.png)
 
@@ -60,11 +63,14 @@ Created a functional website which tracks time for your work. Fist users lands t
 
 
 ## Developers
-<a>Saksham Shelwal</a>
-<a>Janhavi Pravhu</a>
-<a>Rekha Yadav</a>
-<a>Rushikesh Patil</a>
-<a>Gaurav Sudanshu</a>
+
+ - **[Saksham Shelwal](https://github.com/skshm2000)**
+ - **[Janhavi Prabhu](https://github.com/Janhaviprabhu)**
+ - **[Rekha Yadav](https://github.com/Rekha0980)**
+ - **[Rushikesh Patil](https://github.com/rushi6457)**
+ - **[Gaurav Sudanshi](https://github.com/GauravSudhanshu)**
+
+
 
 
 
