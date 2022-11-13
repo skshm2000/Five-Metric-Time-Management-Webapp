@@ -33,6 +33,7 @@ import { Navigate, useNavigate } from "react-router-dom"
 
 const Signup=()=>{
  const[open,setOpen]=useState(false)
+ const [error,setError]=useState(false)
   const navigate = useNavigate()
  const toggle=()=>{
   setOpen(!open)
@@ -50,6 +51,9 @@ setUser({...user,[name]:value})
 
 const handleSubmit=(e)=>{
   e.preventDefault()
+  if(user.password.length<8){
+    setError(true)
+  }
   axios.post("https://tender-hen-suspenders.cyclic.app/signup",{
     username:user.username,
     email:user.email,
@@ -89,7 +93,7 @@ const handleSubmit=(e)=>{
               <Input type={(open===false)?"password":"text"} height={"34px"}  placeholder="Enter your password" value={user.password} name="password" onChange={handleChange}/>
             <InputRightElement><Box>{(open===false)? <AiOutlineEyeInvisible onClick={toggle} />:<AiOutlineEye onClick={toggle}/>}</Box></InputRightElement>  
               </InputGroup>
-             
+              {error ? <Text fontSize="xs" color="red" textAlign={"start"}>Password must have 8 characters</Text>:""}
             </FormControl>
 
               <Stack
