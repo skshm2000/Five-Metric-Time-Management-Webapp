@@ -1,36 +1,35 @@
 import React from 'react'
 import "./Improve.css"
-
+import { Flex, UnorderedList, ListItem, Box, Button, Text } from '@chakra-ui/react'
 
 const Improve = () => {
   return (
-    <div>
-      <div className='control'>
-      <div className='working_time'>
-        <p>Improve attendance with time off tracking software</p>
+      <Flex>
+      <Box w="35%" pl="40px" pt="30px"> 
+        <Text fontSize="40px" fontWeight="bold">Improve attendance with time off tracking software</Text>
        
-        <ul>
-            <li>
+        <UnorderedList mt="25px">
+            <ListItem>
             flexible time off policy
-            </li>
-            <li>
+            </ListItem>
+            <ListItem>
             time off requests management
-            </li>
-            <li>
+            </ListItem>
+            <ListItem>
             time off calendar
-            </li>
-
-            <li>
+            </ListItem>
+            <ListItem>
             pto calculations
-            </li>
+            </ListItem>
 
-        </ul>
-        <button className='trial'>Start Free Trial</button>
-      </div>
-        <img src="https://tmetric.com/media/mlzbtxv5/time-off-calendar-case.svg" alt="myactivity" className='activity_img'/>
+        </UnorderedList>
+        <Button mt="25px" variant="solid" colorScheme="blue">Start Free Trial</Button>
+      </Box>
+      <Box w="65%">
+        <img src="https://tmetric.com/media/mlzbtxv5/time-off-calendar-case.svg" alt="myactivity"/>
+      </Box>
 
-    </div>
-    </div>
+    </Flex>
   )
 }
 

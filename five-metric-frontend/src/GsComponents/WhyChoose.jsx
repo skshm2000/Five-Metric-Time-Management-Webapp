@@ -1,7 +1,9 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import "./WhyChoose.css"
+
 const WhyChoose = () => {
+  let nav = useNavigate()
   return (
     <>
     <h1 className='why_choose'>Why choose TMetric?</h1>
@@ -30,7 +32,7 @@ const WhyChoose = () => {
       <div className='make_time'>
         <h1>Make time work for you!</h1>
         <Link to="#" >
-        <button>Start Free Trial</button>
+        <button onClick={()=>nav("/signup")}>Start Free Trial</button>
         </Link>
         <h3>Powered by  A software vendor with 20 years of experience.</h3>
       </div>

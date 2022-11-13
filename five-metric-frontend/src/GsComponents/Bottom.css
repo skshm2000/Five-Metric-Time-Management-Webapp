@@ -16,7 +16,8 @@
     color: blue;
 }
 .bottom button{
-    background-color: blue;
+    background-color: rgb(49, 130, 206);
+    color: white;
     width: 5rem;
     height: 2.5rem;
     border-radius: 5px;

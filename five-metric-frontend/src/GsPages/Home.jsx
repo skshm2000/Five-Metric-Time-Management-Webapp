@@ -26,7 +26,7 @@ const Home = () => {
       <Review />
       <WhyChoose />
       <Footer />
-      {/* <Bottom /> */}
+      <Bottom />
     </>
       
   )

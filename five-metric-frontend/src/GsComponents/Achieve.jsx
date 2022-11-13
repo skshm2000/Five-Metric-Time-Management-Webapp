@@ -1,37 +1,41 @@
 import React from 'react'
 import "./Achive.css"
+import { Box, Text, Flex, UnorderedList, ListItem, Button, Spacer } from '@chakra-ui/react'
+
 const Achieve = () => {
   return (
-    <div className='control-p'>
-        <img src="https://tmetric.com/media/lltfuaaz/img-report-cases-svg.svg" alt="myactivity" className='activity_img'/>
-     
-      <div className='working_time'>
-        <p>Achieve high profitability by using time tracker</p>
+    <Flex>
+      <Box w="65%">
+        <img src="https://tmetric.com/media/lltfuaaz/img-report-cases-svg.svg" alt="myactivity"/>
+      </Box>
+     <Spacer></Spacer>
+      <Box w="35%">
+        <Text fontSize="40px" fontWeight="bold">Achieve high profitability by using time tracker</Text>
 
-        <ul>
-            <li>
+        <UnorderedList mt='25px' fontSize="18px">
+            <ListItem>
             project management
-            </li>
-            <li>
+            </ListItem>
+            <ListItem>
             project budgeting
-            </li>
-            <li>
+            </ListItem>
+            <ListItem>
             billing and invoicing
-            </li>
+            </ListItem>
            
-            <li>
+            <ListItem>
             accurate payroll
-            </li>
+            </ListItem>
             
-            <li>
+            <ListItem>
             detailed reports
-            </li>
+            </ListItem>
 
-        </ul>
-        <button className='trial'>Start Free Trial</button>
-      </div>
+        </UnorderedList>
+        <Button mt="25px" variant="solid" colorScheme="blue">Start Free Trial</Button>
+      </Box>
      
-    </div>
+    </Flex>
   )
 }
 

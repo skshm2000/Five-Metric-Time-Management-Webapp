@@ -13,16 +13,18 @@ import excel from "../GsAssets/excel.png"
 import asana from "../GsAssets/asana.png"
 import jira from "../GsAssets/jira.png"
 import gitlab from "../GsAssets/gitlab.png"
+import { Button, Heading, Stack, Text, Flex } from '@chakra-ui/react'
+
 const Services = () => {
   return (
-    <div className='service'>
-      <h1>Integrate time tracker tool with 50+ <br/>popular services</h1>
-      <p>5Metric integrates with dozens of services, which lets you measure progress and activity in any tool you use.</p>
-      <div className='explore'>
-        <button className='trials'>Start Free Trial</button>
-        <p>Explore All Integrations</p>
-      </div>
-      <div className='sites'>
+    <Stack spacing="20px">
+      <Heading textAlign={"center"} fontSize="45px">Integrate time tracker tool with 50+ <br/>popular services</Heading>
+      <Text textAlign={"center"} fontSize='19px'>5Metric integrates with dozens of services, which lets you measure progress and activity in any tool you use.</Text>
+      <Flex alignSelf="center" gap="20px"> 
+        <Button variant="solid" colorScheme="blue">Start Free Trial</Button>
+        <Text color="rgb(49, 130, 206)">Explore All Integrations</Text>
+      </Flex>
+      <Flex alignSelf='center'>
       <img src={gsuite} alt="" />
       <img src={msoffice} alt="" />
       <img src={googlekeep} alt="keep" />
@@ -31,18 +33,18 @@ const Services = () => {
       <img src={asana} alt="" />
       <img src={jira} alt="" />
       <img src={gitlab} alt="" />
-      </div>
-      <div className='sites'>
+      </Flex>
+      <Flex alignSelf='center'>
       <img src={docs} alt="" />
       <img src={trello} alt="" />
       <img src={redmine} alt="" />
       <img src={zendesk} alt="" />
       <img src={wrike} alt="" />
-      </div>
+      </Flex>
       
 
       
-    </div>
+    </Stack>
   )
 }
 

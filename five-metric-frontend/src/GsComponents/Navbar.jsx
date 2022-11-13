@@ -29,7 +29,7 @@ import {
 
   FaTshirt,
 } from "react-icons/fa";
-import logo from "../assets/logo.png";
+import logo from "../GsAssets/navbarLogo.jpg";
 import {
   Button,
   Menu,
@@ -220,7 +220,7 @@ const Navbar = ({page=false}) => {
             <button className="login">Log In</button>
           </Link>
           <Link to='/signup'>
-            <button className="signup">Sign In</button>
+            <button className="signup">Sign Up</button>
           </Link>
         </div>
 

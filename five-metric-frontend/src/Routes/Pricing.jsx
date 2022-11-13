@@ -7,6 +7,7 @@ import SliderComponent from '../Components/SliderComponent';
 import TopHeading from '../Components/TopHeading';
 import Navbar from "../GsComponents/Navbar"
 import Footer from "../GsComponents/Footer"
+import QuestionNdAnswer from "../Components/QuestionNdAnswer"
 
 const Pricing = () => {
     return (
@@ -16,6 +17,7 @@ const Pricing = () => {
             <SliderComponent/>
             <BottomButtonComponent/>
             <HowToBuy/>
+            <QuestionNdAnswer />
             <PricingFooter/>
             <Footer/>
         </Box>

@@ -9,7 +9,7 @@ const Footer = () => {
     <Box className="footer">
       {/* <div className='logo'>
       <Link to="/">
-        <img src={footer_logo} alt="logo"  />
+        <img src="" alt="logo"  />
         
       </Link>
       </div> */}
@@ -118,6 +118,7 @@ const Footer = () => {
       </SimpleGrid>
     </Box>
   );
+
 }
 
 export default Footer;

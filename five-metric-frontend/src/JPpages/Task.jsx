@@ -68,7 +68,7 @@ export const Task = () => {
     e.preventDefault()
     if(!state.entries[0]){
       alert("You need to add entry first")
-      nav("/")
+      nav("/time")
       return
     }
     dispatcher(taskAdder({...taskData,id:state.entries[0].id}))

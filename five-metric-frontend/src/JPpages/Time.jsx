@@ -121,7 +121,7 @@ export const Time = () => {
                     <Text>{ele.title}</Text>
                   </Flex>
                   <Box>
-                    <Flex p={"20px"} gap={10}>
+                    <Flex p={"20px"} gap={5}>
                       <Button onClick={() => handleDelete(ele.id)}>
                         Delete
                       </Button>

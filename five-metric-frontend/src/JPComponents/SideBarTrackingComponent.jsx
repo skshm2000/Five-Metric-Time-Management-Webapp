@@ -18,7 +18,7 @@ import React, { useState } from 'react';
 import {IoIosArrowBack} from "react-icons/io"
 import {IoAtCircleOutline,IoShirtOutline} from "react-icons/io5"
 import { Link, useNavigate } from 'react-router-dom';
-import logo from "../assets/logo.png"
+import logo from "../GsAssets/navbarLogo.jpg"
 import {BsClockHistory} from "react-icons/bs"
 import {BiCustomize ,BiNotepad,BiGridAlt} from "react-icons/bi"
 import { AiOutlineTeam,AiFillSetting,AiOutlineTags,AiOutlineAlignLeft } from 'react-icons/ai';
@@ -172,11 +172,9 @@ const SideBarTrackingComponent = () => {
                 <CgProfile fontSize={'25px'}/>
                 <Text fontSize={'12px'} wordBreak='break-word' >Username:<Heading size='md'>{userId.split("@")[1]}</Heading></Text>
               </Flex>
-              <Button _hover={'black'} onClick={handleLogout} marginTop={'15px'} width='150px' bgColor={'blue.400'} color='white'>Logout</Button>
+              <Button _hover={'black'} onClick={handleLogout} marginTop={'15px'} w='100%' bgColor={'blue.400'} color='white'>Logout</Button>
         </Box>
         </Box>
-
-    
   </>
     );
 }
