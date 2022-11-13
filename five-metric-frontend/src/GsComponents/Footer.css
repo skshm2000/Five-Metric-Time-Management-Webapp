@@ -13,13 +13,13 @@ height:50vh;
 }
 .application h1{
     
-    width:100%;
-    margin: 1.5rem 1.5rem;
-    font-size: 3vh;
+    width:70%;
+    margin: 0;
+    margin-top: 1.5rem;
+    font-size: 2.7vh;
     font-weight: bold;
     text-align: center;
-    
-    color:black;
+    color:#3a3e42;
     
 }
 .application a h4{
@@ -27,21 +27,21 @@ height:50vh;
     display: flex;
     width:100%;
     margin: 1.5rem 1.5rem;
-    font-size:2.5vh;
+    font-size:2.3vh;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-align: center;
-    color: grey;
+    color: #3a3e42;
 
 
 }
 .browserExtensions h1{
     
-    width:100%;
-    margin: 1.5rem 1.5rem;
-    font-size: 3vh;
+    width:80%;
+    margin-top: 1.5rem;
+    font-size: 2.7vh;
     font-weight: bold;
     text-align: center;
-    color: grey;
+    color: #3a3e42;
     
 }
 .browserExtensions a h4{
@@ -49,19 +49,19 @@ height:50vh;
     display: flex;
     width:100%;
     margin: 1.5rem 1.5rem;
-    font-size:2.5vh;
+    font-size:2.3vh;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-align: center;
-    color:black;
+    color:#3a3e42;
 }
 .resources h1{
     
-    width:100%;
-    margin: 1.5rem 1.5rem;
-    font-size: 3vh;
+    width:50%;
+   margin-top: 1.5rem;
+    font-size: 2.7vh;
     font-weight: bold;
     text-align: center;
-    color:black;
+    color:#3a3e42;
     
 }
 .resources h4{
@@ -69,20 +69,20 @@ height:50vh;
     display: flex;
     width:100%;
     margin: 1.5rem 1.5rem;
-    font-size:2.5vh;
+    font-size:2.3vh;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-align: center;
    
-    color: grey;
+    color:#3a3e42;
 }
 .about h1{
     
-    width:100%;
-    margin: 1.5rem 1.5rem;
-    font-size: 3vh;
+    width:60%;
+   margin-top: 1.5rem;
+    font-size: 2.7vh;
     font-weight: bold;
     text-align: center;
-    color: grey;
+    color: #3a3e42;
     
 }
 .about h4{
@@ -90,21 +90,9 @@ height:50vh;
     display: flex;
     width:100%;
     margin: 1.5rem 1.5rem;
-    font-size:2.5vh;
+    font-size:2.3vh;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-align: center;
-    color:black;
+    color:#3a3e42;
     
-}
-@media screen and (max-width:1040px){
-    .footer{
-        display: grid;
-        grid-template-columns: repeat(2,1fr);
-        background-color: none;
-        margin-bottom: 20px;
-        }
-        .footer h1{
-            text-align: justify;
-        }
-
 }
