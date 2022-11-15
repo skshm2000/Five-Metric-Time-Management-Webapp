@@ -8,10 +8,18 @@ import Control from '../GsComponents/Control';
 import Achieve from '../GsComponents/Achieve';
 import Improve from '../GsComponents/Improve';
 import Services from '../GsComponents/Services';
-// import Why5Metric from '../GsComponents/Why5Metric';
 import Review from '../GsComponents/Review';
 import WhyChoose from '../GsComponents/WhyChoose';
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
+
 const Home = () => {
+  const {pathname} = useLocation()
+  
+  useEffect(()=>{
+    window.scrollTo(0,0)
+  }, [pathname])
+
   return (
     <>
       <Navbar />

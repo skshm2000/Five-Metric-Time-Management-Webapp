@@ -73,7 +73,7 @@ import logo from "../GsAssets/navbarLogo.jpg";
             <Box backgroundColor={"#F2F5FC"} borderRadius="10px" pt="50px">
             <Image src={logo}  width={"162px"} margin='auto' marginTop={"0px"} backgroundColor={"#F2F5FC"}/>
           <Heading lineHeight={1.1} fontSize={{ base: '2xl', md: '3xl',lg:"1.625rem" }}  fontWeight={"12px"} color={"black"} backgroundColor={"#F2F5FC"} pb="17px" mt="12px" textAlign="center">
-          Log into TMetric
+          Log into Five Metric
           </Heading>
             </Box>
          <Stack p={6}>

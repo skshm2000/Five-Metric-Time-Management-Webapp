@@ -8,8 +8,17 @@ import TopHeading from '../Components/TopHeading';
 import Navbar from "../GsComponents/Navbar"
 import Footer from "../GsComponents/Footer"
 import QuestionNdAnswer from "../Components/QuestionNdAnswer"
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
+
 
 const Pricing = () => {
+    const {pathname} = useLocation()
+  
+    useEffect(()=>{
+        window.scrollTo(0,0)
+    }, [pathname])
+    
     return (
         <Box>
             <Navbar page="true" />
