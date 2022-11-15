@@ -1,4 +1,4 @@
-# 5 Metric 
+# 5 Metric -  **[Deployed Link](https://five-metric.netlify.app/)**
 This is an web application with you can easily track time on tasks and projects, create time entries, capture hours, and save time on paperwork when it comes to generating time reports. Dive into a detailed overview of the time utilization and precisely evaluate productivity.
 
 
@@ -68,7 +68,7 @@ Created a functional website which tracks time for your work. Fist users lands t
  - **[Janhavi Prabhu](https://github.com/Janhaviprabhu)**
  - **[Rekha Yadav](https://github.com/Rekha0980)**
  - **[Rushikesh Patil](https://github.com/rushi6457)**
- - **[Gaurav Sudanshi](https://github.com/GauravSudhanshu)**
+ - **[Gaurav Sudhanshu](https://github.com/GauravSudhanshu)**
 
 
 
