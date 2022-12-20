@@ -29,7 +29,7 @@ Created a functional website which tracks time for your work. Fist users lands t
 <li>CSS</li>
 </ul>
 
-## Installation Requirenments
+## Installation Requirements
 <ol>
 <li>Fork the repo, then clone it</li>
 <li>install all dependencies, with 'npm install'</li>
@@ -64,13 +64,8 @@ Created a functional website which tracks time for your work. Fist users lands t
 
 ## Developers
 
- - **[Saksham Shelwal](https://github.com/skshm2000)**
+ - **[Saksham Selwal](https://github.com/skshm2000)**
  - **[Janhavi Prabhu](https://github.com/Janhaviprabhu)**
  - **[Rekha Yadav](https://github.com/Rekha0980)**
  - **[Rushikesh Patil](https://github.com/rushi6457)**
  - **[Gaurav Sudhanshu](https://github.com/GauravSudhanshu)**
-
-
-
-
-
