@@ -98,11 +98,11 @@ export const Time = () => {
   return (
     <>
       <Flex w="100%" >
-        <Box w="12%">
+        <Box   w="19%">
           <SideBarTrackingComponent />
         </Box>
         
-        <Box mt={10} ml="100px"  width={"75%"} >
+        <Box mt={10} ml={{md:"120px",lg:"40px"}}  width={{md:"65%",lg:"75%"}} >
           <TimeBar />
           <Box borderRadius={5} mt={10} border={"1px solid grey"}>
             <Flex p={"20px"} gap={10}>
