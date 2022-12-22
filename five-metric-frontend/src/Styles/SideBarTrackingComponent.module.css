@@ -20,7 +20,7 @@
     /* margin-top: -200px; */
 }   
 .openIcon{
-
+background-color: rgb(229, 232, 238);
     position: fixed;
     height: 100vh;
    display: none;
@@ -36,7 +36,7 @@
   position: fixed;
   transform: translate(0%);
   height: 127%;
-  width: 18%;
+  width: 17%;
     background-color: rgb(229, 232, 238);
     /* overflow-y: scroll; */
     scroll-padding: 0px;
@@ -123,6 +123,7 @@ background: transparent;
   font-size: 14px;
 }
 .userProfileSection{
+   
   margin-left: 10px;
   margin-top: 20px;
   position: fixed;
@@ -132,21 +133,25 @@ background: transparent;
 
 @media screen and (max-width:1050px) {
     .sidebarMainBoxOpen{
+        background-color: rgb(229, 232, 238);
       display: none;
     }
     .openIcon{
+      background-color: rgb(229, 232, 238);
       position: static;
-        right: 0;
+        right:0;
     
-     
+   
     }
          .sidebarMainBox {
           display: initial;
             width: 50%;
+            z-index: 100;
             margin-top: 0px;
-              margin-left: -30px;
+              /* margin-left: -30px; */
               background-color: rgb(229, 232, 238);
               position: absolute
              }
+              
 
 }

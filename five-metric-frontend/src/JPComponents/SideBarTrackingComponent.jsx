@@ -54,10 +54,12 @@ const SideBarTrackingComponent = () => {
     return (
 
   <>  
+  
         <Button onClick={toggleSideBar}  className={ styles.openIcon}><AiOutlineAlignLeft fontSize={'25px'} /></Button>
-        <Box className={sidebar ? styles.sidebarMainBox :styles.sidebarMainBoxOpen}>
+        
+        <Box  className={sidebar ? styles.sidebarMainBox :styles.sidebarMainBoxOpen}>
          
-          <Flex className={styles.topMostflex} align={'center'}>
+          <Flex  className={styles.topMostflex} align={'center'}>
                 <Button onClick={toggleSideBar}  _hover={'white'} bg={'white'} className={styles.toggleButton}>
                   <IoIosArrowBack padding='0px' className={styles.toggleButtonIcon}/>
                   </Button>
@@ -165,14 +167,15 @@ const SideBarTrackingComponent = () => {
                 </Stack>
                 </Container>
             </Accordion>
-            </Box>
+       
 
-        <Box className={styles.userProfileSection}>
+        <Box   className={styles.userProfileSection}>
             <Flex align={'center'} gap='20px' >
                 <CgProfile fontSize={'25px'}/>
                 <Text fontSize={'12px'} wordBreak='break-word' >Username:<Heading size='md'>{userId.split("@")[1]}</Heading></Text>
               </Flex>
               <Button _hover={'black'} onClick={handleLogout} marginTop={'15px'} w='100%' bgColor={'blue.400'} color='white'>Logout</Button>
+        </Box>
         </Box>
         </Box>
   </>

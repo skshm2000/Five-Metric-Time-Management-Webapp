@@ -1,16 +1,15 @@
-import { Box,  Button,  Flex,  Input,  Menu,  MenuButton,  MenuItem,  MenuList,  Text, VisuallyHidden } from "@chakra-ui/react"
-import {MdOutlineGraphicEq} from "react-icons/md"
+import { Box,  Button,  Flex,  Text, VisuallyHidden } from "@chakra-ui/react"
+
 import { useSelector, useDispatch } from "react-redux"
 import { useEffect, useRef, useState } from "react"
-import { dataGetter, entryAdder, taskAdder, entryDeleter, taskDeleter, entryChanger, taskChanger } from "../redux/User Data/userDataActions"
-import { BsChevronDown } from "react-icons/bs";
+
+
 import { VscDebugStart } from "react-icons/vsc";
 import { BsFillStopFill } from "react-icons/bs";
 import { BiCalendar } from "react-icons/bi";
 export const TimeBar=()=>{
   
-  let state = useSelector(state=>state)
-  let dispatch = useDispatch()
+
   // console.log(state)
 
   useEffect(()=>{
@@ -110,20 +109,7 @@ export const TimeBar=()=>{
             </Button>
             <Text fontSize={"19px"}> My Time </Text>
             <Text>|</Text>
-            <Box>
-              <Menu>
-                <MenuButton
-                  color={"grey"}
-                  as={Button}
-                  rightIcon={<BsChevronDown />}
-                >
-                  Select User or Team
-                </MenuButton>
-                <MenuList>
-                  <MenuItem>{state.team}</MenuItem>
-                </MenuList>
-              </Menu>
-            </Box>
+            
           </Flex>
           <Box>
             {/* <Calendar view="month" defaultValue={new Date()} /> */}
@@ -272,6 +258,7 @@ export const TimeBar=()=>{
                 </Box>
                 <Box>
                   <Box
+                  display={{md:'none',lg:"block"}}
                     bg={"white"}
                     mt={3}
                     title="7:00am"
@@ -280,13 +267,13 @@ export const TimeBar=()=>{
                     width="5px"
                     border="1px solid black"
                   ></Box>
-                  <Text ml="-20px" fontSize={"9px"} w={12}>
+                  <Text display={{md:'none',lg:"block"}} ml="-20px" fontSize={"9px"} w={12}>
                     7:00 am
                   </Text>
                 </Box>
                 <Box>
                   <Box></Box>
-                  <Text ml="-20px" fontSize={"9px"} w={12}></Text>
+                  <Text display={{md:'none'}} ml="-20px" fontSize={"9px"} w={12}></Text>
                 </Box>
               </Flex>
             </Box>
