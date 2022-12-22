@@ -123,7 +123,7 @@ export const Task = () => {
         <Box>
           <SideBarTrackingComponent />
         </Box>
-        <Box mt={"50px"} ml={"250px"} width={"75%"} >
+        <Box mt={"50px"} ml={"50px"} width={{sm:"55%",md:"65%",lg:"75%"}} >
           <Flex gap={5}>
             <Text fontSize={"26px"}>My Task</Text>
             <Text p={1} color={"lightgrey"} fontSize={"20px"}>
@@ -148,7 +148,7 @@ export const Task = () => {
               </Menu>
             </Box>
           </Flex>
-          <Flex mt={6} gap={3}>
+          <Flex mt={6} gap={3} display={{sm:"block",md:"flex",}}>
             {/* client select tag */}
             <Box>
               <Menu closeOnSelect={false}>
@@ -268,30 +268,6 @@ export const Task = () => {
                 </MenuList>
               </Menu>
             </Box>
-            {/*  creator select tag */}
-            <Box>
-              <Menu closeOnSelect={false}>
-                <MenuButton
-                  variant="outline"
-                  width={"150px"}
-                  as={Button}
-                  rightIcon={<BsChevronDown />}
-                >
-                  Creator : Any
-                </MenuButton>
-                <MenuList minWidth="240px">
-                  <MenuOptionGroup defaultValue="Any" type="radio">
-                    <MenuItemOption value="asc">Any</MenuItemOption>
-                  </MenuOptionGroup>
-
-                  <MenuOptionGroup title="Members" type="checkbox">
-                    <MenuItemOption value="User 1">User1</MenuItemOption>
-                    <MenuItemOption value="User 2">User 2</MenuItemOption>
-                    <MenuItemOption value="User 3">User 3</MenuItemOption>
-                  </MenuOptionGroup>
-                </MenuList>
-              </Menu>
-            </Box>
           </Flex>
           {/* new task big Box */}
           <Box borderRadius={5} mt={5} border={"1px solid lightgrey"}>
@@ -326,15 +302,6 @@ export const Task = () => {
                 </Box>
               </Flex>
               {/* SElect tags completed.......................... */}
-              {/* search  */}
-              <Box p={2}>
-                <InputGroup>
-                  <InputLeftElement
-                    children={<AiOutlineSearch color="grey" />}
-                  />
-                  <Input type="text" placeholder="Search" />
-                </InputGroup>
-              </Box>
             </Flex>
             <Divider></Divider>
             {/* adding task form AND TASKS DIV */}
