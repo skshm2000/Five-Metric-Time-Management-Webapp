@@ -17,7 +17,7 @@ const QuestionNdAnswer = () => {
             </Flex>
               <Flex className={styles.howToFlex}>
                 <button className={styles.questions}>Q</button>
-                <Text className={styles.questionText}>Running a non-profit organization?</Text>
+                <Text marginTop='1%' marginBottom='1%' className={styles.questionText}>Running a non-profit organization?</Text>
             </Flex>
               <Flex className={styles.howToFlex}>
                 <button className={styles.answers}>A</button>
@@ -29,7 +29,7 @@ const QuestionNdAnswer = () => {
             </Flex>
               <Flex className={styles.howToFlex}>
                 <button className={styles.answers}>A</button>
-                <Text className={styles.answerText}>Please contact our sales department at <Link className={styles.LinkColor}>sales@tmetric.com</Link></Text>
+                <Flex><Text className={styles.answerText}>Please contact our sales department at <Link className={styles.LinkColor}>sales@tmetric.com</Link></Text></Flex>
             </Flex>
            
         </div>

@@ -111,7 +111,7 @@ export const Time = () => {
               <Button>Add break</Button>
             </Flex>
             <Divider />
-            {state.entries.map((ele) => (
+            {state.entries?.map((ele) => (
               <>
                 <Flex key={ele.id} gap={"40%"}>
                   {/* adding task div */}

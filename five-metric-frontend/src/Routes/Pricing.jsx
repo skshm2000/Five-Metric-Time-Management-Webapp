@@ -10,9 +10,14 @@ import Footer from "../GsComponents/Footer"
 import QuestionNdAnswer from "../Components/QuestionNdAnswer"
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 
 const Pricing = () => {
+
+   
+    const token = localStorage.getItem("token")
+    console.log(token)
     const {pathname} = useLocation()
   
     useEffect(()=>{
