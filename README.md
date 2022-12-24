@@ -11,6 +11,8 @@
 
   `cd Five-Metric-Time-Management-Webapp`
   
+3. Getting start with the project:
+  
 <table>
   <tr>
     <th>Frontend</th>
@@ -20,12 +22,10 @@
   <tr>
     <td>a. Go to the frontend folder
       
-`cd five-metric-frontend`</td>
+  `cd five-metric-frontend`</td>
     <td>a. Go to the backend folder
 
 `cd five-metric-backend`</td>
-    
-  
   </tr>
   <tr>
     <td>b.  Install packages
