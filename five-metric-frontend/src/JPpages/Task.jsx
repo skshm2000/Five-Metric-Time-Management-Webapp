@@ -122,7 +122,7 @@ export const Task = () => {
         <Box>
           <SideBarTrackingComponent />
         </Box>
-        <Box mt={"50px"} ml={"50px"} width={{sm:"55%",md:"65%",lg:"75%"}} >
+        <Box mt={"50px"} ml={"auto"} width={{sm:"55%",md:"65%",lg:"75%"}} >
           <Flex gap={5}>
             <Text fontSize={"26px"}>My Task</Text>
             <Text p={1} color={"lightgrey"} fontSize={"20px"}>
@@ -307,8 +307,8 @@ export const Task = () => {
             <Flex >
               {/* box 1 */}
 
-              <Box p="25px" height={"400px"} margin="auto" width={"100%"}>
-                {state.entries[0]?.tasks.map((ele) => {
+              <Box p="25px" height={"50vh"} margin="auto" width={"100%"}>
+                {state.entries?.tasks.map((ele) => {
                   return (
                     <Accordion allowToggle>
                       <AccordionItem>

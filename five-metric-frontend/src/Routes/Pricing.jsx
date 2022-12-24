@@ -6,7 +6,7 @@ import PricingFooter from '../Components/PricingFooter';
 import SliderComponent from '../Components/SliderComponent';
 import TopHeading from '../Components/TopHeading';
 import Navbar from '../GsComponents/Navbar/Navbar.jsx';
-import Footer from "../GsComponents/Footer"
+import Footer from "../GsComponents/Footer/Footer"
 import QuestionNdAnswer from "../Components/QuestionNdAnswer"
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';

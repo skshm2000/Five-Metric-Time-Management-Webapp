@@ -15,8 +15,9 @@ const Navbar = () => {
         position="sticky"
         top="0"
         left="0"
+        bg={'transparent'}
         backgroundColor="white"
-        zIndex="999"
+        zIndex="1"
         borderBottom="1px solid lightgray"
       >
         {maxWidthLargeScreen ? (

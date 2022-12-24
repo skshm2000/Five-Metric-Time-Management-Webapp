@@ -16,23 +16,35 @@
         grid-template-columns: repeat(1,1fr);
         gap: 20px;
     }
+    .priceButton{
+        display: block;
+        margin: auto;
+    }
+    .priceButtonText{
+        text-align: center;
+    }
 }
 @media screen and (max-width:750px) {
     .priceButtonFlex {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         gap: 20px;
+        justify-content: center;
     }
 }
 @media screen and (max-width :450px) {
     .buttonText {
+            margin: auto;
             margin-top: 20px;
             display: grid;
             grid-template-columns: repeat(1,1fr);
     }
+  
+
 }
 .priceButton{
     width: 200px;
+    margin: auto;
    
 }
 .priceButtonText{

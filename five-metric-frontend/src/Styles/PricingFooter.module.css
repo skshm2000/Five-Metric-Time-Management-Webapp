@@ -18,7 +18,7 @@
     margin-left: 42%;
     margin-top: -15%;
 }
-@media screen and (max-width:750px) {
+@media screen and (max-width:1040px) {
     .footerPriceImage{
      position: relative;
     }
@@ -35,4 +35,9 @@
             text-align: center;
             margin-left: -20px;
     }
+}
+@media screen and (max-width:450px) {
+        .pricingFooter{
+            display: none;
+        }
 }
