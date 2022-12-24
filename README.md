@@ -1,4 +1,29 @@
-# 5 Metric -  **[Deployed Link](https://five-metric.netlify.app/)**
+# Five Metric -  ##### [Deployed Link](https://five-metric.netlify.app/)
+
+## Development
+### Setup
+1. Clone the repository into your system or fork this repository
+`git clone https://github.com/skshm2000/Five-Metric-Time-Management-Webapp.git`
+2. Go to the project folder
+`cd Five-Metric-Time-Management-Webapp`
+
+### For frontend
+a. Go to the frontend folder
+`cd five-metric-frontend`
+b.  Install packages
+`npm install / npm i`
+c. Start project
+`npm start`
+
+### For backend
+a. Go to the backend folder
+`cd five-metric-backend`
+b. Install packages
+`npm install / npm i`
+c. Run backend
+`npm start`
+
+## About project
 This is an web application with you can easily track time on tasks and projects, create time entries, capture hours, and save time on paperwork when it comes to generating time reports. Dive into a detailed overview of the time utilization and precisely evaluate productivity.
 
 

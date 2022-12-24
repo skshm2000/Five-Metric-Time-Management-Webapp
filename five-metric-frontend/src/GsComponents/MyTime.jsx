@@ -1,4 +1,4 @@
-import { Box, Button, Flex, Heading, Input, InputGroup, InputLeftAddon, Stack, Text, Spacer } from "@chakra-ui/react";
+import { Box, Button, Flex, Heading, Input, InputGroup, InputLeftAddon, Stack, Text, Spacer, Container } from "@chakra-ui/react";
 import React from "react";
 import { FaMailBulk } from "react-icons/fa";
 import { Link } from "react-router-dom";
@@ -14,20 +14,21 @@ import '../GsComponents/Mytime.css';
 const MyTime = () => {
   return (
     <> 
-    <Flex pt="90px" backgroundColor="#fff0b8" pb="50px" justifyContent="space-around" className="gssecond">
-      <Stack w="40%" alignContent="center" justifyContent="center" classname="gssecond_stack">
+    <Flex  backgroundColor="#fff0b8" pb="50px" justifyContent="space-around" className="gssecond">
+      <Stack   alignContent="center" justifyContent="center" classname="gssecond_stack">
         <Heading classname="gssecond_heading">Empower your Team with Time Tracking</Heading>
-        <Text fontSize="22px" fontWeight="bolder">5Metric streamlines your team work so you can focus on what matters</Text>
+        <Text  classname="gssecond_text" fontSize="22px" fontWeight="bolder">5Metric streamlines your team work so you can focus on what matters</Text>
         <InputGroup>
           <InputLeftAddon children={<FaMailBulk size={35} color="blue" />} />
+          
           <Input type="email" placeholder="Email" backgroundColor="white"/>
         </InputGroup>
-        <Flex alignContent="center" gap="20px">
-            <Button variant="solid" colorScheme="blue" className="getstarted_btn">Get Started</Button>
+        <Flex alignItem="center" gap="20px" className='funbuttonflex'>
+            <Button  variant="solid" colorScheme="blue" className="getstarted_btn">Get Started</Button>
             <h2>Fully Functional 30-Day Trial</h2>
         </Flex>
       </Stack>
-      <Box w='45%'>
+      <Box className="imagebox">
         <img src="https://tmetric.com/media/nb3imgh0/img-home-heading.svg" alt="" />
       </Box>
     </Flex>

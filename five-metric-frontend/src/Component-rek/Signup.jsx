@@ -75,7 +75,8 @@ const handleSubmit=(e)=>{
         <Stack minH={'100vh'} direction={{ base: 'column', md: 'row' }} border={"1px solid lightgrey"} w={"85%"} margin="auto" borderRadius={"5px"} marginTop={"5px"} >
         <Flex  flex={1} align={'center'} justify={'center'}  bg={"white"} borderRadius={"5px"}>
           <Stack spacing={4} w={'65%'} maxW={'md'} pt="50px"> 
-            <Image src={logo} margin='auto' width={"162px"} marginLeft={{base: '2xl', md: '3xl',lg:"100px"}} marginTop={"0px"}/>
+           <Link onClick={()=>navigate("/")}>
+            <Image src={logo} margin='auto' width={"50%"} marginLeft={{base: '2xl', md: '3xl',lg:"100px"}} marginTop={"0px"}/></Link>
             <Heading fontSize={'1.625rem'} fontWeight={"16px"} color={"black"}>Create Your Account</Heading>
           <form onSubmit={handleSubmit}>
             <FormControl >

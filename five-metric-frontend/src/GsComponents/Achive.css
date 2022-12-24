@@ -37,8 +37,15 @@ border-radius: 5px;
 margin: 2rem 2rem;
 }
 .activity_img{
-width: 50%;
-margin: 5rem 0rem 2rem 1rem;
+    width: 100%;
+};
+.achieve{
+   width: 100%;
+   margin-right: 10%;
+}
+.achieve_text{
+    width: 90%;
+    text-align: justify;
 }
 @media screen and (max-width: 1040px) {
     .achieve{
@@ -46,32 +53,35 @@ margin: 5rem 0rem 2rem 1rem;
         flex-direction:column;
         gap:  20px;
         width: 100%;
-       
-        
-        
-
+      
     }
  
     .achieve_text{
         
         font-size:1px;
-        width: 100%;
-        margin-left:30%;
+        text-align: center;
+        width: 90%;
+        /* margin-left:30%; */
        
         
         
     }
+     .achieve_box ul{
+        padding: 10px;
+     }
     .achieve_box li{
         text-align: justify;
-        font-size:13px;
+        font-size:1rem;
         /* text-align: center; */
         width: 100%;
-        margin-left:75%;
+        /* margin-left:75%; */
     }
     .achieve button{
         margin-left: 30%;
     }
-    
+    .achieveimage{
+        width: 100%;
+    }
 }
 
 

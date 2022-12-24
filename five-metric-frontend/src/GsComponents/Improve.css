@@ -44,31 +44,35 @@ display: block;
 width: 100%;
 margin: 5rem 0rem 2rem 1rem;
 }
+.improve{
+        display: flex;
+        width: 90%;
+        justify-content: space-evenly;
+        align-items: center;
+}
 @media screen and (max-width: 1040px) {
     .improve{
         display: flex;
         flex-direction:column-reverse;
         gap:  20px;
         width: 100%;
-       
-        
-        
-
+     
     }
  
     .improve_text{
         font-size:1px;
         width: 100%;
-       margin-left:3%;
+       /* margin-left:3%; */
         
         
     }
     .improve li{
         text-align: justify;
-        font-size:13px;
+        font-size:1rem;
+        width: 100%;
         /* text-align: center; */
-        width: 200%;
-        margin-left:6%;
+        /* width: 200%; */
+        /* margin-left:6%; */
     }
     .improve button{
        margin-left: -8px;
