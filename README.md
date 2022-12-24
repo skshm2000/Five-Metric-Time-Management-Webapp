@@ -90,13 +90,6 @@ Created a functional website which tracks time for your work. Fist users lands t
 <li>CSS</li>
 </ul>
 
-## Installation Requirements
-<ol>
-<li>Fork the repo, then clone it</li>
-<li>install all dependencies, with 'npm install'</li>
-<li>start the application 'npm start'</li>
-
-</ol>
 
 ## Some Snapshots Of project
 
