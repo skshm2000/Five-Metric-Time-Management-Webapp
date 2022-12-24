@@ -1,27 +1,50 @@
-# Five Metric -  ##### [Deployed Link](https://five-metric.netlify.app/)
+# Five Metric 
+### Checkout [Deployed Link](https://five-metric.netlify.app/)
 
 ## Development
-### Setup
-1. Clone the repository into your system or fork this repository
-`git clone https://github.com/skshm2000/Five-Metric-Time-Management-Webapp.git`
+### <li>Setup</li>
+1. Clone the repository into your system or fork this repository <br/>
+
+  `git clone https://github.com/skshm2000/Five-Metric-Time-Management-Webapp.git`
+
 2. Go to the project folder
-`cd Five-Metric-Time-Management-Webapp`
 
-### For frontend
+  `cd Five-Metric-Time-Management-Webapp`
+
+### <li>For frontend</li>
 a. Go to the frontend folder
+
 `cd five-metric-frontend`
+
 b.  Install packages
+
 `npm install / npm i`
+
 c. Start project
+
 `npm start`
 
-### For backend
+### <li>For backend</li>
 a. Go to the backend folder
+
 `cd five-metric-backend`
+
 b. Install packages
+
 `npm install / npm i`
+
 c. Run backend
+
 `npm start`
+
+
+## Developers & Responsibilities
+
+ - **[Saksham Selwal](https://github.com/skshm2000)** (Built whole Backend)
+ - **[Janhavi Prabhu](https://github.com/Janhaviprabhu)** (Creating UI for User dashboard (Time,work & Task pages)
+ - **[Rekha Yadav](https://github.com/Rekha0980)** (Login & Signup pages)
+ - **[Rushikesh Patil](https://github.com/rushi6457)** (UI and functionality for Pricing page, Responsive navbar, footer and landing page, User dashboard sidebar)
+ - **[Gaurav Sudhanshu](https://github.com/GauravSudhanshu)** (UI for landing page)
 
 ## About project
 This is an web application with you can easily track time on tasks and projects, create time entries, capture hours, and save time on paperwork when it comes to generating time reports. Dive into a detailed overview of the time utilization and precisely evaluate productivity.
@@ -87,10 +110,3 @@ Created a functional website which tracks time for your work. Fist users lands t
 ![Screenshot (33)](https://user-images.githubusercontent.com/97351159/201516794-14c069c0-0e8d-4cae-9ad2-173afa7e4b8d.png)
 
 
-## Developers
-
- - **[Saksham Selwal](https://github.com/skshm2000)**
- - **[Janhavi Prabhu](https://github.com/Janhaviprabhu)**
- - **[Rekha Yadav](https://github.com/Rekha0980)**
- - **[Rushikesh Patil](https://github.com/rushi6457)**
- - **[Gaurav Sudhanshu](https://github.com/GauravSudhanshu)**
