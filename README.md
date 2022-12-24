@@ -43,7 +43,7 @@ c. Run backend
  - **[Saksham Selwal](https://github.com/skshm2000)** (Built whole Backend)
  - **[Janhavi Prabhu](https://github.com/Janhaviprabhu)** (Creating UI for User dashboard (Time,work & Task pages)
  - **[Rekha Yadav](https://github.com/Rekha0980)** (Login & Signup pages)
- - **[Rushikesh Patil](https://github.com/rushi6457)** (UI and functionality for Pricing page, Responsive navbar, footer and landing page, User dashboard sidebar)
+ - **[Rushikesh Patil](https://github.com/rushi6457)** (UI and functionality for Pricing page, Responsive navbar, footer and landing page, User dashboard sidebar, Routing for whole project)
  - **[Gaurav Sudhanshu](https://github.com/GauravSudhanshu)** (UI for landing page)
 
 ## About project
