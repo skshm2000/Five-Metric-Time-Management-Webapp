@@ -1,5 +1,8 @@
 # Five Metric 
-### Checkout [Deployed Link](https://five-metric.netlify.app/)
+
+## About the project
+This is an web application with you can easily track time on tasks and projects, create time entries, capture hours, and save time on paperwork when it comes to generating time reports. Dive into a detailed overview of the time utilization and precisely evaluate productivity.
+### 🔗 Checkout [Deployed Link](https://five-metric.vercel.app/) 
 
 ## Development
 ### <li>Setup</li>
@@ -58,9 +61,6 @@
  - **[Rekha Yadav](https://github.com/Rekha0980)** (Login & Signup pages)
  - **[Rushikesh Patil](https://github.com/rushi6457)** (UI and functionality for Pricing page, Responsiveness of navbar, footer and landing page, User dashboard sidebar, Routing for whole project)
  - **[Gaurav Sudhanshu](https://github.com/GauravSudhanshu)** (UI for landing page)
-
-## About project
-This is an web application with you can easily track time on tasks and projects, create time entries, capture hours, and save time on paperwork when it comes to generating time reports. Dive into a detailed overview of the time utilization and precisely evaluate productivity.
 
 
 ## Description :memo:
