@@ -121,10 +121,10 @@ Created a functional website which tracks time for your work. Fist users lands t
 ### My Work
 ![Screenshot (254)](https://user-images.githubusercontent.com/103261302/209430804-e665eed7-cd40-4d04-a427-68e72d829831.png)
 
-### Mobile view of navbar 
-![Screenshot (255)](https://user-images.githubusercontent.com/103261302/209430812-839329e2-db38-4d46-bfd8-d340cb21ad17.png)
-
-### Mobile view of footer
-![Screenshot (256)](https://user-images.githubusercontent.com/103261302/209430839-afda45e7-aab4-4c7b-bfec-3fb57232ece1.png)
-
-
+ 
+ ### Mobile view 
+<div gap='200px'> 
+<img src='https://user-images.githubusercontent.com/103261302/209430812-839329e2-db38-4d46-bfd8-d340cb21ad17.png'/>
+ 
+<img align='right'  src= 'https://user-images.githubusercontent.com/103261302/209430839-afda45e7-aab4-4c7b-bfec-3fb57232ece1.png'/>
+<div/>
