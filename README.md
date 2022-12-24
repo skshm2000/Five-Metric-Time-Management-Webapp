@@ -102,25 +102,29 @@ Created a functional website which tracks time for your work. Fist users lands t
 
 ### Home Page
 
-![Screenshot (26)](https://user-images.githubusercontent.com/97351159/201516132-0c3a6515-8808-49d3-831c-b43ccf09f2ff.png)
-![Screenshot (27)](https://user-images.githubusercontent.com/97351159/201516189-80f658aa-ed45-4492-93db-87bfec88358b.png)
-
+![Screenshot (247)](https://user-images.githubusercontent.com/103261302/209430451-1dd37c32-58d3-4729-9892-178153d2a7fa.png)
+![Screenshot (248)](https://user-images.githubusercontent.com/103261302/209430463-40b85b9b-e8f3-4595-8295-e380d6a5469d.png)
 ### SignUp
-![Screenshot (28)](https://user-images.githubusercontent.com/97351159/201516279-a15c9dc7-9fc7-4565-8813-4922ddc83d42.png)
-
+![Screenshot (252)](https://user-images.githubusercontent.com/103261302/209430484-4cb22574-1cb4-445f-8ea8-fe5784aefd71.png)
 ### Login 
-![Screenshot (29)](https://user-images.githubusercontent.com/97351159/201516315-6815bcfc-e553-4e68-b7bf-0567b711cac3.png)
+![Screenshot (251)](https://user-images.githubusercontent.com/103261302/209430479-32a5c46c-5176-4d4e-b584-667611db83f1.png)
 
 ### Pricing Page
-![Screenshot (34)](https://user-images.githubusercontent.com/97351159/201516938-300a0ff5-953e-445a-8757-6baba155e173.png)
+![Screenshot (249)](https://user-images.githubusercontent.com/103261302/209430474-bfa54392-5a93-46c8-8770-42cbc322dd46.png)
 
 ### My Time (Dashbord)
-![Screenshot (30)](https://user-images.githubusercontent.com/97351159/201516533-bed0b362-00d4-4c16-9300-e6bc39edaa3a.png)
+![Screenshot (253)](https://user-images.githubusercontent.com/103261302/209430506-0c040ed1-6385-4e7f-ad7e-6ec76cf85e89.png)
 
 ### My Tasks
-![Screenshot (32)](https://user-images.githubusercontent.com/97351159/201516750-d28efb25-b676-4b5a-bc45-fa53371d7ff1.png)
+![Screenshot (257)](https://user-images.githubusercontent.com/103261302/209430798-9c3045a9-c2c3-46ff-b162-76b8443352dc.png)
 
 ### My Work
-![Screenshot (33)](https://user-images.githubusercontent.com/97351159/201516794-14c069c0-0e8d-4cae-9ad2-173afa7e4b8d.png)
+![Screenshot (254)](https://user-images.githubusercontent.com/103261302/209430804-e665eed7-cd40-4d04-a427-68e72d829831.png)
+
+### Mobile view of navbar 
+![Screenshot (255)](https://user-images.githubusercontent.com/103261302/209430812-839329e2-db38-4d46-bfd8-d340cb21ad17.png)
+
+### Mobile view of footer
+![Screenshot (256)](https://user-images.githubusercontent.com/103261302/209430839-afda45e7-aab4-4c7b-bfec-3fb57232ece1.png)
 
 
