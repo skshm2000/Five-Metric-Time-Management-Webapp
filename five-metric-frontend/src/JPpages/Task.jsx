@@ -55,6 +55,7 @@ export const Task = () => {
   const nav=useNavigate()
   const [taskData, setTaskData] = useState(initTaskData);
   const state=useSelector((state)=>state)
+  console.log(state)
   const dispatcher=useDispatch()
 
   const handleChange=((e)=>{
@@ -91,7 +92,7 @@ export const Task = () => {
   }
 
   const handleOpenBox2 = () => {
-     if(!state.entries[0]){
+     if(!state.userDataReducer.entries[0].tasks){
       alert("You need to add entry first")
      setOpenbox(false);
      }else{
