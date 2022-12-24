@@ -15,7 +15,7 @@ import {FaMicrosoft }from "react-icons/fa"
 import {FaApple }from "react-icons/fa"
 import { useState } from 'react';
 import axios from"axios"
-import {useNavigate } from 'react-router-dom';
+import {useNavigate,Link } from 'react-router-dom';
 import logo from "../GsAssets/navbarLogo.jpg";
   
   const Login=()=> {

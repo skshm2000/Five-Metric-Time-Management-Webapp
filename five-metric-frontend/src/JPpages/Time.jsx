@@ -4,14 +4,7 @@ import {
   Checkbox,
   Divider,
   Flex,
-  Menu,
-  MenuButton,
-  MenuItem,
-  MenuList,
-  Stack,
   Text,
-  VisuallyHidden,
-  VisuallyHiddenInput,
 } from "@chakra-ui/react";
 import {
   FormControl,
@@ -26,11 +19,8 @@ import {
   Thead,
   Tr,
 } from "@chakra-ui/react";
-import { useEffect, useRef, useState } from "react";
-import { BsChevronDown } from "react-icons/bs";
-import { VscDebugStart } from "react-icons/vsc";
-import { BsFillStopFill } from "react-icons/bs";
-import { BiCalendar } from "react-icons/bi";
+import { useEffect, useState } from "react";
+
 
 import { TimeBar } from "../JPComponents/timebar";
 import { useSelector } from "react-redux";

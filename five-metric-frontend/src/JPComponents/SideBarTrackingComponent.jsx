@@ -33,14 +33,14 @@ import {CgProfile} from "react-icons/cg"
 
 const SideBarTrackingComponent = () => {
 
-  const state = useDisclosure(state=>state)
-  // console.log(state);
+ 
+
   let userId  = localStorage.getItem('token');
-  // console.log(userId)
+ 
   const [logout,setLogout] = useState(userId)
   const [sidebar, setSidebar] = useState(false);
   const navigate = useNavigate()
-  // console.log(sidebar);
+
   const toggleSideBar = ()=>{
       setSidebar((prev)=>!prev)
   }

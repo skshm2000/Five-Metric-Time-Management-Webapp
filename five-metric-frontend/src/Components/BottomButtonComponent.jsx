@@ -6,7 +6,7 @@ import styles from "../Styles/BottomButton.module.css"
 const BottomButtonComponent = () => {
 
      const token = localStorage.getItem("token")
-    console.log(token)
+
 
     
     return (

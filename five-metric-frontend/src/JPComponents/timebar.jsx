@@ -10,7 +10,7 @@ import { BiCalendar } from "react-icons/bi";
 export const TimeBar=()=>{
   
 
-  // console.log(state)
+
 
   useEffect(()=>{
     // let entryAdderType = {

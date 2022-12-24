@@ -5,8 +5,7 @@ import pricingfooter from "../assets/pricingfooter.png"
 import styles from "../Styles/PricingFooter.module.css"
 const PricingFooter = () => {
        const token = localStorage.getItem("token")
-    console.log(token)
-
+   
     
     return (
         <Box className={styles.pricingFooter}>          

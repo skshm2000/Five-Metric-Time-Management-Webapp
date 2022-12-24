@@ -32,14 +32,13 @@ const Services = () => {
       <img src={excel}alt="" />
       <img src={asana} alt="" />
       <img src={jira} alt="" />
-      <img src={gitlab} alt="" />
       </Flex>
       <Flex alignSelf='center' className='services_lowimage'>
       <img src={docs} alt="" />
       <img src={trello} alt="" />
       <img src={redmine} alt="" />
       <img src={zendesk} alt="" />
-      <img src={wrike} alt="" />
+      
       </Flex>
       
 

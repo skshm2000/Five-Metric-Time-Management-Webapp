@@ -5,7 +5,6 @@ import {
   Icon,
   SimpleGrid,
   useDisclosure,
-  Link
 } from "@chakra-ui/react";
 import { BsChevronDown } from "react-icons/bs";
 import { AiOutlineArrowRight } from "react-icons/ai";
@@ -17,7 +16,7 @@ import { NavLink } from "react-router-dom";
   const { isOpen, onToggle } = useDisclosure();
   const { isOpen: isOpen2, onToggle: onToggle2 } = useDisclosure();
 
-  console.log(menuItems.tmetric[0].img_url);
+
 
   return (
     <Flex
@@ -224,7 +223,7 @@ import { NavLink } from "react-router-dom";
               mt="2rem"
               ml="3rem"
             >
-              <a href="#">View All Integrations</a>
+              <a href="/">View All Integrations</a>
               <Icon as={AiOutlineArrowRight} />
             </Flex>
           </Box>

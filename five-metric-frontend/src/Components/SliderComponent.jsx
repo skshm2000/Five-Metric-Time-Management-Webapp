@@ -9,7 +9,6 @@ import React from 'react';
 import { useState } from 'react';
 
 import {AiFillStepForward} from "react-icons/ai"
-import { useSelector } from 'react-redux';
 import styles from "../Styles/SliderComponent.module.css"
 import CorrectionList from './CorrectionList';
 import PriceComponent from './PriceComponent';
@@ -18,7 +17,7 @@ const SliderComponent = () => {
 
     const [value,setValue] = useState(1)
     const [isChecked,setIsChecked] = useState(false)
-   const store = useSelector(store=>store.price)
+   
 
 
     const handleTeamChange = (e) =>{
