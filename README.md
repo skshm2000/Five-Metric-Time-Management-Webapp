@@ -53,7 +53,7 @@
 
 ## Developers & Responsibilities
 
- - **[Saksham Selwal](https://github.com/skshm2000)** (Built whole Backend)
+ - **[Saksham Selwal](https://github.com/skshm2000)** (Built whole Backend))
  - **[Janhavi Prabhu](https://github.com/Janhaviprabhu)** (Created UI for User dashboard (Time,work & Task pages)
  - **[Rekha Yadav](https://github.com/Rekha0980)** (Login & Signup pages)
  - **[Rushikesh Patil](https://github.com/rushi6457)** (UI and functionality for Pricing page, Responsiveness of navbar, footer and landing page, User dashboard sidebar, Routing for whole project)
