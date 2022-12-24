@@ -1,4 +1,4 @@
-import { Box, Divider, Flex, Grid, Heading,Text } from '@chakra-ui/react';
+import { Box, Divider, Flex, Grid,Text } from '@chakra-ui/react';
 import React from 'react';
 import {FcCheckmark } from "react-icons/fc"
 import {ImCross} from "react-icons/im"

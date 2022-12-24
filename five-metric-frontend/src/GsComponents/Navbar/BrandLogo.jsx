@@ -3,7 +3,7 @@ import logo from "./navbarLogo.jpg";
 
  function BrandLogo() {
   return (
-    <Image width={'55%'} src={logo} />
+    <Image width={{base:"40%",md:"20%",lg:"50%"}} src={logo} />
   );
 }
 export default BrandLogo

@@ -1,4 +1,4 @@
-import { Button, Divider, Flex, Grid, Text } from '@chakra-ui/react';
+import { Button, Divider, Grid, Text } from '@chakra-ui/react';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from "../Styles/BottomButton.module.css"
@@ -6,7 +6,7 @@ import styles from "../Styles/BottomButton.module.css"
 const BottomButtonComponent = () => {
 
      const token = localStorage.getItem("token")
-    console.log(token)
+
 
     
     return (

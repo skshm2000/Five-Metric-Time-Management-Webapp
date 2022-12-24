@@ -1,10 +1,10 @@
-import { Box, Heading, HStack ,Flex,Text} from '@chakra-ui/react';
+import { Box, Heading, Flex,Text} from '@chakra-ui/react';
 import React from 'react';
 import styles from "../Styles/PriceChart.module.css"
-import CorrectionList from './CorrectionList';
+
 
 const PriceComponent = ({value,isChecked}) => {
-    console.log(isChecked);
+  
     return (
         <Box className={styles.priceSheetBox}>
              <Box className={styles.individualPriceButtonDiv}>

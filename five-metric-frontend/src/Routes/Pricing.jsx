@@ -1,4 +1,4 @@
-import { Box, Heading } from '@chakra-ui/react';
+import { Box, } from '@chakra-ui/react';
 import React from 'react';
 import BottomButtonComponent from '../Components/BottomButtonComponent';
 import HowToBuy from '../Components/HowToBuy';
@@ -10,7 +10,7 @@ import Footer from "../GsComponents/Footer"
 import QuestionNdAnswer from "../Components/QuestionNdAnswer"
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import { useSelector } from 'react-redux';
+
 
 
 const Pricing = () => {

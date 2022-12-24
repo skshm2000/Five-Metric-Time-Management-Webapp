@@ -1,4 +1,4 @@
-import { Button, Flex, Grid, Heading, Text } from '@chakra-ui/react';
+import {  Flex,Heading, Text } from '@chakra-ui/react';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from "../Styles/QuestionNdAnswer.module.css"

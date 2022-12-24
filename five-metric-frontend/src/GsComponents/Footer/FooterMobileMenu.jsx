@@ -6,7 +6,6 @@ import {
   AccordionPanel,
   Box,
   Flex,
-  Link,
   Text,
 } from "@chakra-ui/react";
 import { AiFillAndroid, AiFillApple, AiFillChrome } from "react-icons/ai";

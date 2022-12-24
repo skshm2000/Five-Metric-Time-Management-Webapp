@@ -1,8 +1,8 @@
-import { Box, Button, Flex, Heading, Input, InputGroup, InputLeftAddon, Stack, Text, Spacer, Container } from "@chakra-ui/react";
+import { Box, Button, Flex, Heading, Input, InputGroup, InputLeftAddon, Stack, Text,} from "@chakra-ui/react";
 import React from "react";
 import { FaMailBulk } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import mytime from "../GsAssets/mytime.png";
+
 import getApp from "../GsAssets/getApp.jpg";
 import top20 from "../GsAssets/top20.png";
 import frontRunner from "../GsAssets/frontRunner.png";
