@@ -21,7 +21,7 @@
   </tr>
   <tr>
     <td>a. Go to the frontend folder
-      
+    
   `cd five-metric-frontend`</td>
     <td>a. Go to the backend folder
 
@@ -35,9 +35,7 @@
     <td>b. Install packages
 
 `npm install / npm i`</td>
-  
   </tr>
-  
    <tr>
     <td>c. Start project
 
@@ -45,8 +43,7 @@
     <td>c. Start project
 
 `npm start`</td>
-    
-  
+
   </tr>
   
 </table>
@@ -59,7 +56,7 @@
  - **[Saksham Selwal](https://github.com/skshm2000)** (Built whole Backend)
  - **[Janhavi Prabhu](https://github.com/Janhaviprabhu)** (Created UI for User dashboard (Time,work & Task pages)
  - **[Rekha Yadav](https://github.com/Rekha0980)** (Login & Signup pages)
- - **[Rushikesh Patil](https://github.com/rushi6457)** (UI and functionality for Pricing page, Responsive navbar, footer and landing page, User dashboard sidebar, Routing for whole project)
+ - **[Rushikesh Patil](https://github.com/rushi6457)** (UI and functionality for Pricing page, Responsiveness of navbar, footer and landing page, User dashboard sidebar, Routing for whole project)
  - **[Gaurav Sudhanshu](https://github.com/GauravSudhanshu)** (UI for landing page)
 
 ## About project
@@ -104,6 +101,7 @@ Created a functional website which tracks time for your work. Fist users lands t
 ## Some Snapshots Of project
 
 ### Home Page
+
 ![Screenshot (26)](https://user-images.githubusercontent.com/97351159/201516132-0c3a6515-8808-49d3-831c-b43ccf09f2ff.png)
 ![Screenshot (27)](https://user-images.githubusercontent.com/97351159/201516189-80f658aa-ed45-4492-93db-87bfec88358b.png)
 
