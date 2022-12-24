@@ -10,32 +10,48 @@
 2. Go to the project folder
 
   `cd Five-Metric-Time-Management-Webapp`
+  
+<table>
+  <tr>
+    <th>Frontend</th>
+    <th>Backend</th>
+   
+  </tr>
+  <tr>
+    <td>a. Go to the frontend folder
+      
+`cd five-metric-frontend`</td>
+    <td>a. Go to the backend folder
 
-### <li>For frontend</li>
-a. Go to the frontend folder
-
-`cd five-metric-frontend`
-
-b.  Install packages
+`cd five-metric-backend`</td>
+    
+  
+  </tr>
+  <tr>
+    <td>b.  Install packages
 
 `npm install / npm i`
+</td>
+    <td>b. Install packages
 
-c. Start project
+`npm install / npm i`</td>
+  
+  </tr>
+  
+   <tr>
+    <td>c. Start project
 
-`npm start`
+`npm start`</td>
+    <td>c. Start project
 
-### <li>For backend</li>
-a. Go to the backend folder
+`npm start`</td>
+    
+  
+  </tr>
+  
+</table>
 
-`cd five-metric-backend`
 
-b. Install packages
-
-`npm install / npm i`
-
-c. Run backend
-
-`npm start`
 
 
 ## Developers & Responsibilities
