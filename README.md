@@ -1,5 +1,5 @@
 # Five Metric 
-### Checkout [Deployed Link](https://five-metric.netlify.app/)
+### Checkout [Deployed Link](https://five-metric.vercel.app/)
 
 ## Development
 ### <li>Setup</li>
