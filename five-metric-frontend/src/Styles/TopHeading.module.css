@@ -21,18 +21,20 @@
     text-align: center;
 }
 
-@media screen and (max-width:450px) {
+@media screen and (max-width:540px) {
     .priceHeadingBox {   
     background-color: #d7f3fc;
-    padding: 100px;
+    padding: 50px;
     font-family: 'roboto', sans-serif serif;
     height: auto;
     }
     .priceHeadingText{
-        font-size: 20px;
+        font-size: 15px;
         width: 100%;
+        text-align: center;
     }
     .priceHeading{
-        font-size: 50px;
+        font-size: 30px;
+        text-align: center;
     }
 }

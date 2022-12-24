@@ -63,7 +63,9 @@ const SideBarTrackingComponent = () => {
                 <Button onClick={toggleSideBar}  _hover={'white'} bg={'white'} className={styles.toggleButton}>
                   <IoIosArrowBack padding='0px' className={styles.toggleButtonIcon}/>
                   </Button>
+              <Link to='/'>
                 <Image className={styles.logoImage}  width={'150px'} src={logo}/>
+              </Link>
             </Flex>
 
             <Box className={styles.timeWorkMainBox}>
