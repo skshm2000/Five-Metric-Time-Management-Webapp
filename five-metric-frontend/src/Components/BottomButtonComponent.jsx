@@ -4,10 +4,15 @@ import { Link } from 'react-router-dom';
 import styles from "../Styles/BottomButton.module.css"
 
 const BottomButtonComponent = () => {
+
+     const token = localStorage.getItem("token")
+    console.log(token)
+
+    
     return (
         <div className={styles.buttonText}>
             <Grid className={styles.priceButtonFlex}>
-            <Link to="/">
+            <Link to={token !== null ? "/time" : "/login"}>
                 <Button colorScheme={'blue'} className={styles.priceButton}>Get Started</Button>
             </Link>
                 <Text className={styles.priceButtonText}>Fully Functional 30-Day Trial</Text>

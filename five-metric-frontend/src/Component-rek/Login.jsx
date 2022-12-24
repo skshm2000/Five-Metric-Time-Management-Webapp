@@ -71,7 +71,8 @@ import logo from "../GsAssets/navbarLogo.jpg";
           my={12}>
             
             <Box backgroundColor={"#F2F5FC"} borderRadius="10px" pt="50px">
-            <Image src={logo}  width={"162px"} margin='auto' marginTop={"0px"} backgroundColor={"#F2F5FC"}/>
+            <Link to='/'>
+            <Image src={logo}  width={"40%"} margin='auto' marginTop={"0px"} backgroundColor={"#F2F5FC"}/></Link>
           <Heading lineHeight={1.1} fontSize={{ base: '2xl', md: '3xl',lg:"1.625rem" }}  fontWeight={"12px"} color={"black"} backgroundColor={"#F2F5FC"} pb="17px" mt="12px" textAlign="center">
           Log into Five Metric
           </Heading>
@@ -110,13 +111,13 @@ import logo from "../GsAssets/navbarLogo.jpg";
             <Divider orientation={'horizontal'}/>
             <Stack>
               <Button colorScheme={"none"} border={"1px solid lightgrey"} _hover={{bg: '#e2e6eb',}}  leftIcon={<FcGoogle fontSize={"20px"} /> } textColor={"#777E85"} variant={'solid'} height={"34px"} fontSize={"14px"}>
-              Sign Up with Google
+              Sign in with Google
               </Button>
               <Button colorScheme={"none"} border={"1px solid lightgrey" }  _hover={{bg: '#e2e6eb',}}marginTop="-80px" leftIcon={<FaMicrosoft  fontSize={"20px"}/>} textColor={"#777E85"} variant={'solid'} height={"34px"} fontSize={"14px"}>
-              Sign Up with Microsoft
+              Sign in with Microsoft
               </Button>
               <Button colorScheme={"none"} border={"1px solid lightgrey"} _hover={{bg: '#e2e6eb',}}leftIcon={<FaApple color={"black"} fontSize={"20px"}/>} textColor={"#777E85"} variant={'solid'} height={"34px"} fontSize={"14px"}>
-              Sign Up with Apple
+              Sign in with Apple
               </Button>
               </Stack>
               <Divider orientation={'horizontal'}  colorScheme={"black"}/>

@@ -23,11 +23,12 @@
 }
 .features button{
     background: none;
-    width:14rem;
+    width:100%;
     padding:1rem;
-    height: 3rem;
+    /* height: 3rem; */
 }
 .features h1{
+    text-align: center;
     font-size: 1rem;
     gap: 10px;
     display: flex;
@@ -67,18 +68,25 @@
 }
 @media screen and (max-width: 1040px){
     .tracking .heading{
-        width:100%;
-        margin-top:20rem;
+        width:80%;
+        text-align: center;
+        margin-top:5%;
         font-size: 2rem;
         text-align: center;
-        margin-left: -0.5rem;
+        /* margin-left: -0.5rem; */
         font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     
+    }
+    .features{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
     }
     .trackingfeatures{
         
         display: grid;
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns: repeat(1,1fr);
+        justify-content: space-evenly;
         text-align: center;
     }
     .features h1{
@@ -90,7 +98,12 @@
     }
     .innertext{
         display: grid;
+        width: 100%;
+        margin:auto;
         grid-template-columns: repeat(1 , 1fr);
+    }
+   .innertext img{
+        width:100%
     }
 }
 

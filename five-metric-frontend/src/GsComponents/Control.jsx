@@ -6,7 +6,7 @@ import { Flex, Text, Box, Button, UnorderedList, ListItem } from '@chakra-ui/rea
 const Control = () => {
   return (
     <Flex className='control'>
-      <Box p="4%" w="50%" className='control_text'>
+      <Box p="4%"  className='control_text'>
         <Text fontSize="45px" fontWeight="bold">Take effective control of working time</Text>
         <UnorderedList>
             <ListItem>
@@ -39,7 +39,7 @@ const Control = () => {
         </UnorderedList>
         <Button variant="solid" colorScheme="blue" mt="20px">Start Free Trial</Button>
       </Box>
-      <Box pt="3%" w="50%">
+      <Box pt="3%" >
         <img src="https://tmetric.com/media/kssowlxe/img-activity-cases.svg" alt="myactivity"/>
       </Box>
     </Flex>

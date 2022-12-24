@@ -3,9 +3,9 @@
     width: 100%;
     margin: auto;
     justify-content: space-between;
-    padding-left: 130px;
-    padding-top: 100px;
-    padding-bottom: 50px;
+    padding-left: 5%;
+    padding-top: 5%;
+    padding-bottom: 5%;
     align-items: center;
     background-color: #ffffff;
 }
@@ -60,56 +60,62 @@
 
 }
 .apps{
-    width: 90%;
-    height:10rem;
+    width: 100%;
+    padding: 2%;
     /* display: flex;
     justify-content: space-evenly; */
-    display: grid;
-    grid-template-columns: repeat(7 ,1fr);
-    margin:auto;
+    display: flex;
+    justify-content: space-evenly;
     align-items: center;
+    /* grid-template-columns: repeat(7 ,1fr); */
+    /* margin:auto; */
+    /* align-items: center; */
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
     
 }
-.apps img{
+/* .apps img{
     background-color: transparent;
-    width: 9rem;
+    width: 70%;
     padding: 1rem;
-   
-}
+   margin: auto;
+} */
 .apps img:hover{
     box-shadow: rgba(237, 235, 236, 0.4) 5px 5px, rgba(188, 185, 187, 0.3) 10px 10px, rgba(195, 183, 191, 0.2) 15px 15px, rgba(251, 237, 246, 0.1) 20px 20px, rgba(161, 159, 160, 0.05) 25px 25px;
     
 }
 .gssecond_heading{
     font-size: "60px";
+    width: 10%;
 }
-
+.gssecond_stack{
+    width: 40%;
+}
 
 @media screen and (max-width: 1040px){
     .gssecond{
         
+        width: 100%; 
         display:  flex;
         flex-direction: column;
         row-gap: 30px;
+        padding: 5%;
         justify-content: center;
         margin-top: 50px;
-        
     }
     .gssecond_stack{
         
         font-weight:bolder;
         font-size:1rem;
-        width: 100%;
+        width: 40%;
         
     
     }
     .gssecond_heading{
-        
+        width: 40%;
         font-size: 20px;
-        width: 100%;
+        padding: 10px;
         text-align: center;
-
+        padding-left: 1%;
     }
     .mytime_left img{
         width:100%;
@@ -117,23 +123,38 @@
         margin-left: -1rem;
     
     }
-    .getstarted button {
+    .getstarted_btn {
         border: none;
-        width:40%;
+        width:80%;
+        margin: auto;
         padding: 15px;
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
         background-color: blue;
         margin: 0rem 1.5rem 1.5rem 1.5rem;
         color: white;
+        margin-top: 2%;
     }
     .apps{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        display: flex;
+        /* grid-template-columns: repeat(2, 1fr); */
        box-shadow: none;
-        margin: auto;
-        margin-left: 20%;
-       
-        
+        /* margin: auto; */
+        /* margin-left: 20%; */
+       flex-direction: column;
+        gap: 2%;
+    }
+    .funbuttonflex{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .imagebox{
+        width: 100%;
+    }
+    .gssecond_text{
+        width: 90%;
+        text-align: center;
+        padding-left: 1%;
     }
 }
 

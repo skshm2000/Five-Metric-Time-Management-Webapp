@@ -1,0 +1,85 @@
+{
+  "tmetric": [
+    {
+      "id": 1,
+      "title": "Time Tracking",
+      "desc": "Capture and control every task you work on",
+      "img_url": "https://tmetric.com/media/qojb5snq/icon-timer-gray.svg"
+    
+    },
+    {
+      "id": 2,
+      "title": "Billing & Invoicing",
+      "desc": "Set billable rates and easily create invoices",
+      "img_url": "https://tmetric.com/media/5r1l1s4g/icon-invoice-gray.svg"
+     
+    },
+    {
+      "id": 3,
+      "title": "Project Management",
+      "desc": "Create projects, set rates and budgets",
+      "img_url": "https://tmetric.com/media/kqgpqtvh/icon-project-gray.svg"
+     
+    },
+    {
+      "id": 4,
+      "title": "Team Management",
+      "desc": "Monitor productivity and activity level of your team",
+      "img_url": "https://tmetric.com/media/isxcp2ip/icon-team-gray.svg"
+   
+    },
+    {
+      "id": 5,
+      "title": "Task Management",
+      "desc": "Manage tasks and set up an effective workflow",
+      "img_url": "https://tmetric.com/media/g3jc0dsg/icon-reports-gray.svg"
+
+    },
+    {
+      "id": 6,
+      "title": "Time Off",
+      "desc": "Simply ask for days off and control teams attendance",
+      "img_url": "https://tmetric.com/media/bxylkc2s/icon-time-off-gray.svg"
+   
+    }
+  ],
+  "appIntegration": [
+    {
+      "id": 1,
+      "title": "Jira",
+      "desc": "Time tracking on every task in one click",
+      "img_url": "https://tmetric.com/media/rejbvkxk/icon-jira-small.svg"
+    
+    },
+    {
+      "id": 2,
+      "title": "Asana",
+      "desc": "Start to accurately track time of tasks",
+      "img_url": "https://tmetric.com/media/u4kphldq/icon-asana-small.svg"
+    },
+    {
+      "id": 3,
+      "title": "Todoist",
+      "desc": "Track time of your lists and tasks",
+      "img_url": "https://tmetric.com/media/jduhrdq5/icon-todoist-small.svg"
+    },
+    {
+      "id": 4,
+      "title": "MS Office",
+      "desc": "Get plugin for tracking time in MS Office Online",
+      "img_url": "https://tmetric.com/media/uq4dqcrf/icon-ms-office-small.svg"
+    },
+    {
+      "id": 5,
+      "title": "GitHub",
+      "desc": "Track time spent working on an issue with one mouse click",
+      "img_url": "https://tmetric.com/media/nfqj22co/icon-github-small.svg"
+    },
+    {
+      "id": 6,
+      "title": "Freshdesk",
+      "desc": "Track time spent on every support ticket",
+      "img_url": "https://tmetric.com/media/l1cply4y/icon-freshdesk-small.svg"
+    }
+  ]
+}

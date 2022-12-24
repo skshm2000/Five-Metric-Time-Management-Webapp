@@ -5,7 +5,7 @@ import { Flex, UnorderedList, ListItem, Box, Button, Text } from '@chakra-ui/rea
 const Improve = () => {
   return (
       <Flex className='improve'>
-      <Box w="35%" pl="40px" pt="30px" className='improve_text'> 
+      <Box  pl="40px" pt="30px" className='improve_text'> 
         <Text fontSize="40px" fontWeight="bold">Improve attendance with time off tracking software</Text>
        
         <UnorderedList mt="25px">
@@ -25,7 +25,7 @@ const Improve = () => {
         </UnorderedList>
         <Button mt="25px" variant="solid" colorScheme="blue">Start Free Trial</Button>
       </Box>
-      <Box w="65%">
+      <Box >
         <img src="https://tmetric.com/media/mlzbtxv5/time-off-calendar-case.svg" alt="myactivity"/>
       </Box>
 

@@ -23,19 +23,15 @@ margin: 5rem 0rem 2rem 1rem;
         display: flex;
         flex-direction:column-reverse;
         gap:  20px;
-        width: 100%;
-        margin-left: 8%;
+        width: 90%;
+        /* margin-left: 8%; */
 
        
     }
  
-    .control_text{
-        font-size:1px;
-       
-        
-       
-        
-        
+    .control_text p{
+        font-size: 2rem;
+      
     }
     .control_text li{
         text-align: justify;
