@@ -70,7 +70,7 @@ export const Time = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     // setTask([...task, addTask]);
-    // console.log(addTask);
+
     Dispatch(entryAdder(addTask));
   };
   const handleAddTimeEntry = () => {
@@ -90,7 +90,7 @@ export const Time = () => {
       id: Delid,
     };
     Dispatch(entryDeleter(entryDeleterType)).then((res) => {
-      console.log(res);
+     
     });
     alert("You sure you want to Delete this entry");
   };

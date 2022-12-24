@@ -20,14 +20,12 @@ import {
     Box,
     InputGroup,
     InputRightElement,
-    Alert,
-    AlertIcon,
     Text
   } from '@chakra-ui/react'
 import { useState } from "react"
 
 import logo from "../GsAssets/navbarLogo.jpg";
-import { Navigate, useNavigate } from "react-router-dom"
+import {  useNavigate } from "react-router-dom"
 
   // 
 
@@ -47,7 +45,7 @@ const handleChange=(e)=>{
 const {name,value}=e.target
 setUser({...user,[name]:value})
 }
-//console.log(user)
+
 
 const handleSubmit=(e)=>{
   e.preventDefault()
@@ -57,11 +55,11 @@ const handleSubmit=(e)=>{
     password:user.password
   })
   .then((response)=>{
-  console.log(response.data)
-    if(response.data.message=='Registered Successfully'){
+ 
+    if(response.data.message==='Registered Successfully'){
       navigate("/login")
     }
-    if(response.data.error!=false) {
+    if(response.data.error!==false) {
       changeError(response.data.error)
     }
   })

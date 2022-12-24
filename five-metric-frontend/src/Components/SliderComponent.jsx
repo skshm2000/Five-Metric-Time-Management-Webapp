@@ -1,21 +1,13 @@
 import { 
     Box, 
-    Button, 
-    Container, 
     Divider, 
     Flex, 
     Heading, 
-    Input, 
-    Slider, 
-    SliderFilledTrack, 
-    SliderThumb, 
-    SliderTrack, 
-    Stack, 
     Switch, 
     Text } from '@chakra-ui/react';
 import React from 'react';
 import { useState } from 'react';
-import {AiFillStepBackward} from "react-icons/ai"
+
 import {AiFillStepForward} from "react-icons/ai"
 import { useSelector } from 'react-redux';
 import styles from "../Styles/SliderComponent.module.css"
@@ -27,7 +19,7 @@ const SliderComponent = () => {
     const [value,setValue] = useState(1)
     const [isChecked,setIsChecked] = useState(false)
    const store = useSelector(store=>store.price)
-   console.log(store);
+
 
     const handleTeamChange = (e) =>{
          setValue(e.target.value >= 1 && e.target.value <= 200 ? e.target.value : '1')
@@ -35,7 +27,7 @@ const SliderComponent = () => {
 
     const handleSwitch = (e) =>{
         setIsChecked(e.target.checked)
-        // console.log(isChecked)
+      
     }
     return (
     <div>

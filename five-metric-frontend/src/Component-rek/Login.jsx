@@ -15,7 +15,7 @@ import {FaMicrosoft }from "react-icons/fa"
 import {FaApple }from "react-icons/fa"
 import { useState } from 'react';
 import axios from"axios"
-import { Link, Navigate, useNavigate } from 'react-router-dom';
+import {useNavigate } from 'react-router-dom';
 import logo from "../GsAssets/navbarLogo.jpg";
   
   const Login=()=> {
@@ -33,7 +33,7 @@ import logo from "../GsAssets/navbarLogo.jpg";
     const handleNavigate = () =>{
         navigate("/signup")
     } 
-    //console.log(user)
+   
     const handleSubmit=(e)=>{
       e.preventDefault()
       axios.post("https://five-metric.onrender.com/login",{
@@ -41,7 +41,7 @@ import logo from "../GsAssets/navbarLogo.jpg";
         password:user.password
       })
       .then((response)=>{
-     console.log(response.data)
+   
      if(response.data.token){
       localStorage.setItem("token", (response.data.token))
       navigate("/time")
@@ -50,7 +50,7 @@ import logo from "../GsAssets/navbarLogo.jpg";
       }
       })
       .catch((err)=>{
-        console.log(err)
+       console.log(err.message)
       })
     }
    

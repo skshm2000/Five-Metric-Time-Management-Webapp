@@ -10,22 +10,21 @@ import {
   Divider,
   Flex,
   FormControl,
-  Icon,
-  Image,
+
   Input,
   InputGroup,
   InputLeftElement,
   Menu,
   MenuButton,
   MenuItem,
-  MenuItemOption,
+
   MenuList,
   MenuOptionGroup,
   Text,
 } from "@chakra-ui/react";
 import { BsChevronDown } from "react-icons/bs";
 import { MdOutlineAdd } from "react-icons/md";
-import { AiOutlineSearch } from "react-icons/ai";
+
 import { MdWork } from "react-icons/md";
 import { BsThreeDots } from "react-icons/bs";
 import { TbArrowBarToRight } from "react-icons/tb";
@@ -37,7 +36,7 @@ import { AiOutlineCheck } from "react-icons/ai";
 import SideBarTrackingComponent from "../JPComponents/SideBarTrackingComponent";
 import { useDispatch, useSelector } from "react-redux";
 import { dataGetter, taskAdder, taskDeleter } from "../redux/User Data/userDataActions";
-import { NavLink, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 const initTaskData = {
   token: "",
   id: Date.now(),
@@ -73,7 +72,7 @@ export const Task = () => {
     }
     dispatcher(taskAdder({...taskData,id:state.entries[0].id}))
   }
-  console.log(state)
+
 
   useEffect(()=>{
 
@@ -87,7 +86,7 @@ export const Task = () => {
       taskId: x
     };
     dispatcher(taskDeleter(taskDeleterType)).then((res)=>{
-      console.log(res)
+    
     })
   }
 
